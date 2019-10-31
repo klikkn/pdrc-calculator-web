@@ -9,6 +9,9 @@
     <li>
       <router-link to="/cars">Cars</router-link>
     </li>
+    <li>
+      <router-link to="/prices">Prices</router-link>
+    </li>
   </ul>
 </template>
 

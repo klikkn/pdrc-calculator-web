@@ -1,10 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import HelloWorld from "./components/HelloWorld";
+import Home from "./containers/Home";
+import Calculation from "./containers/Calculation";
 
 Vue.use(VueRouter);
 
-const routes = [{ path: "/foo", component: HelloWorld }];
+const routes = [
+  { path: "/", component: Home },
+  { path: "/calculation", component: Calculation }
+];
 
 export default new VueRouter({ routes, mode: "history" });

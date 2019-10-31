@@ -1,0 +1,6374 @@
+[
+  {
+    "make": "Acura",
+    "model": "CL",
+    "from": 1998,
+    "till": 2003
+  },
+  {
+    "make": "Acura",
+    "model": "EL",
+    "from": 1997,
+    "till": 2005
+  },
+  {
+    "make": "Acura",
+    "model": "ILX",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Acura",
+    "model": "Integra",
+    "from": 1998,
+    "till": 2006
+  },
+  {
+    "make": "Acura",
+    "model": "MDX",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Acura",
+    "model": "NSX",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Acura",
+    "model": "RDX",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Acura",
+    "model": "RL",
+    "from": 1995,
+    "till": 2012
+  },
+  {
+    "make": "Acura",
+    "model": "RLX",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Acura",
+    "model": "RSX",
+    "from": 2002,
+    "till": 2006
+  },
+  {
+    "make": "Acura",
+    "model": "TL",
+    "from": 1999,
+    "till": 2014
+  },
+  {
+    "make": "Acura",
+    "model": "TLX",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Acura",
+    "model": "TSX",
+    "from": 2003,
+    "till": 2014
+  },
+  {
+    "make": "Acura",
+    "model": "ZDX",
+    "from": 2010,
+    "till": 2013
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": 146,
+    "from": 1994,
+    "till": 2001
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": 147,
+    "from": 1998,
+    "till": 2010
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "147 GTA",
+    "from": 2002,
+    "till": 2010
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": 156,
+    "from": 1997,
+    "till": 2007
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "156 GTA",
+    "from": 2002,
+    "till": 2007
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": 159,
+    "from": 2005,
+    "till": 2011
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": 166,
+    "from": 1998,
+    "till": 2007
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "4C",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "8C Competizione",
+    "from": 2008,
+    "till": 2010
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "Brera",
+    "from": 2005,
+    "till": 2010
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "Giulia",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "Giulietta",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "GT",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "GTV",
+    "from": 1995,
+    "till": 2006
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "MiTo",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "Spider",
+    "from": 1998,
+    "till": 2010
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "Stelvio",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "Cygnet",
+    "from": 2011,
+    "till": 2013
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DB11",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DB9",
+    "from": 2004,
+    "till": 2016
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DBS",
+    "from": 2003,
+    "till": 2012
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DBS Violante",
+    "from": 2007,
+    "till": 2012
+  },
+  {
+    "make": "Aston Martin",
+    "model": "Rapide",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "V12 Vantage",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "V8 Vantage",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "Vanquish",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "Virage",
+    "from": 2011,
+    "till": 2012
+  },
+  {
+    "make": "Aston Martin",
+    "model": "Zagato Coupe",
+    "from": 2016,
+    "till": 2016
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "A2",
+    "from": 2000,
+    "till": 2006
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "A4 Allroad Quattro",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "A5",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "A6",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "from": 1994,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "Allroad",
+    "from": 2000,
+    "till": 2011
+  },
+  {
+    "make": "Audi",
+    "model": "Q2",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "Q8",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "R8",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "RS Q3",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "RS3",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "RS4",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "RS5",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "RS6",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "RS7",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "S3",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "S4",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "S5",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "S6",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "S7",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "S8",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "SQ2",
+    "from": 2019,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "SQ5",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "SQ7",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "TT",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Audi",
+    "model": "TT RS",
+    "from": 2008,
+    "till": 2014
+  },
+  {
+    "make": "Audi",
+    "model": "TTS",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Bentley",
+    "model": "Arnage",
+    "from": 1999,
+    "till": 2007
+  },
+  {
+    "make": "Bentley",
+    "model": "Azure",
+    "from": 1999,
+    "till": 2009
+  },
+  {
+    "make": "Bentley",
+    "model": "Bentayga",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Bentley",
+    "model": "Brooklands",
+    "from": 2008,
+    "till": 2011
+  },
+  {
+    "make": "Bentley",
+    "model": "Continental",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Bentley",
+    "model": "Flying Spur",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Bentley",
+    "model": "Mulsanne",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "1 series",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "2 series",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "3 series",
+    "from": 1981,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "4 series",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "5 series",
+    "from": 1988,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "6 series",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "7 series",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "8 series",
+    "from": 1990,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "i3",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "i8",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "M2",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "M3",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "M4",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "M5",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "M6",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "X1",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "X2",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "X3",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "X4",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "X5",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "X5 M",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "X6",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "X6 M",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "X7",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "Z3",
+    "from": 1996,
+    "till": 2003
+  },
+  {
+    "make": "BMW",
+    "model": "Z4",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "BMW",
+    "model": "Z8",
+    "from": 2000,
+    "till": 2006
+  },
+  {
+    "make": "Brilliance",
+    "model": "V5",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Buick",
+    "model": "Century",
+    "from": 1997,
+    "till": 2005
+  },
+  {
+    "make": "Buick",
+    "model": "Enclave",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Buick",
+    "model": "Envision",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Buick",
+    "model": "La Crosse",
+    "from": 2004,
+    "till": 2016
+  },
+  {
+    "make": "Buick",
+    "model": "Le Sabre",
+    "from": 1999,
+    "till": 2005
+  },
+  {
+    "make": "Buick",
+    "model": "Lucerne",
+    "from": 2005,
+    "till": 2011
+  },
+  {
+    "make": "Buick",
+    "model": "Park Avenue",
+    "from": 1996,
+    "till": 2012
+  },
+  {
+    "make": "Buick",
+    "model": "Rainier",
+    "from": 2003,
+    "till": 2007
+  },
+  {
+    "make": "Buick",
+    "model": "Regal",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Buick",
+    "model": "Rendezvouz",
+    "from": 2001,
+    "till": 2007
+  },
+  {
+    "make": "Buick",
+    "model": "Terraza",
+    "from": 2005,
+    "till": 2007
+  },
+  {
+    "make": "Buick",
+    "model": "Verano",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "BYD",
+    "model": "Qin",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Cadillac",
+    "model": "ATS",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Cadillac",
+    "model": "ATS-V",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Cadillac",
+    "model": "BLS",
+    "from": 2006,
+    "till": 2010
+  },
+  {
+    "make": "Cadillac",
+    "model": "CT6",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Cadillac",
+    "model": "CTS",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Cadillac",
+    "model": "De Ville",
+    "from": 2000,
+    "till": 2005
+  },
+  {
+    "make": "Cadillac",
+    "model": "DTS",
+    "from": 2006,
+    "till": 2011
+  },
+  {
+    "make": "Cadillac",
+    "model": "Eldorado",
+    "from": 1992,
+    "till": 2002
+  },
+  {
+    "make": "Cadillac",
+    "model": "ELR",
+    "from": 2013,
+    "till": 2016
+  },
+  {
+    "make": "Cadillac",
+    "model": "Escalade",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Cadillac",
+    "model": "Seville",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Cadillac",
+    "model": "SRX",
+    "from": 2004,
+    "till": 2016
+  },
+  {
+    "make": "Cadillac",
+    "model": "STS",
+    "from": 2004,
+    "till": 2012
+  },
+  {
+    "make": "Cadillac",
+    "model": "XLR",
+    "from": 2003,
+    "till": 2009
+  },
+  {
+    "make": "Cadillac",
+    "model": "XT4",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Cadillac",
+    "model": "XT5",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Cadillac",
+    "model": "XT6",
+    "from": 2019,
+    "till": "-"
+  },
+  {
+    "make": "Cadillac",
+    "model": "XTS",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Changan",
+    "model": "CS35",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Changan",
+    "model": "CS75",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Changan",
+    "model": "Eado",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Changan",
+    "model": "Raeton",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "Amulet",
+    "from": 2003,
+    "till": 2010
+  },
+  {
+    "make": "Chery",
+    "model": "Arrizo 7",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "Bonus",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "Bonus 3",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "CrossEastar",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "Eastar",
+    "from": 2003,
+    "till": 2015
+  },
+  {
+    "make": "Chery",
+    "model": "Fora",
+    "from": 2006,
+    "till": 2010
+  },
+  {
+    "make": "Chery",
+    "model": "IndiS",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "Kimo",
+    "from": 2008,
+    "till": 2014
+  },
+  {
+    "make": "Chery",
+    "model": "M11",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "QQ",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "QQ6",
+    "from": 2006,
+    "till": 2010
+  },
+  {
+    "make": "Chery",
+    "model": "Tiggo",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "Tiggo 3",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "Tiggo 4",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "Tiggo 5",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Chery",
+    "model": "Very",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Astro",
+    "from": 1995,
+    "till": 2005
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Avalanche",
+    "from": 2002,
+    "till": 2013
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Aveo",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Blazer",
+    "from": 1994,
+    "till": 2005
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Camaro",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Captiva",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Cavalier",
+    "from": 1995,
+    "till": 2005
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Cobalt",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Colorado",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Cruze",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Epica",
+    "from": 2006,
+    "till": 2012
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Equinox",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Express",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "HHR",
+    "from": 2006,
+    "till": 2011
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Impala",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Lacetti",
+    "from": 2002,
+    "till": 2012
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Lanos",
+    "from": 1997,
+    "till": 2012
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Monte Carlo",
+    "from": 2005,
+    "till": 2007
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Niva",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Orlando",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Rezzo",
+    "from": 2000,
+    "till": 2012
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Silverado",
+    "from": 1999,
+    "till": 2007
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Spark",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "SSR",
+    "from": 2003,
+    "till": 2006
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Suburban",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Tahoe",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "TrailBlazer",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Traverse",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Trax",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Uplander",
+    "from": 2005,
+    "till": 2009
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Venture",
+    "from": 1996,
+    "till": 2005
+  },
+  {
+    "make": "Chrysler",
+    "model": 200,
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Chrysler",
+    "model": 300,
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Chrysler",
+    "model": "300M",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Chrysler",
+    "model": "Aspen",
+    "from": 2006,
+    "till": 2009
+  },
+  {
+    "make": "Chrysler",
+    "model": "Concorde",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Chrysler",
+    "model": "Crossfire",
+    "from": 2003,
+    "till": 2007
+  },
+  {
+    "make": "Chrysler",
+    "model": "Grand Voyager",
+    "from": 2008,
+    "till": 2015
+  },
+  {
+    "make": "Chrysler",
+    "model": "Pacifica",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Chrysler",
+    "model": "PT Cruiser",
+    "from": 2000,
+    "till": 2010
+  },
+  {
+    "make": "Chrysler",
+    "model": "Sebring",
+    "from": 2000,
+    "till": 2010
+  },
+  {
+    "make": "Chrysler",
+    "model": "Town & Country",
+    "from": 2008,
+    "till": 2016
+  },
+  {
+    "make": "Chrysler",
+    "model": "Voyager",
+    "from": 1995,
+    "till": 2016
+  },
+  {
+    "make": "Citroen",
+    "model": "Berlingo",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C-Crosser",
+    "from": 2007,
+    "till": 2012
+  },
+  {
+    "make": "Citroen",
+    "model": "C-Elysee",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C1",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C2",
+    "from": 2003,
+    "till": 2009
+  },
+  {
+    "make": "Citroen",
+    "model": "C3",
+    "from": 2002,
+    "till": 2016
+  },
+  {
+    "make": "Citroen",
+    "model": "C3 Aircross",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C3 Picasso",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C3 Pluriel",
+    "from": 2003,
+    "till": 2010
+  },
+  {
+    "make": "Citroen",
+    "model": "C4",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C4 Aircross",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C4 Cactus",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C4 Picasso",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C5",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "C6",
+    "from": 2004,
+    "till": 2012
+  },
+  {
+    "make": "Citroen",
+    "model": "C8",
+    "from": 2002,
+    "till": 2014
+  },
+  {
+    "make": "Citroen",
+    "model": "DS 7 Crossback",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "DS3",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "DS4",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "DS5",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "Grand C4 Picasso",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "Jumpy",
+    "from": 2007,
+    "till": 2016
+  },
+  {
+    "make": "Citroen",
+    "model": "Nemo",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "Saxo",
+    "from": 1996,
+    "till": 2004
+  },
+  {
+    "make": "Citroen",
+    "model": "Spacetourer",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Citroen",
+    "model": "Xsara",
+    "from": 1997,
+    "till": 2006
+  },
+  {
+    "make": "Citroen",
+    "model": "Xsara Picasso",
+    "from": 1999,
+    "till": 2012
+  },
+  {
+    "make": "Daewoo",
+    "model": "Evanda",
+    "from": 2002,
+    "till": 2007
+  },
+  {
+    "make": "Daewoo",
+    "model": "Kalos",
+    "from": 2002,
+    "till": 2007
+  },
+  {
+    "make": "Daewoo",
+    "model": "Leganza",
+    "from": 1997,
+    "till": 2002
+  },
+  {
+    "make": "Daewoo",
+    "model": "Magnus",
+    "from": 2000,
+    "till": 2006
+  },
+  {
+    "make": "Daewoo",
+    "model": "Matiz",
+    "from": 2000,
+    "till": 2015
+  },
+  {
+    "make": "Daewoo",
+    "model": "Nexia",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Daewoo",
+    "model": "Nubira",
+    "from": 1997,
+    "till": 2008
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Applause",
+    "from": 1997,
+    "till": 2000
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Cast",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Copen",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Cuore",
+    "from": 2003,
+    "till": 2011
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Gran Move",
+    "from": 1996,
+    "till": 2002
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Luxio",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Materia",
+    "from": 2006,
+    "till": 2012
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Mebius",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Move",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Sirion",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Terios",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Daihatsu",
+    "model": "Trevis",
+    "from": 2006,
+    "till": 2011
+  },
+  {
+    "make": "Daihatsu",
+    "model": "YRV",
+    "from": 2000,
+    "till": 2005
+  },
+  {
+    "make": "Dodge",
+    "model": "Avenger",
+    "from": 1994,
+    "till": 2014
+  },
+  {
+    "make": "Dodge",
+    "model": "Caliber",
+    "from": 2006,
+    "till": 2012
+  },
+  {
+    "make": "Dodge",
+    "model": "Caliber SRT4",
+    "from": 2007,
+    "till": 2010
+  },
+  {
+    "make": "Dodge",
+    "model": "Caravan",
+    "from": 1995,
+    "till": 2016
+  },
+  {
+    "make": "Dodge",
+    "model": "Challenger",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Dodge",
+    "model": "Charger",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Dodge",
+    "model": "Dakota",
+    "from": 2005,
+    "till": 2011
+  },
+  {
+    "make": "Dodge",
+    "model": "Dart",
+    "from": 2012,
+    "till": 2017
+  },
+  {
+    "make": "Dodge",
+    "model": "Durango",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Dodge",
+    "model": "Intrepid",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Dodge",
+    "model": "Journey",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Dodge",
+    "model": "Magnum",
+    "from": 2004,
+    "till": 2008
+  },
+  {
+    "make": "Dodge",
+    "model": "Neon",
+    "from": 2000,
+    "till": 2005
+  },
+  {
+    "make": "Dodge",
+    "model": "Nitro",
+    "from": 2007,
+    "till": 2012
+  },
+  {
+    "make": "Dodge",
+    "model": "Ram 1500",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Dodge",
+    "model": "Ram 2500",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Dodge",
+    "model": "Ram SRT10",
+    "from": 2004,
+    "till": 2007
+  },
+  {
+    "make": "Dodge",
+    "model": "Stratus",
+    "from": 2001,
+    "till": 2006
+  },
+  {
+    "make": "Dodge",
+    "model": "Viper",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Dongfeng",
+    "model": 580,
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "A30",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "AX7",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "H30 Cross",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "FAW",
+    "model": "Besturn B50",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "FAW",
+    "model": "Besturn X80",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "FAW",
+    "model": "Oley",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "FAW",
+    "model": "Vita",
+    "from": 2006,
+    "till": 2012
+  },
+  {
+    "make": "Ferrari",
+    "model": 348,
+    "from": 1993,
+    "till": 1995
+  },
+  {
+    "make": "Ferrari",
+    "model": 360,
+    "from": 1999,
+    "till": 2005
+  },
+  {
+    "make": "Ferrari",
+    "model": 456,
+    "from": 1992,
+    "till": 2003
+  },
+  {
+    "make": "Ferrari",
+    "model": 458,
+    "from": 2009,
+    "till": 2015
+  },
+  {
+    "make": "Ferrari",
+    "model": 488,
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Ferrari",
+    "model": 512,
+    "from": 1991,
+    "till": 2004
+  },
+  {
+    "make": "Ferrari",
+    "model": 550,
+    "from": 1996,
+    "till": 2002
+  },
+  {
+    "make": "Ferrari",
+    "model": "575 M",
+    "from": 2002,
+    "till": 2006
+  },
+  {
+    "make": "Ferrari",
+    "model": "599 GTB Fiorano",
+    "from": 2006,
+    "till": 2012
+  },
+  {
+    "make": "Ferrari",
+    "model": "599 GTO",
+    "from": 2010,
+    "till": 2012
+  },
+  {
+    "make": "Ferrari",
+    "model": 612,
+    "from": 2004,
+    "till": 2011
+  },
+  {
+    "make": "Ferrari",
+    "model": 812,
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Ferrari",
+    "model": "California",
+    "from": 2008,
+    "till": 2014
+  },
+  {
+    "make": "Ferrari",
+    "model": "California T",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Ferrari",
+    "model": "Challenge Stradale",
+    "from": 2003,
+    "till": 2003
+  },
+  {
+    "make": "Ferrari",
+    "model": "Enzo",
+    "from": 2002,
+    "till": 2004
+  },
+  {
+    "make": "Ferrari",
+    "model": "F12",
+    "from": 2012,
+    "till": 2017
+  },
+  {
+    "make": "Ferrari",
+    "model": "F355",
+    "from": 1994,
+    "till": 1999
+  },
+  {
+    "make": "Ferrari",
+    "model": "F430",
+    "from": 2004,
+    "till": 2010
+  },
+  {
+    "make": "Ferrari",
+    "model": "F50",
+    "from": 1995,
+    "till": 1997
+  },
+  {
+    "make": "Ferrari",
+    "model": "F512 M",
+    "from": 1994,
+    "till": 1996
+  },
+  {
+    "make": "Ferrari",
+    "model": "FF",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Ferrari",
+    "model": "GTC4 Lusso",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Ferrari",
+    "model": "LaFerrari",
+    "from": 2013,
+    "till": 2015
+  },
+  {
+    "make": "Fiat",
+    "model": "124 Spider",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": 500,
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "500L",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "500X",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Albea",
+    "from": 2002,
+    "till": 2012
+  },
+  {
+    "make": "Fiat",
+    "model": "Brava",
+    "from": 1995,
+    "till": 2003
+  },
+  {
+    "make": "Fiat",
+    "model": "Bravo",
+    "from": 1995,
+    "till": 2016
+  },
+  {
+    "make": "Fiat",
+    "model": "Coupe",
+    "from": 1993,
+    "till": 2009
+  },
+  {
+    "make": "Fiat",
+    "model": "Croma",
+    "from": 2005,
+    "till": 2011
+  },
+  {
+    "make": "Fiat",
+    "model": "Doblo",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Ducato",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Freemont",
+    "from": 2011,
+    "till": 2016
+  },
+  {
+    "make": "Fiat",
+    "model": "Grande Punto",
+    "from": 2005,
+    "till": 2009
+  },
+  {
+    "make": "Fiat",
+    "model": "Idea",
+    "from": 2004,
+    "till": 2016
+  },
+  {
+    "make": "Fiat",
+    "model": "Linea",
+    "from": 2007,
+    "till": 2015
+  },
+  {
+    "make": "Fiat",
+    "model": "Marea",
+    "from": 1996,
+    "till": 2006
+  },
+  {
+    "make": "Fiat",
+    "model": "Multipla",
+    "from": 1998,
+    "till": 2010
+  },
+  {
+    "make": "Fiat",
+    "model": "Palio",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Panda",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Panda 4x4",
+    "from": 2003,
+    "till": 2012
+  },
+  {
+    "make": "Fiat",
+    "model": "Punto",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Qubo",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Sedici",
+    "from": 2005,
+    "till": 2014
+  },
+  {
+    "make": "Fiat",
+    "model": "Siena",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Stilo",
+    "from": 2001,
+    "till": 2010
+  },
+  {
+    "make": "Fiat",
+    "model": "Strada",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Tipo",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Fiat",
+    "model": "Ulysse",
+    "from": 2002,
+    "till": 2010
+  },
+  {
+    "make": "Ford",
+    "model": "B-Max",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "C-Max",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Cougar",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Ford",
+    "model": "Crown Victoria",
+    "from": 1999,
+    "till": 2011
+  },
+  {
+    "make": "Ford",
+    "model": "EcoSport",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Edge",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Escape",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Excursion",
+    "from": 1999,
+    "till": 2005
+  },
+  {
+    "make": "Ford",
+    "model": "Expedition",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Explorer",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "F-150",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "F-250 Super Duty",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Falcon",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Fiesta",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Five Hundred",
+    "from": 2005,
+    "till": 2007
+  },
+  {
+    "make": "Ford",
+    "model": "Flex",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Focus",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Freestar",
+    "from": 2003,
+    "till": 2009
+  },
+  {
+    "make": "Ford",
+    "model": "Freestyle",
+    "from": 2004,
+    "till": 2007
+  },
+  {
+    "make": "Ford",
+    "model": "Fusion",
+    "from": 2002,
+    "till": 2012
+  },
+  {
+    "make": "Ford",
+    "model": "Galaxy",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Ka",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Kuga",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Maverick",
+    "from": 1992,
+    "till": 2009
+  },
+  {
+    "make": "Ford",
+    "model": "Mondeo",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Mustang",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Mustang Shelby GT350",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Puma",
+    "from": 1997,
+    "till": 2004
+  },
+  {
+    "make": "Ford",
+    "model": "Ranger",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "S-Max",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Sport Trac",
+    "from": 2007,
+    "till": 2010
+  },
+  {
+    "make": "Ford",
+    "model": "Taurus",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Taurus X",
+    "from": 2007,
+    "till": 2009
+  },
+  {
+    "make": "Ford",
+    "model": "Thunderbird",
+    "from": 2000,
+    "till": 2006
+  },
+  {
+    "make": "Ford",
+    "model": "Tourneo Connect",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Transit",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Ford",
+    "model": "Transit Connect",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "GAZ",
+    "model": 3102,
+    "from": 1997,
+    "till": 2009
+  },
+  {
+    "make": "GAZ",
+    "model": 31105,
+    "from": 1997,
+    "till": 2009
+  },
+  {
+    "make": "GAZ",
+    "model": "Siber",
+    "from": 2008,
+    "till": 2010
+  },
+  {
+    "make": "GAZ",
+    "model": "Sobol",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Geely",
+    "model": "Atlas",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Geely",
+    "model": "Emgrand EC7",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Geely",
+    "model": "Emgrand X7",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Geely",
+    "model": "GC9",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Geely",
+    "model": "GС6",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Geely",
+    "model": "MK",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Geely",
+    "model": "Otaka",
+    "from": 2006,
+    "till": 2009
+  },
+  {
+    "make": "Geely",
+    "model": "Vision",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Genesis",
+    "model": "G70",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Genesis",
+    "model": "G80",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Genesis",
+    "model": "G90",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "GMC",
+    "model": "Acadia",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "GMC",
+    "model": "Canyon",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "GMC",
+    "model": "Envoy",
+    "from": 2001,
+    "till": 2009
+  },
+  {
+    "make": "GMC",
+    "model": "Sierra 1500",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "GMC",
+    "model": "Sierra 2500",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "GMC",
+    "model": "Terrain",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "GMC",
+    "model": "Yukon",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Great Wall",
+    "model": "Cowry",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Great Wall",
+    "model": "Deer",
+    "from": 2003,
+    "till": 2013
+  },
+  {
+    "make": "Great Wall",
+    "model": "GWPeri",
+    "from": 2007,
+    "till": 2015
+  },
+  {
+    "make": "Great Wall",
+    "model": "Hover",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Great Wall",
+    "model": "Hover M2",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Great Wall",
+    "model": "Pegasus",
+    "from": 2005,
+    "till": 2007
+  },
+  {
+    "make": "Great Wall",
+    "model": "Safe",
+    "from": 2002,
+    "till": 2010
+  },
+  {
+    "make": "Great Wall",
+    "model": "Sailor",
+    "from": 2004,
+    "till": 2012
+  },
+  {
+    "make": "Great Wall",
+    "model": "Sing",
+    "from": 2004,
+    "till": 2012
+  },
+  {
+    "make": "Great Wall",
+    "model": "Socool",
+    "from": 2004,
+    "till": 2012
+  },
+  {
+    "make": "Great Wall",
+    "model": "Wingle",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Holden",
+    "model": "Commodore",
+    "from": 2004,
+    "till": 2017
+  },
+  {
+    "make": "Honda",
+    "model": "Accord",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "Amaze",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "City",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "Civic",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "CR-V",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "CR-Z",
+    "from": 2010,
+    "till": 2016
+  },
+  {
+    "make": "Honda",
+    "model": "Crosstour",
+    "from": 2010,
+    "till": 2015
+  },
+  {
+    "make": "Honda",
+    "model": "Element",
+    "from": 2003,
+    "till": 2011
+  },
+  {
+    "make": "Honda",
+    "model": "Fit",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "FR-V",
+    "from": 2004,
+    "till": 2009
+  },
+  {
+    "make": "Honda",
+    "model": "HR-V",
+    "from": 1998,
+    "till": 2006
+  },
+  {
+    "make": "Honda",
+    "model": "HR-V II (GJ)",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "Insight",
+    "from": 1999,
+    "till": 2014
+  },
+  {
+    "make": "Honda",
+    "model": "Jade",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "Jazz",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "Legend",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "Odyssey",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "Pilot",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Honda",
+    "model": "Prelude",
+    "from": 1996,
+    "till": 2001
+  },
+  {
+    "make": "Honda",
+    "model": "Ridgeline",
+    "from": 2005,
+    "till": 2014
+  },
+  {
+    "make": "Honda",
+    "model": "S2000",
+    "from": 1999,
+    "till": 2009
+  },
+  {
+    "make": "Honda",
+    "model": "Shuttle",
+    "from": 1994,
+    "till": 2002
+  },
+  {
+    "make": "Honda",
+    "model": "Stream",
+    "from": 2001,
+    "till": 2015
+  },
+  {
+    "make": "Honda",
+    "model": "Vezel",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Hummer",
+    "model": "H2",
+    "from": 2003,
+    "till": 2010
+  },
+  {
+    "make": "Hummer",
+    "model": "H3",
+    "from": 2005,
+    "till": 2010
+  },
+  {
+    "make": "Hyundai",
+    "model": "Accent",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Atos Prime",
+    "from": 1999,
+    "till": 2014
+  },
+  {
+    "make": "Hyundai",
+    "model": "Azera",
+    "from": 2006,
+    "till": 2011
+  },
+  {
+    "make": "Hyundai",
+    "model": "Centennial",
+    "from": 1999,
+    "till": 2008
+  },
+  {
+    "make": "Hyundai",
+    "model": "Creta",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Elantra",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Entourage",
+    "from": 2007,
+    "till": 2007
+  },
+  {
+    "make": "Hyundai",
+    "model": "Eon",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Equus",
+    "from": 2009,
+    "till": 2016
+  },
+  {
+    "make": "Hyundai",
+    "model": "Galloper",
+    "from": 1998,
+    "till": 2003
+  },
+  {
+    "make": "Hyundai",
+    "model": "Genesis",
+    "from": 2008,
+    "till": 2016
+  },
+  {
+    "make": "Hyundai",
+    "model": "Genesis Coupe",
+    "from": 2008,
+    "till": 2016
+  },
+  {
+    "make": "Hyundai",
+    "model": "Getz",
+    "from": 2002,
+    "till": 2011
+  },
+  {
+    "make": "Hyundai",
+    "model": "Grandeur",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "H1",
+    "from": 1992,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "i10",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "i20",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "i30",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "i30 N",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "i40",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Ioniq",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "ix20",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "ix35",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Kona",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Matrix",
+    "from": 2001,
+    "till": 2014
+  },
+  {
+    "make": "Hyundai",
+    "model": "Palisade",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Porter",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Santa Fe",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Solaris",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Sonata",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Terracan",
+    "from": 2001,
+    "till": 2007
+  },
+  {
+    "make": "Hyundai",
+    "model": "Trajet",
+    "from": 2000,
+    "till": 2008
+  },
+  {
+    "make": "Hyundai",
+    "model": "Tucson",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Veloster",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "Veracruz",
+    "from": 2007,
+    "till": 2015
+  },
+  {
+    "make": "Hyundai",
+    "model": "Verna",
+    "from": 2005,
+    "till": 2011
+  },
+  {
+    "make": "Hyundai",
+    "model": "Xcent",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Hyundai",
+    "model": "XG",
+    "from": 1998,
+    "till": 2005
+  },
+  {
+    "make": "Infiniti",
+    "model": "EX",
+    "from": 2008,
+    "till": 2014
+  },
+  {
+    "make": "Infiniti",
+    "model": "FX",
+    "from": 2003,
+    "till": 2013
+  },
+  {
+    "make": "Infiniti",
+    "model": "G",
+    "from": 2003,
+    "till": 2014
+  },
+  {
+    "make": "Infiniti",
+    "model": "I35",
+    "from": 2002,
+    "till": 2004
+  },
+  {
+    "make": "Infiniti",
+    "model": "JX",
+    "from": 2012,
+    "till": 2013
+  },
+  {
+    "make": "Infiniti",
+    "model": "M",
+    "from": 2001,
+    "till": 2013
+  },
+  {
+    "make": "Infiniti",
+    "model": "Q30",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Infiniti",
+    "model": "Q40",
+    "from": 2014,
+    "till": 2015
+  },
+  {
+    "make": "Infiniti",
+    "model": "Q45",
+    "from": 2002,
+    "till": 2007
+  },
+  {
+    "make": "Infiniti",
+    "model": "Q50",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Infiniti",
+    "model": "Q60",
+    "from": 2013,
+    "till": 2016
+  },
+  {
+    "make": "Infiniti",
+    "model": "Q70",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Infiniti",
+    "model": "QX30",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Infiniti",
+    "model": "QX4",
+    "from": 1997,
+    "till": 2003
+  },
+  {
+    "make": "Infiniti",
+    "model": "QX50",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Infiniti",
+    "model": "QX56",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Infiniti",
+    "model": "QX60",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Infiniti",
+    "model": "QX70",
+    "from": 2013,
+    "till": 2016
+  },
+  {
+    "make": "Infiniti",
+    "model": "QX80",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Isuzu",
+    "model": "Ascender",
+    "from": 2002,
+    "till": 2008
+  },
+  {
+    "make": "Isuzu",
+    "model": "Axiom",
+    "from": 2002,
+    "till": 2004
+  },
+  {
+    "make": "Isuzu",
+    "model": "D-Max",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Isuzu",
+    "model": "D-Max Rodeo",
+    "from": 2007,
+    "till": 2007
+  },
+  {
+    "make": "Isuzu",
+    "model": "I280",
+    "from": 2005,
+    "till": 2006
+  },
+  {
+    "make": "Isuzu",
+    "model": "I290",
+    "from": 2007,
+    "till": 2007
+  },
+  {
+    "make": "Isuzu",
+    "model": "I350",
+    "from": 2005,
+    "till": 2006
+  },
+  {
+    "make": "Isuzu",
+    "model": "I370",
+    "from": 2007,
+    "till": 2007
+  },
+  {
+    "make": "Isuzu",
+    "model": "Rodeo",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Isuzu",
+    "model": "Trooper",
+    "from": 1992,
+    "till": 2002
+  },
+  {
+    "make": "Isuzu",
+    "model": "VehiCross",
+    "from": 1997,
+    "till": 2001
+  },
+  {
+    "make": "Iveco",
+    "model": "Daily",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Jaguar",
+    "model": "E-Pace",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Jaguar",
+    "model": "F-Pace",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Jaguar",
+    "model": "F-Type",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Jaguar",
+    "model": "I-Pace",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Jaguar",
+    "model": "S-Type",
+    "from": 1998,
+    "till": 2008
+  },
+  {
+    "make": "Jaguar",
+    "model": "X-Type",
+    "from": 2001,
+    "till": 2009
+  },
+  {
+    "make": "Jaguar",
+    "model": "XE",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XF",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XJ",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XK/XKR",
+    "from": 2002,
+    "till": 2014
+  },
+  {
+    "make": "Jeep",
+    "model": "Cherokee",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Jeep",
+    "model": "Commander",
+    "from": 2006,
+    "till": 2010
+  },
+  {
+    "make": "Jeep",
+    "model": "Compass",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Jeep",
+    "model": "Gladiator",
+    "from": 2019,
+    "till": "-"
+  },
+  {
+    "make": "Jeep",
+    "model": "Grand Cherokee",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Jeep",
+    "model": "Liberty",
+    "from": 2006,
+    "till": 2013
+  },
+  {
+    "make": "Jeep",
+    "model": "Patriot",
+    "from": 2006,
+    "till": 2016
+  },
+  {
+    "make": "Jeep",
+    "model": "Renegade",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Jeep",
+    "model": "Wrangler",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Carens",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Carnival",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Ceed",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Cerato",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Clarus",
+    "from": 1998,
+    "till": 2001
+  },
+  {
+    "make": "Kia",
+    "model": "Forte",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Magentis",
+    "from": 2001,
+    "till": 2010
+  },
+  {
+    "make": "Kia",
+    "model": "Mohave",
+    "from": 2008,
+    "till": 2011
+  },
+  {
+    "make": "Kia",
+    "model": "Niro",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Opirus",
+    "from": 2003,
+    "till": 2010
+  },
+  {
+    "make": "Kia",
+    "model": "Optima",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Picanto",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "ProCeed",
+    "from": 2019,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Quoris",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Ray",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Rio",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Rio X-Line",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Shuma",
+    "from": 1997,
+    "till": 2005
+  },
+  {
+    "make": "Kia",
+    "model": "Sorento",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Sorento Prime",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Soul",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Spectra",
+    "from": 2005,
+    "till": 2009
+  },
+  {
+    "make": "Kia",
+    "model": "Sportage",
+    "from": 1993,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Stinger",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Stonic",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Telluride",
+    "from": 2019,
+    "till": "-"
+  },
+  {
+    "make": "Kia",
+    "model": "Venga",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Lamborghini",
+    "model": "Aventador",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Lamborghini",
+    "model": "Centenario",
+    "from": 2016,
+    "till": 2017
+  },
+  {
+    "make": "Lamborghini",
+    "model": "Diablo",
+    "from": 1991,
+    "till": 2001
+  },
+  {
+    "make": "Lamborghini",
+    "model": "Gallardo",
+    "from": 2003,
+    "till": 2014
+  },
+  {
+    "make": "Lamborghini",
+    "model": "Huracan",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Lamborghini",
+    "model": "Murcielago",
+    "from": 2003,
+    "till": 2010
+  },
+  {
+    "make": "Lamborghini",
+    "model": "Reventon",
+    "from": 2008,
+    "till": 2008
+  },
+  {
+    "make": "Lamborghini",
+    "model": "Urus",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Lancia",
+    "model": "Delta",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Lancia",
+    "model": "Lybra",
+    "from": 1999,
+    "till": 2007
+  },
+  {
+    "make": "Lancia",
+    "model": "Musa",
+    "from": 2004,
+    "till": 2012
+  },
+  {
+    "make": "Lancia",
+    "model": "Phedra",
+    "from": 2002,
+    "till": 2010
+  },
+  {
+    "make": "Lancia",
+    "model": "Thema",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Lancia",
+    "model": "Thesis",
+    "from": 2001,
+    "till": 2009
+  },
+  {
+    "make": "Lancia",
+    "model": "Ypsilon",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Land Rover",
+    "model": "Defender",
+    "from": 2007,
+    "till": 2016
+  },
+  {
+    "make": "Land Rover",
+    "model": "Discovery",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Land Rover",
+    "model": "Discovery Sport",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Land Rover",
+    "model": "Evoque",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Land Rover",
+    "model": "Freelander",
+    "from": 1998,
+    "till": 2014
+  },
+  {
+    "make": "Land Rover",
+    "model": "Range Rover",
+    "from": 1994,
+    "till": "-"
+  },
+  {
+    "make": "Land Rover",
+    "model": "Range Rover Sport",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Land Rover",
+    "model": "Range Rover Velar",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "CT",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "ES",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "GS",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "GX",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "HS",
+    "from": 2009,
+    "till": 2014
+  },
+  {
+    "make": "Lexus",
+    "model": "IS",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "LFA",
+    "from": 2010,
+    "till": 2012
+  },
+  {
+    "make": "Lexus",
+    "model": "LS",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "LX",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "NX",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "RC",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "RX",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Lexus",
+    "model": "SC",
+    "from": 1999,
+    "till": 2010
+  },
+  {
+    "make": "Lexus",
+    "model": "UX",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Lifan",
+    "model": "Breez",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Lifan",
+    "model": "Cebrium",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Lifan",
+    "model": "Celliya",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Lifan",
+    "model": "Smily",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Lifan",
+    "model": "Solano",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Lifan",
+    "model": "X50",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Lifan",
+    "model": "X60",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Lincoln",
+    "model": "Aviator",
+    "from": 2003,
+    "till": 2005
+  },
+  {
+    "make": "Lincoln",
+    "model": "Mark LT",
+    "from": 2006,
+    "till": 2007
+  },
+  {
+    "make": "Lincoln",
+    "model": "MKC",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Lincoln",
+    "model": "MKS",
+    "from": 2008,
+    "till": 2016
+  },
+  {
+    "make": "Lincoln",
+    "model": "MKT",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Lincoln",
+    "model": "MKX",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Lincoln",
+    "model": "MKZ",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Lincoln",
+    "model": "Navigator",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Lincoln",
+    "model": "Town Car",
+    "from": 1998,
+    "till": 2011
+  },
+  {
+    "make": "Lincoln",
+    "model": "Zephyr",
+    "from": 2006,
+    "till": 2006
+  },
+  {
+    "make": "Lotus",
+    "model": "Elise",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Lotus",
+    "model": "Europa S",
+    "from": 2005,
+    "till": 2010
+  },
+  {
+    "make": "Lotus",
+    "model": "Evora",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Lotus",
+    "model": "Exige",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Marussia",
+    "model": "B1",
+    "from": 2008,
+    "till": 2014
+  },
+  {
+    "make": "Marussia",
+    "model": "B2",
+    "from": 2010,
+    "till": 2014
+  },
+  {
+    "make": "Maserati",
+    "model": "3200 GT",
+    "from": 1998,
+    "till": 2002
+  },
+  {
+    "make": "Maserati",
+    "model": "Ghibli",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Maserati",
+    "model": "Gran Cabrio",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Maserati",
+    "model": "Gran Turismo",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Maserati",
+    "model": "Gran Turismo S",
+    "from": 2008,
+    "till": 2012
+  },
+  {
+    "make": "Maserati",
+    "model": "Levante",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Maserati",
+    "model": "Quattroporte",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Maserati",
+    "model": "Quattroporte S",
+    "from": 2007,
+    "till": 2012
+  },
+  {
+    "make": "Maybach",
+    "model": 57,
+    "from": 2002,
+    "till": 2012
+  },
+  {
+    "make": "Maybach",
+    "model": "57 S",
+    "from": 2007,
+    "till": 2012
+  },
+  {
+    "make": "Maybach",
+    "model": 62,
+    "from": 2002,
+    "till": 2012
+  },
+  {
+    "make": "Maybach",
+    "model": "62 S",
+    "from": 2007,
+    "till": 2012
+  },
+  {
+    "make": "Maybach",
+    "model": "Landaulet",
+    "from": 2003,
+    "till": 2012
+  },
+  {
+    "make": "Mazda",
+    "model": 2,
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Mazda",
+    "model": 3,
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Mazda",
+    "model": 323,
+    "from": 1998,
+    "till": 2003
+  },
+  {
+    "make": "Mazda",
+    "model": 5,
+    "from": 2005,
+    "till": 2015
+  },
+  {
+    "make": "Mazda",
+    "model": 6,
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Mazda",
+    "model": 626,
+    "from": 1997,
+    "till": 2001
+  },
+  {
+    "make": "Mazda",
+    "model": "B-Series",
+    "from": 1999,
+    "till": 2006
+  },
+  {
+    "make": "Mazda",
+    "model": "BT-50",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Mazda",
+    "model": "CX-3",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Mazda",
+    "model": "CX-5",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Mazda",
+    "model": "CX-7",
+    "from": 2006,
+    "till": 2012
+  },
+  {
+    "make": "Mazda",
+    "model": "CX-9",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Mazda",
+    "model": "MPV",
+    "from": 1999,
+    "till": 2016
+  },
+  {
+    "make": "Mazda",
+    "model": "MX-5",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Mazda",
+    "model": "Premacy",
+    "from": 1999,
+    "till": 2006
+  },
+  {
+    "make": "Mazda",
+    "model": "RX-7",
+    "from": 1992,
+    "till": 2002
+  },
+  {
+    "make": "Mazda",
+    "model": "RX-8",
+    "from": 2003,
+    "till": 2012
+  },
+  {
+    "make": "Mazda",
+    "model": "Tribute",
+    "from": 2000,
+    "till": 2007
+  },
+  {
+    "make": "McLaren",
+    "model": "540C",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "McLaren",
+    "model": "570S",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "McLaren",
+    "model": "650S",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "McLaren",
+    "model": "675LT",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "McLaren",
+    "model": "MP4-12C",
+    "from": 2011,
+    "till": 2014
+  },
+  {
+    "make": "McLaren",
+    "model": "P1",
+    "from": 2013,
+    "till": 2015
+  },
+  {
+    "make": "Mercedes",
+    "model": "A-class",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "A-Class AMG",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "AMG GT",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "AMG GT 4-Door",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "B-class",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "C-class",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "C-class Sport Coupe",
+    "from": 2001,
+    "till": 2007
+  },
+  {
+    "make": "Mercedes",
+    "model": "CL-class",
+    "from": 1992,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "CLA-class",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "CLC-class",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "CLK-class",
+    "from": 1997,
+    "till": 2009
+  },
+  {
+    "make": "Mercedes",
+    "model": "CLS-class",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "E-class",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "G-class",
+    "from": 1996,
+    "till": 2007
+  },
+  {
+    "make": "Mercedes",
+    "model": "GL-class",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "GLA-class",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "GLC-class",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "GLE-class",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "GLE-class AMG",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "GLE-class Coupe",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "GLK-class",
+    "from": 2008,
+    "till": 2015
+  },
+  {
+    "make": "Mercedes",
+    "model": "M-class",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "R-class",
+    "from": 2005,
+    "till": 2012
+  },
+  {
+    "make": "Mercedes",
+    "model": "S-class",
+    "from": 1990,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "SL-class",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "SLK-class",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "SLR-class",
+    "from": 2003,
+    "till": 2010
+  },
+  {
+    "make": "Mercedes",
+    "model": "SLS AMG",
+    "from": 2010,
+    "till": 2014
+  },
+  {
+    "make": "Mercedes",
+    "model": "Sprinter",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "Vaneo",
+    "from": 2001,
+    "till": 2006
+  },
+  {
+    "make": "Mercedes",
+    "model": "Viano",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Mercedes",
+    "model": "Vito",
+    "from": 1999,
+    "till": 2003
+  },
+  {
+    "make": "Mercedes",
+    "model": "X-Class",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Mercury",
+    "model": "Grand Marquis",
+    "from": 2003,
+    "till": 2011
+  },
+  {
+    "make": "Mercury",
+    "model": "Mariner",
+    "from": 2005,
+    "till": 2007
+  },
+  {
+    "make": "Mercury",
+    "model": "Milan",
+    "from": 2006,
+    "till": 2011
+  },
+  {
+    "make": "Mercury",
+    "model": "Montego",
+    "from": 2004,
+    "till": 2007
+  },
+  {
+    "make": "Mercury",
+    "model": "Monterey",
+    "from": 1991,
+    "till": 2007
+  },
+  {
+    "make": "Mercury",
+    "model": "Mountaineer",
+    "from": 2003,
+    "till": 2010
+  },
+  {
+    "make": "Mercury",
+    "model": "Sable",
+    "from": 1995,
+    "till": 2005
+  },
+  {
+    "make": "MG",
+    "model": "TF",
+    "from": 2002,
+    "till": 2011
+  },
+  {
+    "make": "MG",
+    "model": "XPower SV",
+    "from": 2003,
+    "till": 2008
+  },
+  {
+    "make": "MG",
+    "model": "ZR",
+    "from": 2001,
+    "till": 2005
+  },
+  {
+    "make": "MG",
+    "model": "ZS",
+    "from": 2001,
+    "till": 2005
+  },
+  {
+    "make": "MG",
+    "model": "ZT",
+    "from": 2001,
+    "till": 2005
+  },
+  {
+    "make": "MG",
+    "model": "ZT-T",
+    "from": 2001,
+    "till": 2005
+  },
+  {
+    "make": "Mini",
+    "model": "Clubman",
+    "from": 2007,
+    "till": 2014
+  },
+  {
+    "make": "Mini",
+    "model": "Clubman S",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Mini",
+    "model": "Cooper",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Mini",
+    "model": "Cooper Cabrio",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Mini",
+    "model": "Cooper Countryman",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Mini",
+    "model": "Cooper S",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Mini",
+    "model": "Cooper S Cabrio",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Mini",
+    "model": "Cooper S Countryman All4",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Mini",
+    "model": "One",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "3000 GT",
+    "from": 1992,
+    "till": 2001
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "ASX",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Carisma",
+    "from": 1995,
+    "till": 2004
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Colt",
+    "from": 1995,
+    "till": 2012
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Dignity",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Eclipse",
+    "from": 1995,
+    "till": 2007
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Eclipse Cross",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Endeavor",
+    "from": 2004,
+    "till": 2011
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Galant",
+    "from": 1996,
+    "till": 2012
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Grandis",
+    "from": 2003,
+    "till": 2011
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "i-MiEV",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "L200",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Lancer",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Lancer Evo",
+    "from": 2001,
+    "till": 2016
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Mirage",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Outlander",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Outlander XL",
+    "from": 2006,
+    "till": 2012
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Pajero",
+    "from": 1990,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Pajero Pinin",
+    "from": 1999,
+    "till": 2007
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Pajero Sport",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Raider",
+    "from": 2006,
+    "till": 2007
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Space Gear",
+    "from": 1995,
+    "till": 2007
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Space Runner",
+    "from": 1999,
+    "till": 2004
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "Space Star",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Nissan",
+    "model": "350Z",
+    "from": 2002,
+    "till": 2009
+  },
+  {
+    "make": "Nissan",
+    "model": "370Z",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Almera",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Almera Classic",
+    "from": 2005,
+    "till": 2012
+  },
+  {
+    "make": "Nissan",
+    "model": "Almera Tino",
+    "from": 2000,
+    "till": 2005
+  },
+  {
+    "make": "Nissan",
+    "model": "Altima",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Armada",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Bluebird Sylphy",
+    "from": 2000,
+    "till": 2012
+  },
+  {
+    "make": "Nissan",
+    "model": "GT-R",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Juke",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Leaf",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Maxima",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Micra",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Murano",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Navara",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Note",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "NP300",
+    "from": 2008,
+    "till": 2013
+  },
+  {
+    "make": "Nissan",
+    "model": "Pathfinder",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Patrol",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Primera",
+    "from": 1996,
+    "till": 2008
+  },
+  {
+    "make": "Nissan",
+    "model": "Qashqai",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Qashqai+2",
+    "from": 2008,
+    "till": 2013
+  },
+  {
+    "make": "Nissan",
+    "model": "Quest",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Rogue",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Sentra",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Skyline",
+    "from": 2001,
+    "till": 2005
+  },
+  {
+    "make": "Nissan",
+    "model": "Sylphy",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Teana",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Terrano",
+    "from": 1993,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Tiida",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "Titan",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "X-Trail",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Nissan",
+    "model": "XTerra",
+    "from": 2001,
+    "till": 2015
+  },
+  {
+    "make": "Nissan",
+    "model": "Z",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Adam",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Agila",
+    "from": 2000,
+    "till": 2014
+  },
+  {
+    "make": "Opel",
+    "model": "Antara",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Astra",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Astra GTS",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Cascada",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Combo",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Corsa",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Crossland X",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Frontera",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Opel",
+    "model": "Grandland X",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Insignia",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Insignia OPC",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Karl",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Meriva",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Mokka",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Omega",
+    "from": 1994,
+    "till": 2004
+  },
+  {
+    "make": "Opel",
+    "model": "Signum",
+    "from": 2003,
+    "till": 2008
+  },
+  {
+    "make": "Opel",
+    "model": "Speedster",
+    "from": 2000,
+    "till": 2007
+  },
+  {
+    "make": "Opel",
+    "model": "Tigra",
+    "from": 1994,
+    "till": 2009
+  },
+  {
+    "make": "Opel",
+    "model": "Vectra",
+    "from": 1995,
+    "till": 2008
+  },
+  {
+    "make": "Opel",
+    "model": "Vivaro",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Opel",
+    "model": "Zafira",
+    "from": 1999,
+    "till": 2014
+  },
+  {
+    "make": "Opel",
+    "model": "Zafira Tourer",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 1007,
+    "from": 2004,
+    "till": 2009
+  },
+  {
+    "make": "Peugeot",
+    "model": 107,
+    "from": 2005,
+    "till": 2014
+  },
+  {
+    "make": "Peugeot",
+    "model": 108,
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 2008,
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 206,
+    "from": 1998,
+    "till": 2012
+  },
+  {
+    "make": "Peugeot",
+    "model": 207,
+    "from": 2006,
+    "till": 2014
+  },
+  {
+    "make": "Peugeot",
+    "model": 208,
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 3008,
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 301,
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 307,
+    "from": 2000,
+    "till": 2011
+  },
+  {
+    "make": "Peugeot",
+    "model": 308,
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 4007,
+    "from": 2007,
+    "till": 2012
+  },
+  {
+    "make": "Peugeot",
+    "model": 4008,
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 406,
+    "from": 1995,
+    "till": 2004
+  },
+  {
+    "make": "Peugeot",
+    "model": 407,
+    "from": 2004,
+    "till": 2010
+  },
+  {
+    "make": "Peugeot",
+    "model": 408,
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 5008,
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 508,
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": 607,
+    "from": 2000,
+    "till": 2010
+  },
+  {
+    "make": "Peugeot",
+    "model": 807,
+    "from": 2002,
+    "till": 2014
+  },
+  {
+    "make": "Peugeot",
+    "model": "Boxer",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": "Partner",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Peugeot",
+    "model": "RCZ Sport",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Pontiac",
+    "model": "Aztec",
+    "from": 2001,
+    "till": 2005
+  },
+  {
+    "make": "Pontiac",
+    "model": "Bonneville",
+    "from": 1999,
+    "till": 2005
+  },
+  {
+    "make": "Pontiac",
+    "model": "Firebird",
+    "from": 1993,
+    "till": 2002
+  },
+  {
+    "make": "Pontiac",
+    "model": "G5 Pursuit",
+    "from": 2004,
+    "till": 2010
+  },
+  {
+    "make": "Pontiac",
+    "model": "G6",
+    "from": 2004,
+    "till": 2010
+  },
+  {
+    "make": "Pontiac",
+    "model": "G8",
+    "from": 2008,
+    "till": 2009
+  },
+  {
+    "make": "Pontiac",
+    "model": "Grand AM",
+    "from": 1998,
+    "till": 2005
+  },
+  {
+    "make": "Pontiac",
+    "model": "Grand Prix",
+    "from": 1996,
+    "till": 2008
+  },
+  {
+    "make": "Pontiac",
+    "model": "GTO",
+    "from": 2004,
+    "till": 2006
+  },
+  {
+    "make": "Pontiac",
+    "model": "Montana",
+    "from": 1997,
+    "till": 2009
+  },
+  {
+    "make": "Pontiac",
+    "model": "Solstice",
+    "from": 2005,
+    "till": 2010
+  },
+  {
+    "make": "Pontiac",
+    "model": "Sunfire",
+    "from": 1995,
+    "till": 2005
+  },
+  {
+    "make": "Pontiac",
+    "model": "Torrent",
+    "from": 2005,
+    "till": 2009
+  },
+  {
+    "make": "Pontiac",
+    "model": "Vibe",
+    "from": 2002,
+    "till": 2009
+  },
+  {
+    "make": "Porsche",
+    "model": "718 Boxster",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Porsche",
+    "model": "718 Cayman",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Porsche",
+    "model": 911,
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Porsche",
+    "model": "Boxster",
+    "from": 1996,
+    "till": 2016
+  },
+  {
+    "make": "Porsche",
+    "model": "Cayenne",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Porsche",
+    "model": "Cayman",
+    "from": 2005,
+    "till": 2016
+  },
+  {
+    "make": "Porsche",
+    "model": "Macan",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Porsche",
+    "model": "Panamera",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Ravon",
+    "model": "Gentra",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Avantime",
+    "from": 2001,
+    "till": 2004
+  },
+  {
+    "make": "Renault",
+    "model": "Captur",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Clio",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Duster",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Duster Oroch",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Espace",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Fluence",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Kadjar",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Kangoo",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Kaptur",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Koleos",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Laguna",
+    "from": 1993,
+    "till": 2015
+  },
+  {
+    "make": "Renault",
+    "model": "Latitude",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Logan",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Master",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Megane",
+    "from": 1996,
+    "till": 2016
+  },
+  {
+    "make": "Renault",
+    "model": "Modus",
+    "from": 2004,
+    "till": 2012
+  },
+  {
+    "make": "Renault",
+    "model": "Sandero",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Sandero Stepway",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Scenic",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Symbol",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Talisman",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Trafic",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Twingo",
+    "from": 1993,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Twizy",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Renault",
+    "model": "Vel Satis",
+    "from": 2002,
+    "till": 2009
+  },
+  {
+    "make": "Renault",
+    "model": "Wind",
+    "from": 2010,
+    "till": 2013
+  },
+  {
+    "make": "Renault",
+    "model": "Zoe",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "Cullinan",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "Dawn",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "Ghost",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "Phantom",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "Wraith",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Rover",
+    "model": 25,
+    "from": 1999,
+    "till": 2008
+  },
+  {
+    "make": "Rover",
+    "model": 400,
+    "from": 1996,
+    "till": 2000
+  },
+  {
+    "make": "Rover",
+    "model": 45,
+    "from": 2000,
+    "till": 2008
+  },
+  {
+    "make": "Rover",
+    "model": 600,
+    "from": 1999,
+    "till": 2004
+  },
+  {
+    "make": "Rover",
+    "model": 75,
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Rover",
+    "model": "Streetwise",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Saab",
+    "model": "9-2x",
+    "from": 2004,
+    "till": 2007
+  },
+  {
+    "make": "Saab",
+    "model": "9-3",
+    "from": 2003,
+    "till": 2014
+  },
+  {
+    "make": "Saab",
+    "model": "9-4x",
+    "from": 2011,
+    "till": 2012
+  },
+  {
+    "make": "Saab",
+    "model": "9-5",
+    "from": 1997,
+    "till": 2012
+  },
+  {
+    "make": "Saab",
+    "model": "9-7x",
+    "from": 2005,
+    "till": 2009
+  },
+  {
+    "make": "Saturn",
+    "model": "Aura",
+    "from": 2007,
+    "till": 2007
+  },
+  {
+    "make": "Saturn",
+    "model": "Ion",
+    "from": 2003,
+    "till": 2007
+  },
+  {
+    "make": "Saturn",
+    "model": "LW",
+    "from": 1998,
+    "till": 2004
+  },
+  {
+    "make": "Saturn",
+    "model": "Outlook",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Saturn",
+    "model": "Sky",
+    "from": 2007,
+    "till": 2007
+  },
+  {
+    "make": "Saturn",
+    "model": "Vue",
+    "from": 2002,
+    "till": 2007
+  },
+  {
+    "make": "Scion",
+    "model": "FR-S",
+    "from": 2013,
+    "till": 2016
+  },
+  {
+    "make": "Scion",
+    "model": "tC",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Scion",
+    "model": "xA",
+    "from": 2003,
+    "till": 2007
+  },
+  {
+    "make": "Scion",
+    "model": "xB",
+    "from": 2003,
+    "till": 2015
+  },
+  {
+    "make": "Scion",
+    "model": "xD",
+    "from": 2007,
+    "till": 2014
+  },
+  {
+    "make": "Seat",
+    "model": "Alhambra",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Seat",
+    "model": "Altea",
+    "from": 2004,
+    "till": 2015
+  },
+  {
+    "make": "Seat",
+    "model": "Altea Freetrack",
+    "from": 2007,
+    "till": 2015
+  },
+  {
+    "make": "Seat",
+    "model": "Altea XL",
+    "from": 2007,
+    "till": 2015
+  },
+  {
+    "make": "Seat",
+    "model": "Arosa",
+    "from": 1997,
+    "till": 2006
+  },
+  {
+    "make": "Seat",
+    "model": "Ateca",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Seat",
+    "model": "Cordoba",
+    "from": 1999,
+    "till": 2009
+  },
+  {
+    "make": "Seat",
+    "model": "Exeo",
+    "from": 2008,
+    "till": 2013
+  },
+  {
+    "make": "Seat",
+    "model": "Ibiza",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Seat",
+    "model": "Leon",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Seat",
+    "model": "Mii",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Seat",
+    "model": "Toledo",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Skoda",
+    "model": "Citigo",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Skoda",
+    "model": "Fabia",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Skoda",
+    "model": "Felicia",
+    "from": 1995,
+    "till": 2000
+  },
+  {
+    "make": "Skoda",
+    "model": "Karoq",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Skoda",
+    "model": "Kodiaq",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Skoda",
+    "model": "Octavia",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Skoda",
+    "model": "Octavia Scout",
+    "from": 2007,
+    "till": 2013
+  },
+  {
+    "make": "Skoda",
+    "model": "Octavia Tour",
+    "from": 2006,
+    "till": 2013
+  },
+  {
+    "make": "Skoda",
+    "model": "Praktik",
+    "from": 2007,
+    "till": 2015
+  },
+  {
+    "make": "Skoda",
+    "model": "Rapid",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Skoda",
+    "model": "Rapid Spaceback (NH1)",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Skoda",
+    "model": "Roomster",
+    "from": 2006,
+    "till": 2015
+  },
+  {
+    "make": "Skoda",
+    "model": "Superb",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Skoda",
+    "model": "Yeti",
+    "from": 2010,
+    "till": "-"
+  },
+  {
+    "make": "Smart",
+    "model": "Forfour",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Smart",
+    "model": "Fortwo",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Smart",
+    "model": "Roadster",
+    "from": 2003,
+    "till": 2012
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Actyon",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Actyon Sports",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Chairman",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Korando",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Kyron",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Musso",
+    "from": 1993,
+    "till": 2007
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Musso Sport",
+    "from": 2004,
+    "till": 2007
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Rexton",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Rodius",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Stavic",
+    "from": 2013,
+    "till": "-"
+  },
+  {
+    "make": "Ssang Yong",
+    "model": "Tivoli",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Subaru",
+    "model": "Ascent",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "Subaru",
+    "model": "Baja",
+    "from": 2002,
+    "till": 2007
+  },
+  {
+    "make": "Subaru",
+    "model": "Exiga",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Subaru",
+    "model": "Forester",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Subaru",
+    "model": "Impreza",
+    "from": 1992,
+    "till": "-"
+  },
+  {
+    "make": "Subaru",
+    "model": "Justy",
+    "from": 1995,
+    "till": 2006
+  },
+  {
+    "make": "Subaru",
+    "model": "Legacy",
+    "from": 1994,
+    "till": "-"
+  },
+  {
+    "make": "Subaru",
+    "model": "Levorg",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Subaru",
+    "model": "Outback",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Subaru",
+    "model": "Traviq",
+    "from": 2001,
+    "till": 2006
+  },
+  {
+    "make": "Subaru",
+    "model": "Tribeca",
+    "from": 2005,
+    "till": 2014
+  },
+  {
+    "make": "Subaru",
+    "model": "WRX",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Subaru",
+    "model": "XV",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Suzuki",
+    "model": "Alto",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Suzuki",
+    "model": "Baleno",
+    "from": 1995,
+    "till": 2003
+  },
+  {
+    "make": "Suzuki",
+    "model": "Celerio",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Suzuki",
+    "model": "Ciaz",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Suzuki",
+    "model": "Grand Vitara",
+    "from": 1998,
+    "till": 2014
+  },
+  {
+    "make": "Suzuki",
+    "model": "Grand Vitara XL7",
+    "from": 1998,
+    "till": 2014
+  },
+  {
+    "make": "Suzuki",
+    "model": "Ignis",
+    "from": 2000,
+    "till": 2008
+  },
+  {
+    "make": "Suzuki",
+    "model": "Jimny",
+    "from": 1998,
+    "till": "-"
+  },
+  {
+    "make": "Suzuki",
+    "model": "Kizashi",
+    "from": 2009,
+    "till": 2015
+  },
+  {
+    "make": "Suzuki",
+    "model": "Liana",
+    "from": 2002,
+    "till": 2007
+  },
+  {
+    "make": "Suzuki",
+    "model": "Splash",
+    "from": 2008,
+    "till": 2016
+  },
+  {
+    "make": "Suzuki",
+    "model": "Swift",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Suzuki",
+    "model": "SX4",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Suzuki",
+    "model": "Vitara",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Suzuki",
+    "model": "Wagon R",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Suzuki",
+    "model": "Wagon R+",
+    "from": 2000,
+    "till": 2006
+  },
+  {
+    "make": "Tesla",
+    "model": "Model 3",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Tesla",
+    "model": "Model S",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Tesla",
+    "model": "Model X",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "4Runner",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Alphard",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Auris",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Avalon",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Avensis",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Avensis Verso",
+    "from": 2001,
+    "till": 2010
+  },
+  {
+    "make": "Toyota",
+    "model": "Aygo",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "C-HR",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Caldina",
+    "from": 2002,
+    "till": 2007
+  },
+  {
+    "make": "Toyota",
+    "model": "Camry",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Celica",
+    "from": 1999,
+    "till": 2006
+  },
+  {
+    "make": "Toyota",
+    "model": "Corolla",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Corolla Verso",
+    "from": 2002,
+    "till": 2009
+  },
+  {
+    "make": "Toyota",
+    "model": "FJ Cruiser",
+    "from": 2007,
+    "till": 2016
+  },
+  {
+    "make": "Toyota",
+    "model": "Fortuner",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "GT 86",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Hiace",
+    "from": 2006,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Highlander",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Hilux",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "iQ",
+    "from": 2008,
+    "till": 2016
+  },
+  {
+    "make": "Toyota",
+    "model": "ist",
+    "from": 2002,
+    "till": 2016
+  },
+  {
+    "make": "Toyota",
+    "model": "Land Cruiser",
+    "from": 1990,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Land Cruiser Prado",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Mark II",
+    "from": 2000,
+    "till": 2004
+  },
+  {
+    "make": "Toyota",
+    "model": "Mirai",
+    "from": 2014,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "MR2",
+    "from": 1999,
+    "till": 2007
+  },
+  {
+    "make": "Toyota",
+    "model": "Picnic",
+    "from": 1995,
+    "till": 2001
+  },
+  {
+    "make": "Toyota",
+    "model": "Previa",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Prius",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "RAV4",
+    "from": 1994,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Sequoia",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Sienna",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Tacoma",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Tundra",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Venza",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Verso",
+    "from": 2009,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Vitz",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Yaris",
+    "from": 1999,
+    "till": "-"
+  },
+  {
+    "make": "Toyota",
+    "model": "Yaris Verso",
+    "from": 1999,
+    "till": 2005
+  },
+  {
+    "make": "UAZ",
+    "model": "Pickup",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "UAZ",
+    "model": "Патриот",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "UAZ",
+    "model": "Хантер",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "2101-2107",
+    "from": 1976,
+    "till": 2012
+  },
+  {
+    "make": "VAZ",
+    "model": "2108, 2109, 21099",
+    "from": 1984,
+    "till": 2004
+  },
+  {
+    "make": "VAZ",
+    "model": "2110, 2111, 2112",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "2113, 2114, 2115",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Granta",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Largus",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Largus Cross",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Vesta Cross",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Vesta Sport",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Vesta SW",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "XRay",
+    "from": 2016,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "XRay Cross",
+    "from": 2018,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Веста",
+    "from": 2015,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Калина",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Нива 4X4",
+    "from": 1977,
+    "till": "-"
+  },
+  {
+    "make": "VAZ",
+    "model": "Ока",
+    "from": 1988,
+    "till": 2008
+  },
+  {
+    "make": "VAZ",
+    "model": "Приора",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Amarok",
+    "from": 1990,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Arteon",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Beetle",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Bora",
+    "from": 1998,
+    "till": 2005
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Caddy",
+    "from": 2004,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "CC",
+    "from": 2012,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Crafter",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "CrossGolf",
+    "from": 2007,
+    "till": 2009
+  },
+  {
+    "make": "Volkswagen",
+    "model": "CrossPolo",
+    "from": 2006,
+    "till": 2009
+  },
+  {
+    "make": "Volkswagen",
+    "model": "CrossTouran",
+    "from": 2007,
+    "till": 2015
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Eos",
+    "from": 2006,
+    "till": 2015
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Fox",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Golf",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "from": 2005,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Lupo",
+    "from": 1998,
+    "till": 2005
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Multivan",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "New Beetle",
+    "from": 1998,
+    "till": 2007
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Passat",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Passat CC",
+    "from": 2008,
+    "till": 2012
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Phaeton",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Pointer",
+    "from": 1993,
+    "till": 1997
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Polo",
+    "from": 2001,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Routan",
+    "from": 2008,
+    "till": 2014
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Scirocco",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Sharan",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "T-Roc",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Teramont",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "from": 2007,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Touareg",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Touran",
+    "from": 2003,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Transporter",
+    "from": 1990,
+    "till": "-"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Up",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "C30",
+    "from": 2007,
+    "till": 2013
+  },
+  {
+    "make": "Volvo",
+    "model": "C70",
+    "from": 2006,
+    "till": 2013
+  },
+  {
+    "make": "Volvo",
+    "model": "C70 Convertible",
+    "from": 1997,
+    "till": 2006
+  },
+  {
+    "make": "Volvo",
+    "model": "C70 Coupe",
+    "from": 1996,
+    "till": 2007
+  },
+  {
+    "make": "Volvo",
+    "model": "S40",
+    "from": 1995,
+    "till": 2012
+  },
+  {
+    "make": "Volvo",
+    "model": "S60",
+    "from": 2000,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "S70",
+    "from": 1996,
+    "till": 2000
+  },
+  {
+    "make": "Volvo",
+    "model": "S80",
+    "from": 1998,
+    "till": 2016
+  },
+  {
+    "make": "Volvo",
+    "model": "S90",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "V40",
+    "from": 1995,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "V50",
+    "from": 2004,
+    "till": 2012
+  },
+  {
+    "make": "Volvo",
+    "model": "V60",
+    "from": 2011,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "V70",
+    "from": 1996,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "V90",
+    "from": 1997,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC40",
+    "from": 2017,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC60",
+    "from": 2008,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC70",
+    "from": 2002,
+    "till": "-"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC90",
+    "from": 2002,
+    "till": "-"
+  }
+]

@@ -6,6 +6,9 @@
     <li>
       <router-link to="/calculation">Calculation</router-link>
     </li>
+    <li>
+      <router-link to="/cars">Cars</router-link>
+    </li>
   </ul>
 </template>
 

@@ -6,10 +6,10 @@
       <h3>{{categories[index]}}</h3>
       <table>
         <tr>
-          <th v-for="(header, index) of headers" :key="index">{{ header }}</th>
+          <th v-for="(header, index) of ['size', ...classes]" :key="index">{{ header }}</th>
         </tr>
-        <tr v-for="(rowValue, rowIndex) of rows" :key="rowIndex">
-          <th>{{rows[rowIndex]}}</th>
+        <tr v-for="(rowValue, rowIndex) of squares" :key="rowIndex">
+          <th>{{squares[rowIndex]}}</th>
           <td
             v-for="(priceValue, colIndex) of priceTable"
             :key="colIndex"
@@ -21,18 +21,27 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { isEmpty } from "ramda";
+import { mapState, mapActions, mapGetters } from "vuex";
 
 export default {
+  mounted: function() {
+    if (isEmpty(this.params)) this.getParams();
+  },
+
   data: function() {
     return {
-      categories: ["light", "hard", "roof"],
-      headers: ["size", "class1", "class2", "class3", "class4"],
-      rows: ["1-3", "3-5", "5-10", "10-20", "20-40", "40-70"]
+      categories: ["light", "hard", "roof"]
     };
   },
-  computed: mapState({
-    prices: state => state.prices
-  })
+
+  computed: {
+    ...mapState({ params: ({ params }) => params }),
+    ...mapGetters(["prices", "classes", "squares"])
+  },
+
+  methods: {
+    ...mapActions(["getClasses", "getSquares", "getParams"])
+  }
 };
 </script>

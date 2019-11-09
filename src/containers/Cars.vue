@@ -7,24 +7,28 @@
         <th>Model</th>
         <th>From</th>
         <th>Till</th>
+        <th>Class</th>
       </tr>
-      <tr v-for="(car, index) of cars" :key="index">
-        <td>{{ car.make }}</td>
-        <td>{{ car.model }}</td>
-        <td>{{ car.from }}</td>
-        <td>{{ car.till }}</td>
+      <tr v-for="(model) of models" :key="model.id">
+        <td>{{ model.make.title }}</td>
+        <td>{{ model.title }}</td>
+        <td>{{ model.from }}</td>
+        <td>{{ model.till }}</td>
+        <td>{{ model.class }}</td>
       </tr>
     </table>
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 
 export default {
-  computed: mapState({
-    prices: state => state.prices,
-    cars: state => state.cars
-  })
+  mounted: function() {
+    this.getModels();
+  },
+
+  computed: mapState({ models: ({ models }) => models }),
+  methods: { ...mapActions(["getModels"]) }
 };
 </script>

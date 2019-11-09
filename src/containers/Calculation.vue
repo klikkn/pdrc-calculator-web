@@ -3,93 +3,164 @@
     <h1>Calculation</h1>
 
     <form v-on:submit.prevent="onSubmit" v-on:reset="onReset">
-      <select v-model="form.make">
-        <option disabled value>Please select one</option>
+      <select v-model="form.make" :disabled="!makes.length" @change="onMakeChange">
+        <option disabled value="null">Please select make</option>
+        <option v-for="(make, index) of makes" :key="index" :value="make">{{make.title}}</option>
       </select>
 
-      <select v-model="form.model">
-        <option disabled value>Please select one</option>
+      <select v-model="form.model" :disabled="!form.make || !models.length" @change="onModelChange">
+        <option disabled value="null">Please select model</option>
+        <option
+          v-for="model of modelsByMakeId(form.make ? form.make.id : null)"
+          :key="model.id"
+          :value="model"
+        >{{model.title}}</option>
       </select>
 
-      <select v-model="form.year">
-        <option disabled value>Please select one</option>
+      <select v-model="form.year" :disabled="!form.model">
+        <option disabled value="null">Please select year</option>
+        <option v-for="(year) in getYearsRange(form.model)" :key="year">{{year}}</option>
       </select>
 
-      <table>
-        <tr v-for="(part, key) of form.parts" :key="key">
+      <select v-model="form.classValue" :disabled="!form.model">
+        <option disabled value="null">Please select class</option>
+        <option v-for="(value, index) of classes" :key="index" :value="value">{{value}}</option>
+      </select>
+
+      <table v-if="!isEmptyParams">
+        <tr v-for="(part, index) of parts" :key="index">
           <td>
-            <input type="checkbox" :id="key" v-model="part.value" />
-            <label :for="key">{{ part.label }}</label>
+            <input type="checkbox" :id="index" :value="part" v-model="form.selected" />
+            <label :for="index">{{ part }}</label>
           </td>
+
           <td>
-            <input v-model="part.square" />
+            <select v-model="form.squares[part]">
+              <option disabled value="undefined">Please select square</option>
+              <option v-for="(square, index) of squares" :key="index" :value="index">{{square}}</option>
+            </select>
           </td>
-          <td>
-            <input type="checkbox" :id="`${key}-hard`" :value="key" v-model="form.hard[key]" />
-            <label :for="`${key}-hard`">Hard</label>
-          </td>
-          <td>
+
+          <td v-if="part != 'roof'">
             <input
               type="checkbox"
-              :id="`${key}-assembly`"
-              :value="key"
-              v-model="form.assembly[key]"
+              :id="`${part}-hard`"
+              :value="index"
+              v-model="form.complicated[part]"
             />
-            <label :for="`${key}-assembly`">Assembly</label>
+            <label :for="`${part}-hard`">Complicated</label>
           </td>
+          <td v-else></td>
         </tr>
       </table>
 
-      <button type="submit">Submit</button>
+      <button type="submit" :disabled="isSubmitDisabled">Submit</button>
       <button type="reset">Reset</button>
     </form>
+
+    <div>Result: {{ result }}</div>
     {{ form }}
   </div>
 </template>
 
 <script>
-import { clone } from "ramda";
+import { clone, range, isEmpty } from "ramda";
+import { mapState, mapGetters, mapActions } from "vuex";
+import { calculate } from "../services/api";
 
 const defaultFormState = {
-  make: "",
-  model: "",
-  year: "",
+  make: null,
+  model: null,
+  year: null,
+  classValue: null,
 
-  parts: {
-    doorFrontLeft: { label: "doorFrontLeft", value: false, square: null },
-    doorFrontRight: { label: "doorFrontRight", value: false, square: null },
-    doorBackLeft: { label: "doorBackLeft", value: false, square: null },
-    doorBackRight: { label: "doorBackRight", value: false, square: null },
-
-    wingFrontLeft: { label: "wingFrontLeft", value: false, square: null },
-    wingFrontRight: { label: "wingFrontRight", value: false, square: null },
-    wingBackLeft: { label: "wingBackLeft", value: false, square: null },
-    wingBackRight: { label: "wingBackRight", value: false, square: null },
-
-    hood: { label: "hood", value: false, square: null },
-    trunk: { label: "trunk", value: false, square: null },
-    roof: { label: "roof", value: false, square: null },
-
-    rackLeftRack: { label: "rackLeftRack", value: false, square: null },
-    rackRightRack: { label: "rackRightRack", value: false, square: null }
-  },
-
-  hard: {},
-  assembly: {}
+  selected: [],
+  complicated: {},
+  squares: {}
 };
 
 export default {
+  mounted: function() {
+    if (isEmpty(this.params)) this.getParams();
+    if (isEmpty(this.makes)) this.getMakes();
+
+    this.getParts();
+  },
+
   data: function() {
-    return { form: clone(defaultFormState) };
+    return { form: clone(defaultFormState), result: 0 };
+  },
+
+  computed: {
+    ...mapState({
+      params: state => state.params,
+      makes: state => state.makes,
+      models: state => state.models,
+      parts: state => state.parts
+    }),
+
+    ...mapGetters(["prices", "classes", "squares", "modelsByMakeId"]),
+
+    isSubmitDisabled: function() {
+      const { make, model, classValue } = this.form;
+      return ![make, model, classValue].every(Boolean);
+    },
+
+    isEmptyParams: function() {
+      return isEmpty(this.params);
+    }
   },
 
   methods: {
-    onSubmit: function() {
-      console.log(this.form);
+    ...mapActions([
+      "getParams",
+      "getMakes",
+      "getModel",
+      "getMakeModels",
+      "getParts"
+    ]),
+
+    onSubmit: async function() {
+      try {
+        const { selected, classValue, complicated, squares } = this.form;
+        const { data } = await calculate({
+          selected,
+          classValue,
+          complicated,
+          squares
+        });
+
+        this.result = data;
+      } catch (err) {
+        console.log(err);
+      }
     },
+
     onReset: function() {
-      console.log(1);
       this.form = clone(defaultFormState);
+      this.result = 0;
+    },
+
+    onMakeChange: function() {
+      this.form.model = null;
+      this.form.year = null;
+      this.form.classValue = null;
+
+      this.getMakeModels({ id: this.form.make.id });
+    },
+
+    onModelChange: function() {
+      if (!this.form.model) return;
+      this.form.classValue = this.form.model.class;
+    },
+
+    getYearsRange(model) {
+      if (!model) return [];
+
+      return range(
+        model.from,
+        model.till ? model.till : new Date().getFullYear()
+      );
     }
   }
 };

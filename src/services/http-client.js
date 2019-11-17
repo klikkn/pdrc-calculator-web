@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const provider = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: process.env.VUE_APP_API_HOST,
   timeout: 15000,
   headers: {
     Accept: "application/json, text/plain",

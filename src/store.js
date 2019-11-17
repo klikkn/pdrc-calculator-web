@@ -3,8 +3,8 @@ import Vuex from "vuex";
 
 import {
   getParams,
+  updateParams,
   getMakes,
-  getModels,
   getMakeModels,
   getParts
 } from "./services/api";
@@ -44,10 +44,10 @@ export default new Vuex.Store({
       }
     },
 
-    async getModels({ commit }) {
+    async updateParams({ commit }, { data }) {
       try {
-        const { data } = await getModels();
-        commit("SET", { prop: "models", value: data });
+        await updateParams(data);
+        commit("SET", { prop: "params", value: data });
       } catch (err) {
         console.log(err.message);
       }

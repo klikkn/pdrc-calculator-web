@@ -8,6 +8,14 @@ export const getParams = async () => {
   }
 };
 
+export const updateParams = async data => {
+  try {
+    return await httpClient.put(`/params`, data);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 export const getMakes = async () => {
   try {
     return await httpClient.get("/makes");
@@ -19,14 +27,6 @@ export const getMakes = async () => {
 export const getMakeModels = async id => {
   try {
     return await httpClient.get(`/makes/${id}/models`);
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
-export const getModels = async () => {
-  try {
-    return await httpClient.get("/models?_expand=make&_page=1");
   } catch (err) {
     console.log(err.message);
   }

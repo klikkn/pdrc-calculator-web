@@ -1,42 +1,64 @@
 <template>
   <div>
-    <h1>Calculation</h1>
+    <h1>{{ $t('calculation') }}</h1>
 
     <form v-on:submit.prevent="onSubmit" v-on:reset="onReset">
-      <select v-model="form.make" :disabled="!makes.length" @change="onMakeChange">
-        <option disabled value="null">Please select make</option>
-        <option v-for="(make, index) of makes" :key="index" :value="make">{{make.title}}</option>
-      </select>
+      <table>
+        <tr>
+          <td>
+            <select v-model="form.make" :disabled="!makes.length" @change="onMakeChange">
+              <option disabled value="null">{{ $t('select.make') }}</option>
+              <option v-for="(make, index) of makes" :key="index" :value="make">{{make.title}}</option>
+            </select>
+          </td>
+        </tr>
 
-      <select v-model="form.model" :disabled="!form.make || !models.length" @change="onModelChange">
-        <option disabled value="null">Please select model</option>
-        <option
-          v-for="model of modelsByMakeId(form.make ? form.make.id : null)"
-          :key="model.id"
-          :value="model"
-        >{{model.title}}</option>
-      </select>
+        <tr>
+          <td>
+            <select
+              v-model="form.model"
+              :disabled="!form.make || !models.length"
+              @change="onModelChange"
+            >
+              <option disabled value="null">{{ $t('select.model') }}</option>
+              <option
+                v-for="model of modelsByMakeId(form.make ? form.make.id : null)"
+                :key="model.id"
+                :value="model"
+              >{{model.title}}</option>
+            </select>
+          </td>
+        </tr>
 
-      <select v-model="form.year" :disabled="!form.model">
-        <option disabled value="null">Please select year</option>
-        <option v-for="(year) in getYearsRange(form.model)" :key="year">{{year}}</option>
-      </select>
+        <tr>
+          <td>
+            <select v-model="form.year" :disabled="!form.model">
+              <option disabled value="null">{{ $t('select.year') }}</option>
+              <option v-for="(year) in getYearsRange(form.model)" :key="year">{{year}}</option>
+            </select>
+          </td>
+        </tr>
 
-      <select v-model="form.classValue" :disabled="!form.model">
-        <option disabled value="null">Please select class</option>
-        <option v-for="(value, index) of classes" :key="index" :value="value">{{value}}</option>
-      </select>
+        <tr>
+          <td>
+            <select v-model="form.classValue" :disabled="!form.model">
+              <option disabled value="null">{{ $t('select.class') }}</option>
+              <option v-for="(value, index) of classes" :key="index" :value="value">{{value}}</option>
+            </select>
+          </td>
+        </tr>
+      </table>
 
       <table v-if="!isEmptyParams">
         <tr v-for="(part, index) of parts" :key="index">
           <td>
             <input type="checkbox" :id="index" :value="part" v-model="form.selected" />
-            <label :for="index">{{ part }}</label>
+            <label :for="index">{{ $t(part) }}</label>
           </td>
 
           <td>
             <select v-model="form.squares[part]">
-              <option disabled value="undefined">Please select square</option>
+              <option disabled value="undefined">{{ $t('pleaseSelect') }} {{ $t('square') }}</option>
               <option v-for="(square, index) of squares" :key="index" :value="index">{{square}}</option>
             </select>
           </td>
@@ -48,18 +70,17 @@
               :value="index"
               v-model="form.complicated[part]"
             />
-            <label :for="`${part}-hard`">Complicated</label>
+            <label :for="`${part}-hard`">{{ $t('complicated') }}</label>
           </td>
           <td v-else></td>
         </tr>
       </table>
 
-      <button type="submit" :disabled="isSubmitDisabled">Submit</button>
-      <button type="reset">Reset</button>
-    </form>
+      <button type="submit" :disabled="isSubmitDisabled">{{ $t('submit') }}</button>
+      <button type="reset">{{ $t('reset') }}</button>
 
-    <div>Result: {{ result }}</div>
-    {{ form }}
+      <div>{{ $t('result') }} {{ result }}</div>
+    </form>
   </div>
 </template>
 

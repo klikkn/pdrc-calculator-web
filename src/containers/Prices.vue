@@ -1,22 +1,23 @@
 <template>
   <div>
-    <h1>Prices</h1>
-
+    <h1>{{ $t('prices') }}</h1>
     <div v-for="(priceTable, index) of prices" :key="index">
-      <h3>{{categories[index]}}</h3>
+      <h3>{{ $t(categories[index]) }}</h3>
       <table>
         <tr>
-          <th v-for="(header, index) of ['size', ...classes]" :key="index">{{ header }}</th>
+          <th>{{ $t('size') }}</th>
+          <th v-for="(value, index) of classes" :key="index">{{ value }}</th>
         </tr>
         <tr v-for="(rowValue, rowIndex) of squares" :key="rowIndex">
           <th>{{squares[rowIndex]}}</th>
-          <td
-            v-for="(priceValue, colIndex) of priceTable"
-            :key="colIndex"
-          >{{priceTable[colIndex][rowIndex]}}</td>
+          <td v-for="(priceValue, colIndex) of priceTable" :key="colIndex">
+            <input type="text" v-model="priceTable[colIndex][rowIndex]" />
+          </td>
         </tr>
       </table>
     </div>
+
+    <button v-on:click="onSave">{{ $t('save') }}</button>
   </div>
 </template>
 
@@ -31,7 +32,7 @@ export default {
 
   data: function() {
     return {
-      categories: ["light", "hard", "roof"]
+      categories: ["light", "complicated", "roof"]
     };
   },
 
@@ -41,7 +42,12 @@ export default {
   },
 
   methods: {
-    ...mapActions(["getClasses", "getSquares", "getParams"])
+    ...mapActions(["getClasses", "getSquares", "getParams", "updateParams"]),
+
+    onSave() {
+      console.log(this.params);
+      this.updateParams({ data: this.params });
+    }
   }
 };
 </script>

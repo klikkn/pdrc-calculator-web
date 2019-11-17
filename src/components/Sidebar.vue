@@ -1,16 +1,13 @@
 <template>
   <ul class="sidebar">
     <li>
-      <router-link to="/">Home</router-link>
+      <router-link to="/">{{ $t('calculation') }}</router-link>
     </li>
     <li>
-      <router-link to="/calculation">Calculation</router-link>
+      <router-link to="/cars">{{ $t('cars') }}</router-link>
     </li>
     <li>
-      <router-link to="/cars">Cars</router-link>
-    </li>
-    <li>
-      <router-link to="/prices">Prices</router-link>
+      <router-link to="/prices">{{ $t('prices') }}</router-link>
     </li>
   </ul>
 </template>

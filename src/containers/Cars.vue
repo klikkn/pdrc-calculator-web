@@ -1,16 +1,22 @@
 <template>
   <div>
-    <h1>Cars</h1>
-    <table>
+    <h1>{{ $t('cars') }}</h1>
+
+    <select v-model="make" :disabled="!makes.length" @change="onMakeChange">
+      <option disabled value="null">{{ $t('select.make') }}</option>
+      <option v-for="(make, index) of makes" :key="index" :value="make">{{make.title}}</option>
+    </select>
+
+    <table v-if="make">
       <tr>
-        <th>Make</th>
-        <th>Model</th>
-        <th>From</th>
-        <th>Till</th>
-        <th>Class</th>
+        <th>{{ $t('make') }}</th>
+        <th>{{ $t('model') }}</th>
+        <th>{{ $t('from') }}</th>
+        <th>{{ $t('till') }}</th>
+        <th>{{ $t('class') }}</th>
       </tr>
-      <tr v-for="(model) of models" :key="model.id">
-        <td>{{ model.make.title }}</td>
+      <tr v-for="model of modelsByMakeId(make ? make.id : null)" :key="model.id">
+        <td>{{ make.title }}</td>
         <td>{{ model.title }}</td>
         <td>{{ model.from }}</td>
         <td>{{ model.till }}</td>
@@ -21,14 +27,29 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { isEmpty } from "ramda";
+import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
   mounted: function() {
-    this.getModels();
+    if (isEmpty(this.makes)) this.getMakes();
   },
 
-  computed: mapState({ models: ({ models }) => models }),
-  methods: { ...mapActions(["getModels"]) }
+  data: function() {
+    return { make: null, models: [] };
+  },
+
+  computed: {
+    ...mapState({ makes: ({ makes }) => makes }),
+    ...mapGetters(["modelsByMakeId"])
+  },
+
+  methods: {
+    ...mapActions(["getMakes", "getMakeModels"]),
+
+    onMakeChange: function() {
+      this.getMakeModels({ id: this.make.id });
+    }
+  }
 };
 </script>

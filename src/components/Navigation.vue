@@ -1,5 +1,5 @@
 <template>
-  <ul class="sidebar">
+  <ul class="navigation">
     <li>
       <router-link to="/">{{ $t('calculation') }}</router-link>
     </li>
@@ -13,9 +13,14 @@
 </template>
 
 <style>
-.sidebar {
-  position: absolute;
-  width: 150px;
-  background-color: rgba(0, 0, 0, 0.1);
+.navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigation li {
+  display: block;
+  margin-right: 15px;
 }
 </style>

@@ -8,10 +8,10 @@ import store from "./store";
 import i18n from "./i18n";
 
 import App from "./App.vue";
-import Sidebar from "./components/Sidebar.vue";
+import Navigation from "./components/Navigation.vue";
 
 Vue.use(ElementUI);
-Vue.component("Sidebar", Sidebar);
+Vue.component("Navigation", Navigation);
 
 Vue.config.productionTip = false;
 

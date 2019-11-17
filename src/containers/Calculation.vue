@@ -79,10 +79,13 @@
       <button type="submit" :disabled="isSubmitDisabled">{{ $t('submit') }}</button>
       <button type="reset">{{ $t('reset') }}</button>
 
-      <div>{{ $t('result') }} {{ result }}</div>
+      <div class="mt-1">{{ $t('result') }}: {{ result }}</div>
     </form>
   </div>
 </template>
+
+<style>
+</style>
 
 <script>
 import { clone, range, isEmpty } from "ramda";

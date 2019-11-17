@@ -5,19 +5,19 @@
       <h3>{{ $t(categories[index]) }}</h3>
       <table>
         <tr>
-          <th></th>
-          <th v-for="(value, index) of classes" :key="index">{{ $t('class') }} {{ value }}</th>
+          <th>{{ $t('size') }}</th>
+          <th v-for="(value, index) of classes" :key="index">{{ value }}</th>
         </tr>
         <tr v-for="(rowValue, rowIndex) of squares" :key="rowIndex">
-          <th>{{squares[rowIndex]}} {{ $t('sm2') }}</th>
+          <th>{{squares[rowIndex]}}</th>
           <td v-for="(priceValue, colIndex) of priceTable" :key="colIndex">
-            <input type="text" v-model="priceTable[colIndex][rowIndex]" />
+            <input type="text" v-model.number="priceTable[colIndex][rowIndex]" />
           </td>
         </tr>
       </table>
     </div>
 
-    <button v-on:click="onSave">{{ $t('save') }}</button>
+    <button class="mt-1" v-on:click="onSave">{{ $t('save') }}</button>
   </div>
 </template>
 
@@ -45,7 +45,6 @@ export default {
     ...mapActions(["getClasses", "getSquares", "getParams", "updateParams"]),
 
     onSave() {
-      console.log(this.params);
       this.updateParams({ data: this.params });
     }
   }

@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <Sidebar />
+    <div class="container">
+      <Navigation />
 
-    <div class="main">
-      <router-view></router-view>
+      <div class="main">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -16,8 +18,12 @@
   color: #2c3e50;
 }
 
-.main {
-  padding-left: 200px;
+.container {
+  padding: 0 25px;
+}
+
+.mt-1 {
+  margin-top: 15px;
 }
 </style>
 

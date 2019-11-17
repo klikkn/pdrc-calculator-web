@@ -13,35 +13,29 @@
   "complicated": "Complicated",
   "result": "Result",
   "save": "Save",
-
   "doorFrontLeft": "Door Front Left",
   "doorFrontRight": "Door Front Right",
   "doorBackLeft": "Door Back Left",
   "doorBackRight": "Door Back Right",
-
   "wingFrontLeft": "Wing Front Left",
   "wingFrontRight": "Wing Front Right",
   "wingBackLeft": "Wing Back Left",
   "wingBackRight": "Wing Back Right",
-
   "rackLeftRack": "Rack Left Rack",
   "rackRightRack": "Rack Right Rack",
-
   "hood": "Hood",
   "trunk": "Trunk",
-
   "roof": "Roof",
-
   "light": "Light",
   "size": "size",
-
   "from": "From",
   "till": "Till",
-
+  "sm2": "sm2",
   "select": {
     "make": "Select make",
     "model": "Select model",
     "year": "Select year",
-    "class": "Select class"
+    "class": "Select class",
+    "square": "Select square"
   }
 }

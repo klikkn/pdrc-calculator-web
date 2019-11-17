@@ -58,7 +58,7 @@
 
           <td>
             <select v-model="form.squares[part]">
-              <option disabled value="undefined">{{ $t('pleaseSelect') }} {{ $t('square') }}</option>
+              <option disabled value="undefined">{{ $t('select.square') }}</option>
               <option v-for="(square, index) of squares" :key="index" :value="index">{{square}}</option>
             </select>
           </td>

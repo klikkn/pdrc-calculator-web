@@ -17,6 +17,8 @@ import { errorHandler } from './services/errors'
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  strict: true,
+
   state: {
     user: null,
     params: null

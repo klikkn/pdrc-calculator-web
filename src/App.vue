@@ -30,9 +30,12 @@
 <script>
 import { isNil } from "ramda";
 import { mapGetters, mapActions } from "vuex";
+import tokenService from "./services/token";
 
 export default {
   mounted: function() {
+    if (!tokenService.get()) return;
+
     if (isNil(this.user)) this.getMe();
     if (isNil(this.params)) this.getParams();
   },

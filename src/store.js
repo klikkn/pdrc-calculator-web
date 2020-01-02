@@ -26,6 +26,7 @@ export default new Vuex.Store({
     classes: ({ params }) => params ? params.classes : [],
     squares: ({ params }) => params ? params.squares : [],
     parts: ({ params }) => params ? params.parts : [],
+    categories: ({ params }) => params ? params.categories : [],
 
     prices: ({ user }) => user ? user.prices : [],
   },

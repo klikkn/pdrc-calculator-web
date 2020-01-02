@@ -25,14 +25,8 @@
 import { mapActions, mapGetters } from "vuex";
 
 export default {
-  data: function() {
-    return {
-      categories: ["light", "complicated", "roof"]
-    };
-  },
-
   computed: {
-    ...mapGetters(["prices", "classes", "squares"])
+    ...mapGetters(["prices", "classes", "squares", "categories"])
   },
 
   methods: {

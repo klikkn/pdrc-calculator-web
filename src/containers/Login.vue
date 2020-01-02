@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Login</h1>
+    <h1>{{ $t('login') }}</h1>
 
     <form v-on:submit.prevent="onSubmit">
       <input type="text" v-model="email" />

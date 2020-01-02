@@ -11,8 +11,11 @@ const options = {
 };
 
 axios.interceptors.request.use(function (config) {
-  const token = tokenService.get();
-  config.headers.Authorization = token ? `Bearer ${token}` : '';
+  if (!['/auth/local', '/auth/local/register'].includes(config.url)) {
+    const token = tokenService.get();
+    config.headers.Authorization = token ? `Bearer ${token}` : '';
+  }
+
   return config;
 });
 

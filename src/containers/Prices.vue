@@ -36,10 +36,10 @@ export default {
   },
 
   methods: {
-    ...mapActions(["updateParams"]),
+    ...mapActions(["updateMe"]),
 
     onSave() {
-      this.updateParams({ data: this.params });
+      this.updateMe({ prices: this.prices });
     }
   }
 };

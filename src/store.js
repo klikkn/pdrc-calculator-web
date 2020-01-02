@@ -2,10 +2,11 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 import {
-  me,
   login,
   register,
-  getParams
+  getMe,
+  updateMe,
+  getParams,
 } from "./services/api";
 
 import tokenService from './services/token'
@@ -26,7 +27,7 @@ export default new Vuex.Store({
     squares: ({ params }) => params ? params.squares : [],
     parts: ({ params }) => params ? params.parts : [],
 
-    prices: ({ user: { prices } }) => prices,
+    prices: ({ user }) => user ? user.prices : [],
   },
 
   mutations: {
@@ -36,16 +37,6 @@ export default new Vuex.Store({
   },
 
   actions: {
-    async getUser({ commit }) {
-      try {
-        const { data } = await me();
-
-        commit("SET", { prop: "user", value: data });
-      } catch (err) {
-        console.log(err.message);
-      }
-    },
-
     async login({ commit }, data) {
       try {
         const { data: { jwt, user } } = await login(data);
@@ -75,6 +66,26 @@ export default new Vuex.Store({
     async logout() {
       tokenService.remove();
       window.location.replace('/')
+    },
+
+    async getMe({ commit }) {
+      try {
+        const { data } = await getMe();
+
+        commit("SET", { prop: "user", value: data });
+      } catch (err) {
+        console.log(err.message);
+      }
+    },
+
+    async updateMe({ commit }, _data) {
+      try {
+        const { data } = await updateMe(_data);
+
+        commit("SET", { prop: "user", value: data });
+      } catch (err) {
+        console.log(err.message);
+      }
     },
 
     async getParams({ commit }) {

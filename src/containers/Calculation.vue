@@ -50,8 +50,6 @@
 
       <div class="mt-1">{{ $t('result') }}: {{ result }}</div>
     </form>
-
-    <div>{{form}}</div>
   </div>
 </template>
 
@@ -81,7 +79,7 @@ export default {
 
     isSubmitDisabled: function() {
       const { classIndex } = this.form;
-      return ![classIndex].every(Boolean);
+      return isNil(classIndex);
     },
 
     isEmptyParams: function() {
@@ -93,14 +91,16 @@ export default {
     onSubmit: async function() {
       try {
         const { selected, classIndex, complicated, squares } = this.form;
-        const { data } = await calculate({
+        const {
+          data: { result }
+        } = await calculate({
           selected,
           classIndex,
           complicated,
           squares
         });
 
-        this.result = data;
+        this.result = result;
       } catch (err) {
         console.log(err);
       }

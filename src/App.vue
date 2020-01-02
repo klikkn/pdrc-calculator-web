@@ -33,7 +33,7 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   mounted: function() {
-    if (isNil(this.user)) this.getUser();
+    if (isNil(this.user)) this.getMe();
     if (isNil(this.params)) this.getParams();
   },
 
@@ -42,7 +42,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["getUser", "getParams"])
+    ...mapActions(["getMe", "getParams"])
   }
 };
 </script>

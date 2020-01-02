@@ -28,4 +28,21 @@
 </style>
 
 <script>
+import { isNil } from "ramda";
+import { mapGetters, mapActions } from "vuex";
+
+export default {
+  mounted: function() {
+    if (isNil(this.user)) this.getUser();
+    if (isNil(this.params)) this.getParams();
+  },
+
+  computed: {
+    ...mapGetters(["user", "params"])
+  },
+
+  methods: {
+    ...mapActions(["getUser", "getParams"])
+  }
+};
 </script>

@@ -1,5 +1,29 @@
 import httpClient from "./http-client";
 
+export const me = async () => {
+  try {
+    return await httpClient.get("/users/me");
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export const login = async (data) => {
+  try {
+    return await httpClient.post("/auth/local", data);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export const register = async (data) => {
+  try {
+    return await httpClient.post("/auth/local/register", data);
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 export const getParams = async () => {
   try {
     return await httpClient.get("/params");
@@ -11,22 +35,6 @@ export const getParams = async () => {
 export const updateParams = async data => {
   try {
     return await httpClient.put(`/params`, data);
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
-export const getMakes = async () => {
-  try {
-    return await httpClient.get("/makes");
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-
-export const getMakeModels = async id => {
-  try {
-    return await httpClient.get(`/makes/${id}/models`);
   } catch (err) {
     console.log(err.message);
   }

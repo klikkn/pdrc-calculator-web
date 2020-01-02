@@ -6,10 +6,10 @@
       <table>
         <tr>
           <th>{{ $t('size') }}</th>
-          <th v-for="(value, index) of classes" :key="index">{{ value }}</th>
+          <th v-for="(value, index) of classes" :key="index">{{ value.title }}</th>
         </tr>
         <tr v-for="(rowValue, rowIndex) of squares" :key="rowIndex">
-          <th>{{squares[rowIndex]}}</th>
+          <th>{{squares[rowIndex].title}}</th>
           <td v-for="(priceValue, colIndex) of priceTable" :key="colIndex">
             <input type="text" v-model.number="priceTable[colIndex][rowIndex]" />
           </td>
@@ -22,14 +22,9 @@
 </template>
 
 <script>
-import { isEmpty } from "ramda";
-import { mapState, mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
-  mounted: function() {
-    if (isEmpty(this.params)) this.getParams();
-  },
-
   data: function() {
     return {
       categories: ["light", "complicated", "roof"]
@@ -37,12 +32,11 @@ export default {
   },
 
   computed: {
-    ...mapState({ params: ({ params }) => params }),
     ...mapGetters(["prices", "classes", "squares"])
   },
 
   methods: {
-    ...mapActions(["getClasses", "getSquares", "getParams", "updateParams"]),
+    ...mapActions(["updateParams"]),
 
     onSave() {
       this.updateParams({ data: this.params });

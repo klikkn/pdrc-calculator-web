@@ -60,6 +60,7 @@
 import { clone, isNil } from "ramda";
 import { mapGetters } from "vuex";
 import { calculate } from "../services/api";
+import { errorHandler } from "../services/errors";
 
 const defaultFormState = {
   classIndex: null,
@@ -102,7 +103,7 @@ export default {
 
         this.result = result;
       } catch (err) {
-        console.log(err);
+        errorHandler(err.message);
       }
     },
 

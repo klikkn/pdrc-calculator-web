@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
+import { clone } from 'ramda';
+
 import {
   login,
   register,
@@ -10,6 +12,7 @@ import {
 } from "./services/api";
 
 import tokenService from './services/token'
+import { errorHandler } from './services/errors'
 
 Vue.use(Vuex);
 
@@ -23,12 +26,12 @@ export default new Vuex.Store({
     user: ({ user }) => user,
     params: ({ params }) => params,
 
-    classes: ({ params }) => params ? params.classes : [],
-    squares: ({ params }) => params ? params.squares : [],
-    parts: ({ params }) => params ? params.parts : [],
-    categories: ({ params }) => params ? params.categories : [],
+    classes: ({ params }) => params ? clone(params.classes) : [],
+    squares: ({ params }) => params ? clone(params.squares) : [],
+    parts: ({ params }) => params ? clone(params.parts) : [],
+    categories: ({ params }) => params ? clone(params.categories) : [],
 
-    prices: ({ user }) => user ? user.prices : [],
+    prices: ({ user }) => user ? clone(user.prices) : [],
   },
 
   mutations: {
@@ -47,7 +50,7 @@ export default new Vuex.Store({
 
         window.location.replace('/')
       } catch (err) {
-        console.log(err.message);
+        errorHandler(err.message);
       }
     },
 
@@ -60,7 +63,7 @@ export default new Vuex.Store({
 
         window.location.replace('/')
       } catch (err) {
-        console.log(err.message);
+        errorHandler(err.message);
       }
     },
 
@@ -75,17 +78,18 @@ export default new Vuex.Store({
 
         commit("SET", { prop: "user", value: data });
       } catch (err) {
-        console.log(err.message);
+        errorHandler(err.message);
       }
     },
 
-    async updateMe({ commit }, _data) {
+    async updateMe({ commit, state }, data) {
+      const { user } = state;
       try {
-        const { data } = await updateMe(_data);
-
-        commit("SET", { prop: "user", value: data });
+        await updateMe(data);
+        commit("SET", { prop: "user", value: { ...clone(user), ...clone(data) } });
       } catch (err) {
-        console.log(err.message);
+        commit("SET", { prop: "user", value: clone(user) });
+        errorHandler(err.message);
       }
     },
 
@@ -94,7 +98,7 @@ export default new Vuex.Store({
         const { data } = await getParams();
         commit("SET", { prop: "params", value: data });
       } catch (err) {
-        console.log(err.message);
+        errorHandler(err.message);
       }
     }
   }

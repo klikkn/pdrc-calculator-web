@@ -39,11 +39,11 @@
 </style>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["user"])
+    ...mapState(["user"])
   },
   methods: {
     ...mapActions(["logout"])

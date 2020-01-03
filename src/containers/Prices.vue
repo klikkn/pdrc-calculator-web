@@ -22,11 +22,17 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapState } from "vuex";
+import { clone } from "ramda";
 
 export default {
   computed: {
-    ...mapGetters(["prices", "classes", "squares", "categories"])
+    ...mapState({
+      prices: ({ user }) => (user ? clone(user.prices) : []),
+      classes: ({ params }) => (params ? clone(params.classes) : []),
+      squares: ({ params }) => (params ? clone(params.squares) : []),
+      categories: ({ params }) => (params ? clone(params.categories) : [])
+    })
   },
 
   methods: {

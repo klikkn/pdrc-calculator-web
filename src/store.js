@@ -25,18 +25,7 @@ export default new Vuex.Store({
     isLoading: false
   },
 
-  getters: {
-    user: ({ user }) => user,
-    params: ({ params }) => params,
-
-    classes: ({ params }) => params ? clone(params.classes) : [],
-    squares: ({ params }) => params ? clone(params.squares) : [],
-    parts: ({ params }) => params ? clone(params.parts) : [],
-    categories: ({ params }) => params ? clone(params.categories) : [],
-
-    prices: ({ user }) => user ? clone(user.prices) : [],
-    isLoading: ({ isLoading }) => isLoading,
-  },
+  getters: {},
 
   mutations: {
     ["SET"](state, { prop, value }) {

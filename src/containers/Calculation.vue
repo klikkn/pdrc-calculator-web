@@ -58,7 +58,7 @@
 
 <script>
 import { clone, isNil } from "ramda";
-import { mapGetters } from "vuex";
+import { mapState } from "vuex";
 import { calculate } from "../services/api";
 import { errorHandler } from "../services/errors";
 
@@ -76,7 +76,14 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["user", "params", "prices", "classes", "squares", "parts"]),
+    ...mapState({
+      user: state => clone(state.user),
+      params: state => clone(state.params),
+      prices: ({ params }) => (params ? clone(params.prices) : []),
+      classes: ({ params }) => (params ? clone(params.classes) : []),
+      squares: ({ params }) => (params ? clone(params.squares) : []),
+      parts: ({ params }) => (params ? clone(params.parts) : [])
+    }),
 
     isSubmitDisabled: function() {
       const { classIndex } = this.form;

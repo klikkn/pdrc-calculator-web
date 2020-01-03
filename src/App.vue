@@ -30,7 +30,7 @@
 
 <script>
 import { isNil } from "ramda";
-import { mapGetters, mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 import tokenService from "./services/token";
 
 export default {
@@ -42,7 +42,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(["user", "params"])
+    ...mapState(["user", "params"])
   },
 
   methods: {

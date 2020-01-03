@@ -9,7 +9,7 @@
 
       <table>
         <tr>
-          <th class="row-th">
+          <th>
             <div>{{ $t('class') }}</div>
             <div>-</div>
             <div>{{ $t('size') }}</div>
@@ -19,7 +19,7 @@
         <tr v-for="(rowValue, rowIndex) of squares" :key="rowIndex">
           <th class="row-th">{{squares[rowIndex].title}}</th>
           <td v-for="(priceValue, colIndex) of priceTable" :key="colIndex">
-            <input type="text" v-model.number="priceTable[colIndex][rowIndex]" />
+            <el-input placeholder="Please input" v-model.number="priceTable[colIndex][rowIndex]"></el-input>
           </td>
         </tr>
       </table>
@@ -29,30 +29,8 @@
 
 <style scoped>
 table {
-  border-collapse: collapse;
   width: 100%;
   color: var(--SECONDARY_TEXT);
-}
-
-table,
-th,
-td {
-  border: 1px solid var(--LIGHTER_BORDER);
-}
-
-input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 10px 0;
-
-  width: 100%;
-
-  border: none;
-  text-align: center;
-
-  color: var(--REGULAR_TEXT);
 }
 
 .header {
@@ -65,8 +43,12 @@ input {
   table,
   th,
   td,
-  input {
+  table >>> .el-input__inner {
     font-size: 0.7rem;
+  }
+
+  table >>> .el-input__inner {
+    padding: 0;
   }
 }
 
@@ -74,8 +56,12 @@ input {
   table,
   th,
   td,
-  input {
+  table >>> .el-input__inner {
     font-size: 1rem;
+  }
+
+  table >>> .el-input__inner {
+    padding: 0 5px;
   }
 }
 
@@ -83,8 +69,12 @@ input {
   table,
   th,
   td,
-  input {
+  table >>> .el-input__inner {
     font-size: 1.25rem;
+  }
+
+  table >>> .el-input__inner {
+    padding: 0 15px;
   }
 }
 </style>

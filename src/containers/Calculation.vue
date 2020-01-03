@@ -38,14 +38,13 @@
             <div v-else></div>
           </div>
         </div>
-      </div>
 
-      <div class="mt-1">
-        <el-button type="primary" native-type="submit">{{ $t('submit') }}</el-button>
-        <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
+        <div class="grid-row grid-row--last">
+          <el-button type="primary" native-type="submit">{{ $t('submit') }}</el-button>
+          <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
+          <div class="result">{{ $t('result') }}: {{ result }}</div>
+        </div>
       </div>
-
-      <div class="mt-1">{{ $t('result') }}: {{ result }}</div>
     </form>
   </div>
 </template>
@@ -56,20 +55,41 @@
   width: 100%;
 }
 
-@media screen and (min-width: 0) {
-  .grid {
-    display: grid;
-    grid-gap: 15px;
-  }
+.el-button {
+  margin: 0;
+}
 
+.grid {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.grid-row {
+  display: grid;
+}
+
+.result {
+  font-weight: bold;
+  align-self: center;
+}
+
+@media screen and (min-width: 0) {
   .grid-row {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
   }
 
+  .grid-row--last {
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+
   .part {
     grid-column: 1/-1;
+  }
+
+  .result {
+    justify-self: start;
   }
 }
 
@@ -78,12 +98,20 @@
 
 @media screen and (min-width: 768px) {
   .grid-row {
-    display: grid;
     grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .grid-row--last {
+    grid-template-columns: auto auto 1fr;
+    grid-gap: 10px;
   }
 
   .part {
     grid-column: 1/2;
+  }
+
+  .result {
+    justify-self: end;
   }
 }
 </style>

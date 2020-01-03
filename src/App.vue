@@ -12,6 +12,12 @@
 </template>
 
 <style>
+:root {
+  --BASIC_BLACK: #000000;
+  --BASIC_WHITE: #ffffff;
+  --BRAND_COLOR: #409eff;
+}
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

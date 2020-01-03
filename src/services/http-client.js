@@ -28,6 +28,7 @@ axios.interceptors.response.use(function (response) {
   store.dispatch('disableLoader');
   return response;
 }, function (error) {
+  store.dispatch('disableLoader');
   return Promise.reject(error);
 });
 

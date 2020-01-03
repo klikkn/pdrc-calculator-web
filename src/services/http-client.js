@@ -1,4 +1,5 @@
 import axios from "axios";
+import store from '../store'
 import tokenService from './token'
 
 const options = {
@@ -11,12 +12,23 @@ const options = {
 };
 
 axios.interceptors.request.use(function (config) {
+  store.dispatch('enableLoader');
+
   if (!['/auth/local', '/auth/local/register'].includes(config.url)) {
     const token = tokenService.get();
     config.headers.Authorization = token ? `Bearer ${token}` : '';
   }
 
-  return config;
+  return config
+}, function (error) {
+  return Promise.reject(error);
+});
+
+axios.interceptors.response.use(function (response) {
+  store.dispatch('disableLoader');
+  return response;
+}, function (error) {
+  return Promise.reject(error);
 });
 
 export default class httpClient {

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Loader />
     <div class="container">
       <Navigation />
 

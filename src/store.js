@@ -21,7 +21,8 @@ export default new Vuex.Store({
 
   state: {
     user: null,
-    params: null
+    params: null,
+    isLoading: false
   },
 
   getters: {
@@ -34,6 +35,7 @@ export default new Vuex.Store({
     categories: ({ params }) => params ? clone(params.categories) : [],
 
     prices: ({ user }) => user ? clone(user.prices) : [],
+    isLoading: ({ isLoading }) => isLoading,
   },
 
   mutations: {
@@ -43,6 +45,14 @@ export default new Vuex.Store({
   },
 
   actions: {
+    enableLoader({ commit }) {
+      commit("SET", { prop: "isLoading", value: true });
+    },
+
+    disableLoader({ commit }) {
+      commit("SET", { prop: "isLoading", value: false });
+    },
+
     async login({ commit }, data) {
       try {
         const { data: { jwt, user } } = await login(data);

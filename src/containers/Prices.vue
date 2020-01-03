@@ -70,7 +70,7 @@ input {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 568px) {
   table,
   th,
   td,

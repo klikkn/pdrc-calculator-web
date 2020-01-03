@@ -39,8 +39,22 @@
   padding: 0 25px;
 }
 
-.mt-1 {
-  margin-top: 15px;
+@media screen and (min-width: 0) {
+  .mt-1 {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .mt-1 {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mt-1 {
+    margin-top: 25px;
+  }
 }
 </style>
 

@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <div class="auth">
     <h1>{{ $t('login') }}</h1>
 
-    <form v-on:submit.prevent="onSubmit">
-      <input type="text" v-model="email" />
-      <input type="password" v-model="password" />
+    <form v-on:submit.prevent="onSubmit" class="auth__form">
+      <el-input placeholder="Please input login" v-model="email"></el-input>
+      <el-input placeholder="Please input password" v-model="password" show-password></el-input>
 
-      <button type="submit">{{ $t('submit') }}</button>
+      <el-button type="primary" native-type="submit">{{ $t('submit') }}</el-button>
     </form>
   </div>
 </template>
+
 
 <script>
 import { mapActions } from "vuex";

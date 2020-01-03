@@ -40,6 +40,20 @@
   padding: 0 25px;
 }
 
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth__form {
+  display: grid;
+  grid-gap: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
 @media screen and (min-width: 0) {
   .mt-1 {
     margin-top: 15px;

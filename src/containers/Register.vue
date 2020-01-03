@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <div class="auth">
     <h1>{{ $t('register') }}</h1>
 
-    <form v-on:submit.prevent="onSubmit">
-      <input type="text" v-model="username" />
-      <input type="text" v-model="email" />
-      <input type="password" v-model="password1" />
-      <input type="password" v-model="password2" />
+    <form v-on:submit.prevent="onSubmit" class="auth__form">
+      <el-input placeholder="Please input username" v-model="username"></el-input>
+      <el-input placeholder="Please input email" v-model="email"></el-input>
+      <el-input placeholder="Please input password" v-model="password1" show-password></el-input>
+      <el-input placeholder="Please input password" v-model="password2" show-password></el-input>
 
-      <button type="submit">{{ $t('submit') }}</button>
+      <el-button type="primary" native-type="submit">{{ $t('submit') }}</el-button>
     </form>
   </div>
 </template>

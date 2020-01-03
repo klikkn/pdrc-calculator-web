@@ -57,7 +57,7 @@ table {
   th,
   td,
   table >>> .el-input__inner {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   table >>> .el-input__inner {
@@ -66,13 +66,6 @@ table {
 }
 
 @media screen and (min-width: 768px) {
-  table,
-  th,
-  td,
-  table >>> .el-input__inner {
-    font-size: 1.25rem;
-  }
-
   table >>> .el-input__inner {
     padding: 0 15px;
   }

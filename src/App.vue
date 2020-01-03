@@ -4,7 +4,7 @@
     <div class="container">
       <Navigation />
 
-      <div class="main">
+      <div class="main mb-1">
         <router-view></router-view>
       </div>
     </div>
@@ -29,7 +29,8 @@
 }
 
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -43,17 +44,29 @@
   .mt-1 {
     margin-top: 15px;
   }
+
+  .mb-1 {
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (min-width: 568px) {
   .mt-1 {
     margin-top: 20px;
   }
+
+  .mb-1 {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .mt-1 {
     margin-top: 25px;
+  }
+
+  .mb-1 {
+    margin-bottom: 25px;
   }
 }
 </style>

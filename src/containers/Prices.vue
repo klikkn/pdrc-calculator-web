@@ -19,7 +19,13 @@
         <tr v-for="(rowValue, rowIndex) of squares" :key="rowIndex">
           <th class="row-th">{{squares[rowIndex].title}}</th>
           <td v-for="(priceValue, colIndex) of priceTable" :key="colIndex">
-            <el-input placeholder="Please input" v-model.number="priceTable[colIndex][rowIndex]"></el-input>
+            <div class="el-input">
+              <input
+                class="el-input__inner"
+                type="text"
+                v-model.number="priceTable[colIndex][rowIndex]"
+              />
+            </div>
           </td>
         </tr>
       </table>

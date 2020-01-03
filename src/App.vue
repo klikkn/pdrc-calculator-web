@@ -16,6 +16,16 @@
   --BASIC_BLACK: #000000;
   --BASIC_WHITE: #ffffff;
   --BRAND_COLOR: #409eff;
+
+  --PRIMARY_TEXT: #303133;
+  --REGULAR_TEXT: #606266;
+  --SECONDARY_TEXT: #909399;
+  --PLACEHOLDER_TEXT: #c0c4cc;
+
+  --BASE_BORDER: #dcdfe6;
+  --LIGHT_BORDER: #e4e7ed;
+  --LIGHTER_BORDER: #ebeef5;
+  --EXTRA_LIGHT_BORDER: #f2f6fc;
 }
 
 #app {

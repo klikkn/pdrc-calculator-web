@@ -40,6 +40,10 @@
   padding: 0 25px;
 }
 
+.el-notification {
+  width: 290px;
+}
+
 .auth {
   display: flex;
   flex-direction: column;

@@ -1,3 +1,5 @@
+import { Notification } from 'element-ui'
+
 export const errorHandler = (error) => {
-  alert(error)
+  Notification.error(error);
 }

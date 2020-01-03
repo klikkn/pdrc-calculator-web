@@ -3,8 +3,8 @@
     <h1>{{ $t('login') }}</h1>
 
     <form v-on:submit.prevent="onSubmit" class="auth__form">
-      <el-input placeholder="Please input login" v-model="email"></el-input>
-      <el-input placeholder="Please input password" v-model="password" show-password></el-input>
+      <el-input :placeholder="$t('enter.login')" v-model="email"></el-input>
+      <el-input :placeholder="$t('enter.password')" v-model="password" show-password></el-input>
 
       <el-button type="primary" native-type="submit">{{ $t('submit') }}</el-button>
     </form>

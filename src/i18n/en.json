@@ -7,6 +7,13 @@
   "doorBackRight": "Door Back Right",
   "doorFrontLeft": "Door Front Left",
   "doorFrontRight": "Door Front Right",
+  "enter": {
+    "email": "Enter email",
+    "login": "Enter login",
+    "password": "Enter password",
+    "passwordAgain": "Confirm password",
+    "username": "Enter username"
+  },
   "from": "From",
   "home": "Home",
   "hood": "Hood",

@@ -7,6 +7,13 @@
   "doorBackRight": "Задняя правая дверь",
   "doorFrontLeft": "Левая передняя дверь",
   "doorFrontRight": "Правая передняя дверь",
+  "enter": {
+    "email": "Введите email",
+    "login": "Введите логин",
+    "password": "Введите пароль",
+    "passwordAgain": "Повторите пароль",
+    "username": "Введите логин"
+  },
   "from": "С",
   "home": "Главная",
   "hood": "Капот",

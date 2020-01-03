@@ -3,57 +3,89 @@
     <h1>{{ $t('calculation') }}</h1>
 
     <form v-on:submit.prevent="onSubmit" v-on:reset="onReset">
-      <table>
-        <tr>
-          <td>
-            <select v-model="form.classIndex">
-              <option disabled value="null">{{ $t('select.class') }}</option>
-              <option v-for="(value, index) of classes" :key="index" :value="index">{{value.title}}</option>
-            </select>
-          </td>
-        </tr>
-      </table>
+      <el-select v-model="form.classIndex" :placeholder="$t('select.class')">
+        <el-option
+          v-for="(value, index) of classes"
+          :key="index"
+          :label="value.title"
+          :value="index"
+        ></el-option>
+      </el-select>
 
-      <table v-if="!isEmptyParams">
-        <tr v-for="(part, index) of parts" :key="index">
-          <td>
-            <input type="checkbox" :id="index" :value="part" v-model="form.selected" />
-            <label :for="index">{{ $t(part) }}</label>
-          </td>
+      <div v-if="!isEmptyParams" class="mt-1 grid">
+        <div v-for="(part, index) of parts" :key="index" class="grid-row">
+          <div class="part">
+            <el-checkbox v-model="form.selected[part]" border>{{ $t(part) }}</el-checkbox>
+          </div>
 
-          <td>
-            <select v-model="form.squares[part]">
-              <option disabled value="undefined">{{ $t('select.square') }}</option>
-              <option
+          <div class="square">
+            <el-select v-model="form.squares[part]" :placeholder="$t('select.square')">
+              <el-option
                 v-for="(square, index) of squares"
                 :key="index"
+                :label="square.title"
                 :value="index"
-              >{{square.title}}</option>
-            </select>
-          </td>
+              ></el-option>
+            </el-select>
+          </div>
 
-          <td v-if="part != 'roof'">
-            <input
-              type="checkbox"
-              :id="`${part}-hard`"
-              :value="index"
+          <div class="complicated">
+            <el-checkbox
               v-model="form.complicated[part]"
-            />
-            <label :for="`${part}-hard`">{{ $t('complicated') }}</label>
-          </td>
-          <td v-else></td>
-        </tr>
-      </table>
+              v-if="part != 'roof'"
+              border
+            >{{ $t('complicated') }}</el-checkbox>
+            <div v-else></div>
+          </div>
+        </div>
+      </div>
 
-      <button type="submit" :disabled="isSubmitDisabled">{{ $t('submit') }}</button>
-      <button type="reset">{{ $t('reset') }}</button>
+      <div class="mt-1">
+        <el-button type="primary" native-type="submit">{{ $t('submit') }}</el-button>
+        <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
+      </div>
 
       <div class="mt-1">{{ $t('result') }}: {{ result }}</div>
     </form>
   </div>
 </template>
 
-<style>
+<style scoped>
+.el-checkbox,
+.el-select {
+  width: 100%;
+}
+
+@media screen and (min-width: 0) {
+  .grid {
+    display: grid;
+    grid-gap: 15px;
+  }
+
+  .grid-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+
+  .part {
+    grid-column: 1/-1;
+  }
+}
+
+@media screen and (min-width: 568px) {
+}
+
+@media screen and (min-width: 768px) {
+  .grid-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .part {
+    grid-column: 1/2;
+  }
+}
 </style>
 
 <script>
@@ -65,7 +97,7 @@ import { errorHandler } from "../services/errors";
 const defaultFormState = {
   classIndex: null,
 
-  selected: [],
+  selected: {},
   complicated: {},
   squares: {}
 };

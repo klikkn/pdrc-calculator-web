@@ -1,8 +1,5 @@
 <template>
   <ul class="navigation">
-    <li>
-      <router-link to="/">{{ $t('home') }}</router-link>
-    </li>
     <template v-if="user">
       <li>
         <router-link to="/calculation">{{ $t('calculation') }}</router-link>

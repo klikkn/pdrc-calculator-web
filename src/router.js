@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import Home from "./containers/Home";
 import Login from "./containers/Login";
 import Register from "./containers/Register";
 import Calculation from "./containers/Calculation";
@@ -12,13 +11,17 @@ import tokenService from './services/token'
 Vue.use(VueRouter);
 
 const routes = [
-  { path: "/", component: Home, meta: {} },
+  {
+    path: '/', redirect: () => tokenService.get() ? '/calculation' : '/login'
+  },
 
   { path: "/login", component: Login, meta: {} },
   { path: "/register", component: Register, meta: {} },
 
   { path: "/calculation", component: Calculation, meta: { requiresAuth: true } },
-  { path: "/prices", component: Prices, meta: { requiresAuth: true } }
+  { path: "/prices", component: Prices, meta: { requiresAuth: true } },
+
+  { path: '*', redirect: '/' }
 ];
 
 const router = new VueRouter({ routes, mode: "history" });

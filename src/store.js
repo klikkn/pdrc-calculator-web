@@ -9,6 +9,7 @@ import {
   getMe,
   updateMe,
   getParams,
+  calculate
 } from "./services/api";
 
 import tokenService from './services/token'
@@ -16,12 +17,21 @@ import { errorHandler } from './services/errors'
 
 Vue.use(Vuex);
 
+export const defaultCalculationFormState = {
+  classIndex: null,
+  selected: {},
+  complicated: {},
+  squares: {},
+  result: 0
+}
+
 export default new Vuex.Store({
   strict: true,
 
   state: {
     user: null,
     params: null,
+    calculationForm: defaultCalculationFormState,
     isLoading: false
   },
 
@@ -40,6 +50,37 @@ export default new Vuex.Store({
 
     disableLoader({ commit }) {
       commit("SET", { prop: "isLoading", value: false });
+    },
+
+    updateCalculationForm({ commit }, data) {
+      commit("SET", { prop: "calculationForm", value: data });
+    },
+
+    resetCalculationForm({ commit }) {
+      commit("SET", { prop: "calculationForm", value: clone(defaultCalculationFormState) });
+    },
+
+    async calculate({ commit, state }, data) {
+      try {
+        const { selected, classIndex, complicated, squares } = data;
+        const {
+          data: { result }
+        } = await calculate({
+          selected,
+          classIndex,
+          complicated,
+          squares
+        });
+
+        commit("SET", {
+          prop: "calculationForm", value: {
+            ...state.calculationForm, result
+          }
+        });
+
+      } catch (err) {
+        errorHandler(err.message);
+      }
     },
 
     async login({ commit }, data) {

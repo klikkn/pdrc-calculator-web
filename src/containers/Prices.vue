@@ -86,9 +86,9 @@ export default {
   computed: {
     ...mapState({
       prices: ({ user }) => (user ? clone(user.prices) : []),
-      classes: ({ params }) => (params ? clone(params.classes) : []),
-      squares: ({ params }) => (params ? clone(params.squares) : []),
-      categories: ({ params }) => (params ? clone(params.categories) : [])
+      classes: ({ params }) => (params ? params.classes : []),
+      squares: ({ params }) => (params ? params.squares : []),
+      categories: ({ params }) => (params ? params.categories : [])
     })
   },
 

@@ -2,8 +2,12 @@
   <div>
     <h1>{{ $t('calculation') }}</h1>
 
-    <form v-on:submit.prevent="onSubmit" v-on:reset="onReset">
-      <el-select v-model="form.classIndex" :placeholder="$t('select.class')">
+    <form
+      v-on:submit.prevent="onSubmit"
+      v-on:reset="onReset"
+      v-loading.fullscreen.lock="!isFormVisible"
+    >
+      <el-select v-model="form.classIndex" @change="onChange" :placeholder="$t('select.class')">
         <el-option
           v-for="(value, index) of classes"
           :key="index"
@@ -12,14 +16,18 @@
         ></el-option>
       </el-select>
 
-      <div v-if="!isEmptyParams" class="mt-1 grid">
+      <div class="mt-1 grid" v-if="isFormVisible">
         <div v-for="(part, index) of parts" :key="index" class="grid-row">
           <div class="part">
-            <el-checkbox v-model="form.selected[part]" border>{{ $t(part) }}</el-checkbox>
+            <el-checkbox v-model="form.selected[part]" @change="onChange" border>{{ $t(part) }}</el-checkbox>
           </div>
 
           <div class="square">
-            <el-select v-model="form.squares[part]" :placeholder="$t('select.square')">
+            <el-select
+              v-model="form.squares[part]"
+              @change="onChange"
+              :placeholder="$t('select.square')"
+            >
               <el-option
                 v-for="(square, index) of squares"
                 :key="index"
@@ -33,6 +41,7 @@
             <el-checkbox
               v-model="form.complicated[part]"
               v-if="part != 'roof'"
+              @change="onChange"
               border
             >{{ $t('complicated') }}</el-checkbox>
             <div v-else></div>
@@ -42,7 +51,7 @@
         <div class="grid-row grid-row--last">
           <el-button type="primary" native-type="submit">{{ $t('submit') }}</el-button>
           <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
-          <div class="result">{{ $t('result') }}: {{ result }}</div>
+          <div class="result">{{ $t('result') }}: {{ form.result }}</div>
         </div>
       </div>
     </form>
@@ -118,31 +127,25 @@
 
 <script>
 import { clone, isNil } from "ramda";
-import { mapState } from "vuex";
-import { calculate } from "../services/api";
-import { errorHandler } from "../services/errors";
-
-const defaultFormState = {
-  classIndex: null,
-
-  selected: {},
-  complicated: {},
-  squares: {}
-};
+import { mapState, mapActions } from "vuex";
 
 export default {
+  beforeDestroy() {
+    this.updateCalculationForm(this.form);
+  },
+
   data: function() {
-    return { form: clone(defaultFormState), result: 0 };
+    return { isFormVisible: true };
   },
 
   computed: {
     ...mapState({
-      user: state => clone(state.user),
-      params: state => clone(state.params),
-      prices: ({ params }) => (params ? clone(params.prices) : []),
-      classes: ({ params }) => (params ? clone(params.classes) : []),
-      squares: ({ params }) => (params ? clone(params.squares) : []),
-      parts: ({ params }) => (params ? clone(params.parts) : [])
+      params: state => state.params,
+      classes: ({ params }) => (params ? params.classes : []),
+      squares: ({ params }) => (params ? params.squares : []),
+      parts: ({ params }) => (params ? params.parts : []),
+
+      form: ({ calculationForm }) => clone(calculationForm)
     }),
 
     isSubmitDisabled: function() {
@@ -156,27 +159,34 @@ export default {
   },
 
   methods: {
-    onSubmit: async function() {
-      try {
-        const { selected, classIndex, complicated, squares } = this.form;
-        const {
-          data: { result }
-        } = await calculate({
-          selected,
-          classIndex,
-          complicated,
-          squares
-        });
+    ...mapActions([
+      "updateCalculationForm",
+      "resetCalculationForm",
+      "calculate"
+    ]),
 
-        this.result = result;
-      } catch (err) {
-        errorHandler(err.message);
-      }
+    onSubmit: function() {
+      this.updateCalculationForm(this.form);
+      this.calculate();
     },
 
     onReset: function() {
-      this.form = clone(defaultFormState);
-      this.result = 0;
+      this.resetCalculationForm();
+      this.onChange();
+      this.forceRerender();
+    },
+
+    onChange() {
+      this.$forceUpdate();
+    },
+
+    // TODO: remove this very bad hack
+    // I don't know how to rerender element-ui components
+    forceRerender() {
+      this.isFormVisible = false;
+      setTimeout(() => {
+        this.isFormVisible = true;
+      }, 300);
     }
   }
 };

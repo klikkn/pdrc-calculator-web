@@ -60,9 +60,9 @@ export default new Vuex.Store({
       commit("SET", { prop: "calculationForm", value: clone(defaultCalculationFormState) });
     },
 
-    async calculate({ commit, state }, data) {
+    async calculate({ commit, state }) {
       try {
-        const { selected, classIndex, complicated, squares } = data;
+        const { selected, classIndex, complicated, squares } = state.calculationForm;
         const {
           data: { result }
         } = await calculate({

@@ -8,6 +8,9 @@
         <router-link to="/prices">{{ $t('prices') }}</router-link>
       </li>
       <li>
+        <router-link to="/classes">{{ $t('classes') }}</router-link>
+      </li>
+      <li>
         <a href="#" v-on:click.prevent="logout">{{ $t('logout') }}</a>
       </li>
     </template>

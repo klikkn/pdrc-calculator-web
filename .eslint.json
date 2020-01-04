@@ -25,34 +25,5 @@
   },
   "parserOptions": {
     "parser": "babel-eslint"
-  },
-  "overrides": [
-    {
-      "files": "*.svelte",
-      "processor": "svelte3/svelte3",
-      "extends": [
-        "eslint:recommended"
-      ],
-      "plugins": [
-        "svelte3"
-      ],
-      "rules": {
-        "comma-dangle": [
-          "error",
-          "always-multiline"
-        ],
-        "indent": [
-          "error",
-          2,
-          {
-            "SwitchCase": 1
-          }
-        ],
-        "no-console": "off",
-        "prettier/prettier": [
-          "off"
-        ]
-      }
-    }
-  ]
+  }
 }

@@ -33,12 +33,11 @@
 
 <script>
 import { mapState } from "vuex";
-import { clone } from "ramda";
 
 export default {
   computed: {
     ...mapState({
-      classes: ({ params }) => (params ? clone(params.classes) : [])
+      classes: ({ params }) => (params ? params.classes : [])
     })
   },
 

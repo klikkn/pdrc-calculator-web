@@ -66,6 +66,10 @@
   .mb-1 {
     margin-bottom: 15px;
   }
+
+  .fz-1 {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (min-width: 568px) {
@@ -76,6 +80,10 @@
   .mb-1 {
     margin-bottom: 20px;
   }
+
+  .fz-1 {
+    font-size: 0.875rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -85,6 +93,10 @@
 
   .mb-1 {
     margin-bottom: 25px;
+  }
+
+  .fz-1 {
+    font-size: 1rem;
   }
 }
 </style>

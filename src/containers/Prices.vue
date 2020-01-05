@@ -9,16 +9,16 @@
 
       <table>
         <tr>
-          <th>
+          <th class="fz-1">
             <div>{{ $t('class') }}</div>
             <div>-</div>
             <div>{{ $t('size') }}</div>
           </th>
-          <th v-for="(value, index) of classes" :key="index">{{ value.title }}</th>
+          <th class="fz-1" v-for="(value, index) of classes" :key="index">{{ value.title }}</th>
         </tr>
         <tr v-for="(rowValue, rowIndex) of squares" :key="rowIndex">
-          <th class="row-th">{{squares[rowIndex].title}}</th>
-          <td v-for="(priceValue, colIndex) of priceTable" :key="colIndex">
+          <th class="fz-1">{{squares[rowIndex].title}}</th>
+          <td class="fz-1" v-for="(priceValue, colIndex) of priceTable" :key="colIndex">
             <div class="el-input">
               <input
                 class="el-input__inner"
@@ -37,6 +37,8 @@
 table {
   width: 100%;
   color: var(--SECONDARY_TEXT);
+  border-spacing: 0;
+  border-collapse: none;
 }
 
 .header {
@@ -46,11 +48,10 @@ table {
 }
 
 @media screen and (min-width: 0) {
-  table,
-  th,
   td,
-  table >>> .el-input__inner {
-    font-size: 0.7rem;
+  tr,
+  th {
+    padding: 0;
   }
 
   table >>> .el-input__inner {
@@ -59,11 +60,10 @@ table {
 }
 
 @media screen and (min-width: 568px) {
-  table,
-  th,
   td,
-  table >>> .el-input__inner {
-    font-size: 0.875rem;
+  tr,
+  th {
+    padding: 1px;
   }
 
   table >>> .el-input__inner {
@@ -72,6 +72,12 @@ table {
 }
 
 @media screen and (min-width: 768px) {
+  td,
+  tr,
+  th {
+    padding: 5px;
+  }
+
   table >>> .el-input__inner {
     padding: 0 15px;
   }

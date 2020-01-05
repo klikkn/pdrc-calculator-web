@@ -2,7 +2,7 @@
   <div>
     <h1>{{ $t('classes') }}</h1>
 
-    <table class="classes-table">
+    <table class="classes-table fz-1">
       <tr>
         <th>{{ $t('class') }}</th>
         <th>{{ $t('length') }}</th>
@@ -18,15 +18,17 @@
 </template>
 
 <style scoped>
-.classes-table th {
-  padding: 15px;
+.classes-table th,
+.classes-table td {
+  padding: 10px;
   text-align: center;
+}
+
+.classes-table th {
   color: var(--SECONDARY_TEXT);
 }
 
 .classes-table td {
-  padding: 15px;
-  text-align: center;
   color: var(--REGULAR_TEXT);
 }
 </style>

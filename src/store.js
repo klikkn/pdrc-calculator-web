@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import { clone } from 'ramda';
+import { clone, isNil } from 'ramda';
 
 import {
   login,
@@ -63,14 +63,11 @@ export default new Vuex.Store({
     async calculate({ commit, state }) {
       try {
         const { selected, classIndex, complicated, squares } = state.calculationForm;
-        const {
-          data: { result }
-        } = await calculate({
-          selected,
-          classIndex,
-          complicated,
-          squares
-        });
+        const items = Object.entries(selected)
+          .filter(([key, value]) => value && !isNil(squares[key]))
+          .map(([key]) => ({ value: key, square: squares[key], complicated: Boolean(complicated[key]) }))
+
+        const { data: { result } } = await calculate({ classIndex, items });
 
         commit("SET", {
           prop: "calculationForm", value: {

@@ -1,6 +1,6 @@
 <template>
   <ul class="navigation">
-    <template v-if="user">
+    <template v-if="isToken">
       <li>
         <router-link to="/calculation">{{ $t('calculation') }}</router-link>
       </li>
@@ -39,11 +39,14 @@
 </style>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions } from "vuex";
+import tokenService from "../services/token";
 
 export default {
   computed: {
-    ...mapState(["user"])
+    isToken() {
+      return tokenService.get();
+    }
   },
   methods: {
     ...mapActions(["logout"])

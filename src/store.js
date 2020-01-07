@@ -12,7 +12,7 @@ import {
   getParams,
   calculate,
   getRequests,
-  addRequest,
+  createRequest,
   deleteRequest
 } from "./services/api";
 
@@ -36,10 +36,17 @@ export default new Vuex.Store({
     params: null,
     requests: [],
     calculationForm: defaultCalculationFormState,
-    isLoading: false
+    isLoading: false,
+
+    isCreateRequestLoading: false,
+    isCreateRequestError: false,
+    isDeleteRequestLoading: false,
+    isDeleteRequestError: false
   },
 
-  getters: {},
+  getters: {
+    availableRequests: state => state.requests.filter(e => !e.isDeleted)
+  },
 
   mutations: {
     ["SET"](state, { prop, value }) {
@@ -152,29 +159,46 @@ export default new Vuex.Store({
       }
     },
 
-    async addRequest({ commit, state, dispatch }, data) {
+    async createRequest({ commit, state, dispatch }, data) {
       try {
-        const { classIndex } = state.calculationForm;
+        commit("SET", { prop: "isCreateRequestLoading", value: true });
+        commit("SET", { prop: "isCreateRequestError", value: false });
+
+        const { classIndex, result } = state.calculationForm;
         const items = calculationFormMapper(state.calculationForm);
 
-        const { data: request } = await addRequest({ ...data, classIndex, items });
+        const { data: request } = await createRequest({ ...data, classIndex, items, price: result });
+
         commit("SET", { prop: "requests", value: [...state.requests, request] });
+        commit("SET", { prop: "isCreateRequestLoading", value: false });
       } catch (err) {
         dispatch('handleError', err);
+        commit("SET", { prop: "isCreateRequestLoading", value: false });
+        commit("SET", { prop: "isCreateRequestError", value: true });
       }
     },
 
     async deleteRequest({ commit, state, dispatch }, id) {
       try {
+        commit("SET", { prop: "isDeleteRequestLoading", value: true });
+        commit("SET", { prop: "isDeleteRequestError", value: false });
         await deleteRequest(id);
-        commit("SET", { prop: "params", value: state.requests });
+
+        const requests = clone(state.requests);
+        const deletedItem = requests.find(e => e.id === id);
+        deletedItem.isDeleted = true;
+
+        commit("SET", { prop: "requests", value: requests });
+        commit("SET", { prop: "isDeleteRequestLoading", value: false });
       } catch (err) {
         dispatch('handleError', err);
+        commit("SET", { prop: "isDeleteRequestLoading", value: false });
+        commit("SET", { prop: "isDeleteRequestError", value: true });
       }
     },
 
     handleError({ dispatch }, error) {
-      Notification.error(error.message);
+      Notification.error({ message: error.message, duration: 0 });
 
       const statusCode = error.response.status;
       if (!statusCode) return;
@@ -187,8 +211,7 @@ export default new Vuex.Store({
   }
 });
 
-const calculationFormMapper = ({ selected, complicated, squares }) => {
+const calculationFormMapper = ({ selected, complicated, squares }) =>
   Object.entries(selected)
     .filter(([key, value]) => value && !isNil(squares[key]))
     .map(([key]) => ({ value: key, square: squares[key], complicated: Boolean(complicated[key]) }))
-}

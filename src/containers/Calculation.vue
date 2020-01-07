@@ -49,12 +49,59 @@
         </div>
 
         <div class="grid-row grid-row--last">
-          <el-button type="primary" native-type="submit">{{ $t('submit') }}</el-button>
+          <div class="result">{{ $t('total') }}: {{ form.result }}</div>
+          <el-button
+            type="primary"
+            :disabled="form.classIndex === null"
+            native-type="submit"
+          >{{ $t('calculate') }}</el-button>
           <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
-          <div class="result">{{ $t('result') }}: {{ form.result }}</div>
+          <el-button
+            type="primary"
+            :disabled="form.result === 0"
+            @click="dialogFormVisible = true"
+          >{{ $t('order') }}</el-button>
         </div>
       </div>
     </form>
+
+    <el-dialog :title="$t('requestCreateFormTitle')" :visible.sync="dialogFormVisible">
+      <el-form :model="requestForm" class="requestForm" v-loading="isCreateRequestLoading">
+        <el-date-picker
+          v-model="requestForm.date"
+          type="date"
+          :placeholder="$t('enter.date')"
+          format="dd.MM.yyyy"
+          value-format="timestamp"
+        ></el-date-picker>
+
+        <el-input v-model="requestForm.vin" :placeholder="$t('enter.vin')" autocomplete="off"></el-input>
+        <el-input v-model="requestForm.make" :placeholder="$t('enter.make')" autocomplete="off"></el-input>
+        <el-input v-model="requestForm.model" :placeholder="$t('enter.model')" autocomplete="off"></el-input>
+        <el-input
+          v-model="requestForm.carNumber"
+          :placeholder="$t('enter.carNumber')"
+          autocomplete="off"
+        ></el-input>
+        <el-input
+          v-model="requestForm.clientName"
+          :placeholder="$t('enter.clientName')"
+          autocomplete="off"
+        ></el-input>
+        <el-input
+          v-model="requestForm.phoneNumber"
+          :placeholder="$t('enter.phoneNumber')"
+          autocomplete="off"
+        ></el-input>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button
+          @click="dialogFormVisible = false"
+          :disabled="isCreateRequestLoading"
+        >{{ $t('cancel') }}</el-button>
+        <el-button type="primary" @click="onSave" :disabled="isCreateRequestLoading">{{ $t('yes') }}</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -64,7 +111,7 @@
   width: 100%;
 }
 
-.el-button {
+.grid-row--last .el-button {
   margin: 0;
 }
 
@@ -82,6 +129,11 @@
   align-self: center;
 }
 
+.requestForm {
+  display: grid;
+  grid-gap: 15px;
+}
+
 @media screen and (min-width: 0) {
   .grid-row {
     grid-template-columns: repeat(2, 1fr);
@@ -93,12 +145,12 @@
     grid-gap: 10px;
   }
 
-  .part {
+  .grid-row--last button {
     grid-column: 1/-1;
   }
 
-  .result {
-    justify-self: start;
+  .part {
+    grid-column: 1/-1;
   }
 }
 
@@ -111,16 +163,16 @@
   }
 
   .grid-row--last {
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 1fr auto auto auto;
     grid-gap: 10px;
+  }
+
+  .grid-row--last button {
+    grid-column: initial;
   }
 
   .part {
     grid-column: 1/2;
-  }
-
-  .result {
-    justify-self: end;
   }
 }
 </style>
@@ -135,7 +187,20 @@ export default {
   },
 
   data: function() {
-    return { isFormVisible: true };
+    return {
+      isFormVisible: true,
+      dialogFormVisible: false,
+      requestForm: {
+        vin: "",
+        make: "",
+        model: "",
+        carNumber: "",
+        clientName: "",
+        phoneNumber: "",
+        date: new Date().getTime(),
+        price: ""
+      }
+    };
   },
 
   computed: {
@@ -144,8 +209,10 @@ export default {
       classes: ({ params }) => (params ? params.classes : []),
       squares: ({ params }) => (params ? params.squares : []),
       parts: ({ params }) => (params ? params.parts : []),
-
-      form: ({ calculationForm }) => clone(calculationForm)
+      form: ({ calculationForm }) => clone(calculationForm),
+      isCreateRequestLoading: ({ isCreateRequestLoading }) =>
+        isCreateRequestLoading,
+      isCreateRequestError: ({ isCreateRequestError }) => isCreateRequestError
     }),
 
     isSubmitDisabled: function() {
@@ -162,7 +229,8 @@ export default {
     ...mapActions([
       "updateCalculationForm",
       "resetCalculationForm",
-      "calculate"
+      "calculate",
+      "createRequest"
     ]),
 
     onSubmit: function() {
@@ -176,6 +244,10 @@ export default {
       this.forceRerender();
     },
 
+    onSave: function() {
+      this.createRequest(this.requestForm);
+    },
+
     onChange() {
       this.$forceUpdate();
     },
@@ -187,6 +259,18 @@ export default {
       setTimeout(() => {
         this.isFormVisible = true;
       }, 300);
+    }
+  },
+
+  watch: {
+    isCreateRequestLoading: function(newVal, oldVal) {
+      if (
+        !newVal &&
+        oldVal &&
+        this.dialogFormVisible &&
+        !this.isCreateRequestError
+      )
+        this.dialogFormVisible = false;
     }
   }
 };

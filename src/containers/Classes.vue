@@ -2,8 +2,8 @@
   <div>
     <h1>{{ $t('classes') }}</h1>
 
-    <table class="classes-table fz-1">
-      <tr>
+    <table class="classes-table table">
+      <tr class="fz-1">
         <th>{{ $t('class') }}</th>
         <th>{{ $t('length') }}</th>
         <th>{{ $t('width') }}</th>
@@ -20,16 +20,8 @@
 <style scoped>
 .classes-table th,
 .classes-table td {
-  padding: 10px;
+  padding: 15px;
   text-align: center;
-}
-
-.classes-table th {
-  color: var(--SECONDARY_TEXT);
-}
-
-.classes-table td {
-  color: var(--REGULAR_TEXT);
 }
 </style>
 

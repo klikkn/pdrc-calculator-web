@@ -7,5 +7,5 @@ export const updateMe = async (data) => await httpClient.put("/users/me", data);
 export const getParams = async () => await httpClient.get("/params");
 export const calculate = async data => await httpClient.post("/calculate", data);
 export const getRequests = async () => await httpClient.get("/requests");
-export const addRequest = async data => await httpClient.post("/requests", data);
-export const deleteRequest = async () => await httpClient.delete("/requests");
+export const createRequest = async data => await httpClient.post("/requests", data);
+export const deleteRequest = async (id) => await httpClient.delete(`/requests/${id}`);

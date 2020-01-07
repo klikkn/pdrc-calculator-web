@@ -5,6 +5,7 @@ import Login from "./containers/Login";
 import Register from "./containers/Register";
 import Calculation from "./containers/Calculation";
 import Prices from "./containers/Prices";
+import Requests from "./containers/Requests";
 import Classes from "./containers/Classes";
 
 import tokenService from './services/token'
@@ -21,6 +22,7 @@ const routes = [
 
   { path: "/calculation", component: Calculation, meta: { requiresAuth: true } },
   { path: "/prices", component: Prices, meta: { requiresAuth: true } },
+  { path: "/requests", component: Requests, meta: { requiresAuth: true } },
   { path: "/Classes", component: Classes, meta: { requiresAuth: true } },
 
   { path: '*', redirect: '/' }

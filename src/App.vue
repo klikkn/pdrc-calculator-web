@@ -36,6 +36,10 @@
   color: #2c3e50;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .container {
   padding: 0 25px;
 }
@@ -47,6 +51,14 @@
 .el-select-dropdown__item {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+.el-collapse-item__header {
+  height: auto;
+  line-height: 1;
+  padding: 15px;
+  color: var(--REGULAR_TEXT);
+  font-weight: bold;
 }
 
 .auth {
@@ -63,6 +75,27 @@
   max-width: 500px;
 }
 
+.table {
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid var(--LIGHTER_BORDER);
+  padding: 10px;
+}
+
+.table th {
+  color: var(--SECONDARY_TEXT);
+}
+
+.table td {
+  color: var(--REGULAR_TEXT);
+}
+
 @media screen and (min-width: 0) {
   .mt-1 {
     margin-top: 15px;
@@ -74,6 +107,10 @@
 
   .fz-1 {
     font-size: 0.7rem;
+  }
+
+  .el-dialog {
+    width: 90%;
   }
 }
 
@@ -89,6 +126,10 @@
   .fz-1 {
     font-size: 0.875rem;
   }
+
+  .el-dialog {
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -102,6 +143,10 @@
 
   .fz-1 {
     font-size: 1rem;
+  }
+
+  .el-dialog {
+    width: 50%;
   }
 }
 </style>

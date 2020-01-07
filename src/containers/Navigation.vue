@@ -8,6 +8,9 @@
         <router-link to="/prices">{{ $t('prices') }}</router-link>
       </li>
       <li>
+        <router-link to="/requests">{{ $t('orders') }}</router-link>
+      </li>
+      <li>
         <router-link to="/classes">{{ $t('classes') }}</router-link>
       </li>
       <li>

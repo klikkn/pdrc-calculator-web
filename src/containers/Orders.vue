@@ -3,11 +3,7 @@
     <h1>{{ $t('orders') }}</h1>
 
     <el-collapse>
-      <el-collapse-item
-        v-for="(request, index) of availableRequests"
-        :key="request.id"
-        :name="index"
-      >
+      <el-collapse-item v-for="(order, index) of availableOrders" :key="order.id" :name="index">
         <template slot="title">
           <div class="header">
             <div class="remove">
@@ -15,35 +11,35 @@
                 icon="el-icon-delete"
                 size="mini"
                 circle
-                @click.stop="openDeleteActionDialog(request.id)"
+                @click.stop="openDeleteActionDialog(order.id)"
               ></el-button>
             </div>
 
-            <div>{{ request.date | date }}</div>
-            <div>{{ request.price }} {{ $t('rub') }}</div>
-            <div>{{ request.make }} {{ request.model | emptyString}}</div>
+            <div>{{ order.date | date }}</div>
+            <div>{{ order.price }} {{ $t('rub') }}</div>
+            <div>{{ order.make }} {{ order.model | emptyString}}</div>
           </div>
         </template>
 
         <div class="content">
           <div>
-            <div>{{ $t('vin')}}: {{ request.vin | emptyString }}</div>
-            <div>{{ $t('carNumber')}}: {{ request.carNumber | emptyString }}</div>
-            <div>{{ $t('clientName')}}: {{ request.clientName }}</div>
-            <div>{{ $t('phoneNumber')}}: {{ request.phoneNumber }}</div>
-            <div>{{ $t('classIndex')}}: {{ classes[request.classIndex].title }}</div>
+            <div>{{ $t('vin')}}: {{ order.vin | emptyString }}</div>
+            <div>{{ $t('carNumber')}}: {{ order.carNumber | emptyString }}</div>
+            <div>{{ $t('clientName')}}: {{ order.clientName }}</div>
+            <div>{{ $t('phoneNumber')}}: {{ order.phoneNumber }}</div>
+            <div>{{ $t('classIndex')}}: {{ classes[order.classIndex].title }}</div>
           </div>
 
           <div>
-            <div>{{ $t('partsCount')}}: {{ request.items.length }}</div>
+            <div>{{ $t('partsCount')}}: {{ order.items.length }}</div>
 
-            <table class="table requests-table">
+            <table class="table orders-table">
               <tr>
                 <th>{{ $t('element') }}</th>
                 <th>{{ $t('size') }}</th>
                 <th>{{ $t('complicated') }}</th>
               </tr>
-              <tr v-for="(item, index) of request.items" :key="index" class="table">
+              <tr v-for="(item, index) of order.items" :key="index" class="table">
                 <td>{{ $t(item.value) }}</td>
                 <td>{{ squares[item.square].title }} {{ $t('sm2') }}</td>
                 <td>
@@ -57,16 +53,16 @@
     </el-collapse>
 
     <el-dialog :title="$t('confirmation')" :visible.sync="deleteDialogVisible">
-      <div v-loading="isDeleteRequestLoading">{{ $t('deleteConfirmation') }}</div>
+      <div v-loading="isDeleteOrderLoading">{{ $t('deleteConfirmation') }}</div>
       <span slot="footer" class="dialog-footer">
         <el-button
           @click="deleteDialogVisible = false"
-          :disabled="isDeleteRequestLoading"
+          :disabled="isDeleteOrderLoading"
         >{{ $t('cancel') }}</el-button>
         <el-button
           type="primary"
           @click="deleteAction"
-          :disabled="isDeleteRequestLoading"
+          :disabled="isDeleteOrderLoading"
         >{{ $t('yes') }}</el-button>
       </span>
     </el-dialog>
@@ -87,12 +83,12 @@
   max-width: 800px;
 }
 
-.requests-table th {
+.orders-table th {
   text-align: left;
 }
 
-.requests-table th,
-.requests-table td {
+.orders-table th,
+.orders-table td {
   padding-left: 0;
 }
 
@@ -150,23 +146,22 @@ export default {
   },
 
   mounted: function() {
-    if (isEmpty(this.requests)) this.getRequests();
+    if (isEmpty(this.orders)) this.getOrders();
   },
 
   computed: {
     ...mapState({
-      requests: ({ requests }) => requests,
+      orders: ({ orders }) => orders,
       squares: ({ params }) => (params ? params.squares : []),
       classes: ({ params }) => (params ? params.classes : []),
-      isDeleteRequestLoading: ({ isDeleteRequestLoading }) =>
-        isDeleteRequestLoading,
-      isDeleteRequestError: ({ isDeleteRequestError }) => isDeleteRequestError
+      isDeleteOrderLoading: ({ isDeleteOrderLoading }) => isDeleteOrderLoading,
+      isDeleteOrderError: ({ isDeleteOrderError }) => isDeleteOrderError
     }),
-    ...mapGetters(["availableRequests"])
+    ...mapGetters(["availableOrders"])
   },
 
   methods: {
-    ...mapActions(["getRequests", "deleteRequest"]),
+    ...mapActions(["getOrders", "deleteOrder"]),
 
     openDeleteActionDialog(id) {
       this.deleteDialogVisible = true;
@@ -174,17 +169,17 @@ export default {
     },
 
     deleteAction() {
-      this.deleteRequest(this.deletedDraftId);
+      this.deleteOrder(this.deletedDraftId);
     }
   },
 
   watch: {
-    isDeleteRequestLoading: function(newVal, oldVal) {
+    isDeleteOrderLoading: function(newVal, oldVal) {
       if (
         !newVal &&
         oldVal &&
         this.deleteDialogVisible &&
-        !this.isDeleteRequestError
+        !this.isDeleteOrderError
       ) {
         this.deleteDialogVisible = false;
         this.deletedDraftId = null;

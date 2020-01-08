@@ -65,31 +65,31 @@
       </div>
     </form>
 
-    <el-dialog :title="$t('requestCreateFormTitle')" :visible.sync="dialogFormVisible">
-      <el-form :model="requestForm" class="requestForm" v-loading="isCreateRequestLoading">
+    <el-dialog :title="$t('orderCreateFormTitle')" :visible.sync="dialogFormVisible">
+      <el-form :model="orderForm" class="orderForm" v-loading="isCreateOrderLoading">
         <el-date-picker
-          v-model="requestForm.date"
+          v-model="orderForm.date"
           type="date"
           :placeholder="$t('enter.date')"
           format="dd.MM.yyyy"
           value-format="timestamp"
         ></el-date-picker>
 
-        <el-input v-model="requestForm.vin" :placeholder="$t('enter.vin')" autocomplete="off"></el-input>
-        <el-input v-model="requestForm.make" :placeholder="$t('enter.make')" autocomplete="off"></el-input>
-        <el-input v-model="requestForm.model" :placeholder="$t('enter.model')" autocomplete="off"></el-input>
+        <el-input v-model="orderForm.vin" :placeholder="$t('enter.vin')" autocomplete="off"></el-input>
+        <el-input v-model="orderForm.make" :placeholder="$t('enter.make')" autocomplete="off"></el-input>
+        <el-input v-model="orderForm.model" :placeholder="$t('enter.model')" autocomplete="off"></el-input>
         <el-input
-          v-model="requestForm.carNumber"
+          v-model="orderForm.carNumber"
           :placeholder="$t('enter.carNumber')"
           autocomplete="off"
         ></el-input>
         <el-input
-          v-model="requestForm.clientName"
+          v-model="orderForm.clientName"
           :placeholder="$t('enter.clientName')"
           autocomplete="off"
         ></el-input>
         <el-input
-          v-model="requestForm.phoneNumber"
+          v-model="orderForm.phoneNumber"
           :placeholder="$t('enter.phoneNumber')"
           autocomplete="off"
         ></el-input>
@@ -97,9 +97,9 @@
       <span slot="footer" class="dialog-footer">
         <el-button
           @click="dialogFormVisible = false"
-          :disabled="isCreateRequestLoading"
+          :disabled="isCreateOrderLoading"
         >{{ $t('cancel') }}</el-button>
-        <el-button type="primary" @click="onSave" :disabled="isCreateRequestLoading">{{ $t('yes') }}</el-button>
+        <el-button type="primary" @click="onSave" :disabled="isCreateOrderLoading">{{ $t('yes') }}</el-button>
       </span>
     </el-dialog>
   </div>
@@ -129,7 +129,7 @@
   align-self: center;
 }
 
-.requestForm {
+.orderForm {
   display: grid;
   grid-gap: 15px;
 }
@@ -190,7 +190,7 @@ export default {
     return {
       isFormVisible: true,
       dialogFormVisible: false,
-      requestForm: {
+      orderForm: {
         vin: "",
         make: "",
         model: "",
@@ -210,9 +210,8 @@ export default {
       squares: ({ params }) => (params ? params.squares : []),
       parts: ({ params }) => (params ? params.parts : []),
       form: ({ calculationForm }) => clone(calculationForm),
-      isCreateRequestLoading: ({ isCreateRequestLoading }) =>
-        isCreateRequestLoading,
-      isCreateRequestError: ({ isCreateRequestError }) => isCreateRequestError
+      isCreateOrderLoading: ({ isCreateOrderLoading }) => isCreateOrderLoading,
+      isCreateOrderError: ({ isCreateOrderError }) => isCreateOrderError
     }),
 
     isSubmitDisabled: function() {
@@ -230,7 +229,7 @@ export default {
       "updateCalculationForm",
       "resetCalculationForm",
       "calculate",
-      "createRequest"
+      "createOrder"
     ]),
 
     onSubmit: function() {
@@ -245,7 +244,7 @@ export default {
     },
 
     onSave: function() {
-      this.createRequest(this.requestForm);
+      this.createOrder(this.orderForm);
     },
 
     onChange() {
@@ -263,12 +262,12 @@ export default {
   },
 
   watch: {
-    isCreateRequestLoading: function(newVal, oldVal) {
+    isCreateOrderLoading: function(newVal, oldVal) {
       if (
         !newVal &&
         oldVal &&
         this.dialogFormVisible &&
-        !this.isCreateRequestError
+        !this.isCreateOrderError
       )
         this.dialogFormVisible = false;
     }

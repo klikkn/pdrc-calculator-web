@@ -11,9 +11,9 @@ import {
   updateMe,
   getParams,
   calculate,
-  getRequests,
-  createRequest,
-  deleteRequest
+  getOrders,
+  createOrder,
+  deleteOrder
 } from "./services/api";
 
 import tokenService from './services/token'
@@ -34,18 +34,18 @@ export default new Vuex.Store({
   state: {
     user: null,
     params: null,
-    requests: [],
+    orders: [],
     calculationForm: defaultCalculationFormState,
     isLoading: false,
 
-    isCreateRequestLoading: false,
-    isCreateRequestError: false,
-    isDeleteRequestLoading: false,
-    isDeleteRequestError: false
+    isCreateOrderLoading: false,
+    isCreateOrderError: false,
+    isDeleteOrderLoading: false,
+    isDeleteOrderError: false
   },
 
   getters: {
-    availableRequests: state => state.requests.filter(e => !e.isDeleted)
+    availableOrders: state => state.orders.filter(e => !e.isDeleted)
   },
 
   mutations: {
@@ -150,50 +150,50 @@ export default new Vuex.Store({
       }
     },
 
-    async getRequests({ commit, dispatch }) {
+    async getOrders({ commit, dispatch }) {
       try {
-        const { data } = await getRequests();
-        commit("SET", { prop: "requests", value: data });
+        const { data } = await getOrders();
+        commit("SET", { prop: "orders", value: data });
       } catch (err) {
         dispatch('handleError', err);
       }
     },
 
-    async createRequest({ commit, state, dispatch }, data) {
+    async createOrder({ commit, state, dispatch }, data) {
       try {
-        commit("SET", { prop: "isCreateRequestLoading", value: true });
-        commit("SET", { prop: "isCreateRequestError", value: false });
+        commit("SET", { prop: "isCreateOrderLoading", value: true });
+        commit("SET", { prop: "isCreateOrderError", value: false });
 
         const { classIndex, result } = state.calculationForm;
         const items = calculationFormMapper(state.calculationForm);
 
-        const { data: request } = await createRequest({ ...data, classIndex, items, price: result });
+        const { data: order } = await createOrder({ ...data, classIndex, items, price: result });
 
-        commit("SET", { prop: "requests", value: [...state.requests, request] });
-        commit("SET", { prop: "isCreateRequestLoading", value: false });
+        commit("SET", { prop: "orders", value: [...state.orders, order] });
+        commit("SET", { prop: "isCreateOrderLoading", value: false });
       } catch (err) {
         dispatch('handleError', err);
-        commit("SET", { prop: "isCreateRequestLoading", value: false });
-        commit("SET", { prop: "isCreateRequestError", value: true });
+        commit("SET", { prop: "isCreateOrderLoading", value: false });
+        commit("SET", { prop: "isCreateOrderError", value: true });
       }
     },
 
-    async deleteRequest({ commit, state, dispatch }, id) {
+    async deleteOrder({ commit, state, dispatch }, id) {
       try {
-        commit("SET", { prop: "isDeleteRequestLoading", value: true });
-        commit("SET", { prop: "isDeleteRequestError", value: false });
-        await deleteRequest(id);
+        commit("SET", { prop: "isDeleteOrderLoading", value: true });
+        commit("SET", { prop: "isDeleteOrderError", value: false });
+        await deleteOrder(id);
 
-        const requests = clone(state.requests);
-        const deletedItem = requests.find(e => e.id === id);
+        const orders = clone(state.orders);
+        const deletedItem = orders.find(e => e.id === id);
         deletedItem.isDeleted = true;
 
-        commit("SET", { prop: "requests", value: requests });
-        commit("SET", { prop: "isDeleteRequestLoading", value: false });
+        commit("SET", { prop: "orders", value: orders });
+        commit("SET", { prop: "isDeleteOrderLoading", value: false });
       } catch (err) {
         dispatch('handleError', err);
-        commit("SET", { prop: "isDeleteRequestLoading", value: false });
-        commit("SET", { prop: "isDeleteRequestError", value: true });
+        commit("SET", { prop: "isDeleteOrderLoading", value: false });
+        commit("SET", { prop: "isDeleteOrderError", value: true });
       }
     },
 

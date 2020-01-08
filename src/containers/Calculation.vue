@@ -48,7 +48,7 @@
         </div>
       </div>
 
-      <div class="grid-row grid-row--last">
+      <div class="grid-row grid-row--last mt-1">
         <div class="result">{{ $t('total') }}: {{ form.result }}</div>
         <el-button
           type="primary"

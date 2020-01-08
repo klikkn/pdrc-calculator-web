@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <Loader />
+    <Navigation />
     <div class="container">
-      <Navigation />
-
       <div class="main mb-1">
         <router-view></router-view>
       </div>

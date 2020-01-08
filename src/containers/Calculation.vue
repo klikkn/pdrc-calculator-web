@@ -40,28 +40,27 @@
           <div class="complicated">
             <el-checkbox
               v-model="form.complicated[part]"
-              v-if="part != 'roof'"
+              :disabled="part == 'roof'"
               @change="onChange"
               border
             >{{ $t('complicated') }}</el-checkbox>
-            <div v-else></div>
           </div>
         </div>
+      </div>
 
-        <div class="grid-row grid-row--last">
-          <div class="result">{{ $t('total') }}: {{ form.result }}</div>
-          <el-button
-            type="primary"
-            :disabled="form.classIndex === null"
-            native-type="submit"
-          >{{ $t('calculate') }}</el-button>
-          <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
-          <el-button
-            type="primary"
-            :disabled="form.result === 0"
-            @click="dialogFormVisible = true"
-          >{{ $t('order') }}</el-button>
-        </div>
+      <div class="grid-row grid-row--last">
+        <div class="result">{{ $t('total') }}: {{ form.result }}</div>
+        <el-button
+          type="primary"
+          :disabled="form.classIndex === null"
+          native-type="submit"
+        >{{ $t('calculate') }}</el-button>
+        <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
+        <el-button
+          type="primary"
+          :disabled="form.result === 0"
+          @click="dialogFormVisible = true"
+        >{{ $t('order') }}</el-button>
       </div>
     </form>
 
@@ -158,6 +157,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: auto;
+  }
+
   .grid-row {
     grid-template-columns: 2fr 1fr 1fr;
   }
@@ -173,6 +176,12 @@
 
   .part {
     grid-column: 1/2;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>

@@ -104,7 +104,7 @@ export default new Vuex.Store({
 
     async register({ commit, dispatch }, data) {
       try {
-        const { jwt, user } = await register(data);
+        const { data: { jwt, user } } = await register(data);
 
         tokenService.set(jwt);
         commit("SET", { prop: "user", value: user });

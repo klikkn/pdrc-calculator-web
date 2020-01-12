@@ -1,43 +1,88 @@
 <template>
-  <ul class="navigation">
+  <el-menu shadow="always">
+    <el-menu-item @click="disableMenu" class="close">
+      <i class="el-icon-close"></i>
+    </el-menu-item>
+
     <template v-if="isToken">
-      <li>
-        <router-link to="/calculation">{{ $t('calculation') }}</router-link>
-      </li>
-      <li>
-        <router-link to="/prices">{{ $t('prices') }}</router-link>
-      </li>
-      <li>
-        <router-link to="/orders">{{ $t('orders') }}</router-link>
-      </li>
-      <li>
-        <router-link to="/classes">{{ $t('classes') }}</router-link>
-      </li>
-      <li>
-        <a href="#" v-on:click.prevent="logout">{{ $t('logout') }}</a>
-      </li>
+      <router-link to="/calculation">
+        <el-menu-item>
+          <i class="el-icon-menu"></i>
+          <span>{{ $t('calculation') }}</span>
+        </el-menu-item>
+      </router-link>
+
+      <router-link to="/prices">
+        <el-menu-item>
+          <i class="el-icon-menu"></i>
+          <span>{{ $t('prices') }}</span>
+        </el-menu-item>
+      </router-link>
+
+      <router-link to="/orders">
+        <el-menu-item>
+          <i class="el-icon-menu"></i>
+          <span>{{ $t('orders') }}</span>
+        </el-menu-item>
+      </router-link>
+
+      <router-link to="/classes">
+        <el-menu-item>
+          <i class="el-icon-menu"></i>
+          <span>{{ $t('classes') }}</span>
+        </el-menu-item>
+      </router-link>
+      <a href="#" v-on:click.prevent="logout">
+        <el-menu-item>
+          <i class="el-icon-menu"></i>
+          <span>{{ $t('logout') }}</span>
+        </el-menu-item>
+      </a>
     </template>
     <template v-else>
-      <li>
-        <router-link to="/register">{{ $t('register') }}</router-link>
-      </li>
-      <li>
-        <router-link to="/login">{{ $t('login') }}</router-link>
-      </li>
+      <router-link to="/register">
+        <el-menu-item>
+          <i class="el-icon-menu"></i>
+          <span>{{ $t('register') }}</span>
+        </el-menu-item>
+      </router-link>
+      <router-link to="/login">
+        <el-menu-item>
+          <i class="el-icon-menu"></i>
+          <span>{{ $t('login') }}</span>
+        </el-menu-item>
+      </router-link>
     </template>
-  </ul>
+  </el-menu>
 </template>
 
+
 <style>
-.navigation {
-  margin: 0;
-  padding: 0;
-  display: flex;
+.el-menu a {
+  text-decoration: none;
+  color: var(--PRIMARY_TEXT);
 }
 
-.navigation li {
-  display: block;
-  margin-right: 15px;
+.el-menu-item.close i {
+  font-size: 32px;
+}
+
+@media screen and (min-width: 0) {
+  .close {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 568px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .close {
+    visibility: hidden;
+  }
 }
 </style>
 
@@ -52,7 +97,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["logout"])
+    ...mapActions(["disableMenu", "logout"])
   }
 };
 </script>

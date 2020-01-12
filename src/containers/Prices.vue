@@ -82,6 +82,9 @@ table {
     padding: 0 15px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+}
 </style>
 
 <script>

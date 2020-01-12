@@ -1,11 +1,18 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <Loader />
-    <Navigation />
-    <div class="container">
-      <div class="main mb-1">
-        <router-view></router-view>
+    <div class="main" :class="{ blur: isMenuActive }">
+      <div class="container">
+        <div class="mb-1">
+          <router-view></router-view>
+        </div>
       </div>
+    </div>
+    <div class="open-nav" @click="enableMenu">
+      <i class="el-icon-menu"></i>
+    </div>
+    <div class="nav" :class="{ active: isMenuActive }">
+      <Navigation />
     </div>
   </div>
 </template>
@@ -27,6 +34,11 @@
   --EXTRA_LIGHT_BORDER: #f2f6fc;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
@@ -39,8 +51,12 @@
   font-weight: bold;
 }
 
-.container {
-  padding: 0 25px;
+.blur {
+  filter: blur(5px);
+}
+
+.noscroll {
+  overflow: hidden;
 }
 
 .el-notification {
@@ -58,6 +74,19 @@
   padding: 15px;
   color: var(--REGULAR_TEXT);
   font-weight: bold;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.open-nav {
+  position: absolute;
+  font-size: 32px;
 }
 
 .auth {
@@ -111,6 +140,24 @@
   .el-dialog {
     width: 90%;
   }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .nav {
+    display: none;
+    border: none;
+  }
+
+  .open-nav {
+    top: 20px;
+    right: 7px;
+  }
+
+  .active {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 568px) {
@@ -128,6 +175,15 @@
 
   .el-dialog {
     width: 70%;
+  }
+
+  .open-nav {
+    top: 20px;
+    right: 12px;
+  }
+
+  .container {
+    padding: 0 15px;
   }
 }
 
@@ -147,6 +203,33 @@
   .el-dialog {
     width: 50%;
   }
+
+  .open-nav {
+    top: 20px;
+    right: 17px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    display: block;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border-left: 1px solid var(--BASE_BORDER);
+  }
+
+  .open-nav {
+    display: none;
+  }
+
+  .main {
+    margin-right: 300px;
+  }
 }
 </style>
 
@@ -164,11 +247,11 @@ export default {
   },
 
   computed: {
-    ...mapState(["user", "params"])
+    ...mapState(["user", "params", "isMenuActive"])
   },
 
   methods: {
-    ...mapActions(["getMe", "getParams"])
+    ...mapActions(["getMe", "getParams", "enableMenu"])
   }
 };
 </script>

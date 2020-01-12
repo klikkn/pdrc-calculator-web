@@ -131,6 +131,9 @@
     padding-left: 55px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+}
 </style>
 
 <script>

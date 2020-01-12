@@ -8,6 +8,7 @@ import Prices from "./containers/Prices";
 import Orders from "./containers/Orders";
 import Classes from "./containers/Classes";
 
+import store from './store'
 import tokenService from './services/token'
 
 Vue.use(VueRouter);
@@ -39,6 +40,10 @@ router.beforeEach((to, _, next) => {
   }
 
   next()
+})
+
+router.afterEach(() => {
+  store.dispatch('disableMenu')
 })
 
 export default router;

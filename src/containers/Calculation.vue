@@ -178,12 +178,6 @@
     grid-column: 1/2;
   }
 }
-
-@media screen and (min-width: 1224px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 </style>
 
 <script>
@@ -214,7 +208,6 @@ export default {
 
   computed: {
     ...mapState({
-      params: state => state.params,
       classes: ({ params }) => (params ? params.classes : []),
       squares: ({ params }) => (params ? params.squares : []),
       parts: ({ params }) => (params ? params.parts : []),

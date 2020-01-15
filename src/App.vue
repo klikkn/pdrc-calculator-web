@@ -220,7 +220,6 @@ body {
     bottom: 0;
     right: 0;
     width: 300px;
-    border-left: 1px solid var(--BASE_BORDER);
   }
 
   .open-nav {

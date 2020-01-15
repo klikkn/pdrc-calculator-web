@@ -27,7 +27,10 @@
             <div>{{ $t('carNumber')}}: {{ order.carNumber | emptyString }}</div>
             <div>{{ $t('clientName')}}: {{ order.clientName }}</div>
             <div>{{ $t('phoneNumber')}}: {{ order.phoneNumber }}</div>
-            <div>{{ $t('classIndex')}}: {{ classes[order.classIndex].title }}</div>
+            <div>
+              <span>{{ $t('classIndex')}}:</span>
+              <span v-if="classes[order.classIndex]">{{ classes[order.classIndex].title }}</span>
+            </div>
           </div>
 
           <div>
@@ -41,7 +44,9 @@
               </tr>
               <tr v-for="(item, index) of order.items" :key="index" class="table">
                 <td>{{ $t(item.value) }}</td>
-                <td>{{ squares[item.square].title }} {{ $t('sm2') }}</td>
+                <td>
+                  <span v-if="squares[item.square]">{{ squares[item.square].title }} {{ $t('sm2') }}</span>
+                </td>
                 <td>
                   <i v-if="item.complicated" class="el-icon-success"></i>
                 </td>

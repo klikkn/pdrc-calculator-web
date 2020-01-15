@@ -7,34 +7,34 @@
     <template v-if="isToken">
       <router-link to="/calculation">
         <el-menu-item>
-          <i class="el-icon-menu"></i>
+          <i class="el-icon-s-order"></i>
           <span>{{ $t('calculation') }}</span>
         </el-menu-item>
       </router-link>
 
       <router-link to="/prices">
         <el-menu-item>
-          <i class="el-icon-menu"></i>
+          <i class="el-icon-money"></i>
           <span>{{ $t('prices') }}</span>
         </el-menu-item>
       </router-link>
 
       <router-link to="/orders">
         <el-menu-item>
-          <i class="el-icon-menu"></i>
+          <i class="el-icon-notebook-1"></i>
           <span>{{ $t('orders') }}</span>
         </el-menu-item>
       </router-link>
 
       <router-link to="/classes">
         <el-menu-item>
-          <i class="el-icon-menu"></i>
+          <i class="el-icon-document"></i>
           <span>{{ $t('classes') }}</span>
         </el-menu-item>
       </router-link>
       <a href="#" v-on:click.prevent="logout">
         <el-menu-item>
-          <i class="el-icon-menu"></i>
+          <i class="el-icon-s-promotion"></i>
           <span>{{ $t('logout') }}</span>
         </el-menu-item>
       </a>

@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="app">
-    <Progress />
-
+    <div class="status-loader" v-loading="isStatusLoading"></div>
     <template v-if="status">
+      <Progress />
       <div class="main" :class="{ blur: isMenuActive }">
         <div class="container">
           <div class="mb-1">
@@ -77,6 +77,14 @@ body {
   padding: 15px;
   color: var(--REGULAR_TEXT);
   font-weight: bold;
+}
+
+.status-loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .nav {

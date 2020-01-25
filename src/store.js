@@ -2,7 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import { Notification } from 'element-ui'
 
-import { clone, isNil } from 'ramda';
+import { clone } from 'ramda';
 
 import {
   status,
@@ -23,9 +23,7 @@ Vue.use(Vuex);
 
 export const defaultCalculationFormState = {
   classIndex: null,
-  selected: {},
-  complicated: {},
-  squares: {},
+  items: [],
   result: 0
 }
 
@@ -86,10 +84,9 @@ export default new Vuex.Store({
     },
 
     async calculate({ commit, state, dispatch }) {
-      try {
-        const { classIndex } = state.calculationForm;
-        const items = calculationFormMapper(state.calculationForm);
+      const { classIndex, items } = state.calculationForm;
 
+      try {
         const { data: { result } } = await calculate({ classIndex, items });
 
         commit("SET", {
@@ -190,12 +187,10 @@ export default new Vuex.Store({
     },
 
     async createOrder({ commit, state, dispatch }, data) {
+      const { classIndex, items, result } = state.calculationForm;
       try {
         commit("SET", { prop: "isCreateOrderLoading", value: true });
         commit("SET", { prop: "isCreateOrderError", value: false });
-
-        const { classIndex, result } = state.calculationForm;
-        const items = calculationFormMapper(state.calculationForm);
 
         const { data: order } = await createOrder({ ...data, classIndex, items, price: result });
 
@@ -242,8 +237,3 @@ export default new Vuex.Store({
     }
   }
 });
-
-const calculationFormMapper = ({ selected, complicated, squares }) =>
-  Object.entries(selected)
-    .filter(([key, value]) => value && !isNil(squares[key]))
-    .map(([key]) => ({ value: key, square: squares[key], complicated: Boolean(complicated[key]) }))

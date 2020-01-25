@@ -2,6 +2,7 @@
   "actions": {
     "reloadPage": "You need to reload a page"
   },
+  "add": "Add",
   "calculate": "Calculate",
   "calculation": "Calculation",
   "cancel": "Cancel",
@@ -39,6 +40,7 @@
     "vin": "Enter vin"
   },
   "from": "From",
+  "hailstorm": "Hailstorm",
   "home": "Home",
   "hood": "Hood",
   "length": "Length",
@@ -67,9 +69,11 @@
   "rub": "RUB",
   "save": "Save",
   "select": {
+    "category": "Select category",
     "class": "Select class",
     "make": "Select make",
     "model": "Select model",
+    "part": "Select part",
     "square": "Select square",
     "year": "Select year"
   },

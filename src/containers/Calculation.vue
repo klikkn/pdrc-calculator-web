@@ -17,34 +17,46 @@
       </el-select>
 
       <div class="mt-1 grid" v-if="isFormVisible">
-        <div v-for="(part, index) of parts" :key="index" class="grid-row">
-          <div class="part">
-            <el-checkbox v-model="form.selected[part]" @change="onChange" border>{{ $t(part) }}</el-checkbox>
-          </div>
+        <div>
+          <div v-for="(item, index) of form.items" :key="index">{{ item }}</div>
+        </div>
 
-          <div class="square">
-            <el-select
-              v-model="form.squares[part]"
-              @change="onChange"
-              :placeholder="$t('select.square')"
-            >
-              <el-option
-                v-for="(square, index) of squares"
-                :key="index"
-                :label="square.title"
-                :value="index"
-              ></el-option>
-            </el-select>
-          </div>
+        <div class="grid-row">
+          <el-select
+            v-model="temporaryItem.part"
+            @change="onChange"
+            :placeholder="$t('select.part')"
+          >
+            <el-option v-for="(part, index) of parts" :key="index" :value="part" :label="$t(part)"></el-option>
+          </el-select>
 
-          <div class="complicated">
-            <el-checkbox
-              v-model="form.complicated[part]"
-              :disabled="part == 'roof'"
-              @change="onChange"
-              border
-            >{{ $t('complicated') }}</el-checkbox>
-          </div>
+          <el-select
+            v-model="temporaryItem.square"
+            @change="onChange"
+            :placeholder="$t('select.square')"
+          >
+            <el-option
+              v-for="(square, index) of squares"
+              :key="index"
+              :label="square.title"
+              :value="index"
+            ></el-option>
+          </el-select>
+
+          <el-select
+            v-model="temporaryItem.category"
+            @change="onChange"
+            :placeholder="$t('select.category')"
+          >
+            <el-option
+              v-for="(category, index) of categories"
+              :key="index"
+              :label="$t(category)"
+              :value="category"
+            ></el-option>
+          </el-select>
+
+          <el-button type="primary" @click="onAddItem" :disabled="isAddItemDisabled">{{ $t('add') }}</el-button>
         </div>
       </div>
 
@@ -52,7 +64,7 @@
         <div class="result">{{ $t('total') }}: {{ form.result }}</div>
         <el-button
           type="primary"
-          :disabled="form.classIndex === null"
+          :disabled="form.classIndex === null || !form.items.length"
           native-type="submit"
         >{{ $t('calculate') }}</el-button>
         <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
@@ -184,6 +196,12 @@
 import { clone, isNil } from "ramda";
 import { mapState, mapActions } from "vuex";
 
+const temporaryItemDefaultState = {
+  part: null,
+  square: null,
+  category: null
+};
+
 export default {
   beforeDestroy() {
     this.updateCalculationForm(this.form);
@@ -191,6 +209,7 @@ export default {
 
   data: function() {
     return {
+      temporaryItem: temporaryItemDefaultState,
       isFormVisible: true,
       dialogFormVisible: false,
       orderForm: {
@@ -211,14 +230,16 @@ export default {
       classes: ({ params }) => (params ? params.classes : []),
       squares: ({ params }) => (params ? params.squares : []),
       parts: ({ params }) => (params ? params.parts : []),
+      categories: ({ params }) => (params ? params.categories : []),
+
       form: ({ calculationForm }) => clone(calculationForm),
       isCreateOrderLoading: ({ isCreateOrderLoading }) => isCreateOrderLoading,
       isCreateOrderError: ({ isCreateOrderError }) => isCreateOrderError
     }),
 
-    isSubmitDisabled: function() {
-      const { classIndex } = this.form;
-      return isNil(classIndex);
+    isAddItemDisabled: function() {
+      const { part, square, category } = this.temporaryItem;
+      return isNil(part) || isNil(square) || isNil(category);
     },
 
     isEmptyParams: function() {
@@ -241,6 +262,8 @@ export default {
 
     onReset: function() {
       this.resetCalculationForm();
+      this.temporaryItem = clone(temporaryItemDefaultState);
+
       this.onChange();
       this.forceRerender();
     },
@@ -250,6 +273,11 @@ export default {
     },
 
     onChange() {
+      this.$forceUpdate();
+    },
+
+    onAddItem() {
+      this.form.items.push(clone(this.temporaryItem));
       this.$forceUpdate();
     },
 

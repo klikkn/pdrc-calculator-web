@@ -69,11 +69,11 @@ export default new Vuex.Store({
       commit("SET", { prop: "isMenuActive", value: false });
     },
 
-    enableLoader({ commit }) {
+    enableLoading({ commit }) {
       commit("SET", { prop: "isLoading", value: true });
     },
 
-    disableLoader({ commit }) {
+    disableLoading({ commit }) {
       commit("SET", { prop: "isLoading", value: false });
     },
 

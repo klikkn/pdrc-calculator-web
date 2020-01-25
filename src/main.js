@@ -12,11 +12,11 @@ import i18n from "./i18n";
 
 import App from "./App.vue";
 import Navigation from "./containers/Navigation.vue";
-import Loader from "./containers/Loader.vue";
+import Progress from "./containers/Progress.vue";
 
 Vue.use(ElementUI, { locale: ruLocale })
 Vue.component("Navigation", Navigation);
-Vue.component("Loader", Loader);
+Vue.component("Progress", Progress);
 
 Vue.config.productionTip = false;
 

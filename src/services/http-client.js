@@ -12,7 +12,7 @@ const options = {
 };
 
 axios.interceptors.request.use(function (config) {
-  store.dispatch('enableLoader');
+  store.dispatch('enableLoading');
 
   if (!['/auth/local', '/auth/local/register'].includes(config.url)) {
     const token = tokenService.get();
@@ -25,10 +25,10 @@ axios.interceptors.request.use(function (config) {
 });
 
 axios.interceptors.response.use(function (response) {
-  store.dispatch('disableLoader');
+  store.dispatch('disableLoading');
   return response;
 }, function (error) {
-  store.dispatch('disableLoader');
+  store.dispatch('disableLoading');
   return Promise.reject(error);
 });
 

@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <Loader />
+    <Progress />
 
     <template v-if="status">
       <div class="main" :class="{ blur: isMenuActive }">

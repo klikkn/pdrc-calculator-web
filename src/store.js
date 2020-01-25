@@ -5,6 +5,7 @@ import { Notification } from 'element-ui'
 import { clone, isNil } from 'ramda';
 
 import {
+  status,
   login,
   register,
   getMe,
@@ -32,6 +33,7 @@ export default new Vuex.Store({
   strict: true,
 
   state: {
+    status: false,
     user: null,
     params: null,
     orders: [],
@@ -39,6 +41,8 @@ export default new Vuex.Store({
     isLoading: false,
     isMenuActive: false,
 
+    isStatusLoading: false,
+    isStatusError: true,
     isCreateOrderLoading: false,
     isCreateOrderError: false,
     isDeleteOrderLoading: false,
@@ -128,6 +132,22 @@ export default new Vuex.Store({
     async logout() {
       tokenService.remove();
       window.location.replace('/')
+    },
+
+    async getStatus({ commit, dispatch }) {
+      try {
+        commit("SET", { prop: "isStatusLoading", value: true });
+        commit("SET", { prop: "isStatusError", value: false });
+
+        await status();
+
+        commit("SET", { prop: "isStatusLoading", value: false });
+        commit("SET", { prop: "status", value: true });
+      } catch (err) {
+        dispatch('handleError', err);
+        commit("SET", { prop: "isStatusLoading", value: false });
+        commit("SET", { prop: "isStatusError", value: true });
+      }
     },
 
     async getMe({ commit, dispatch }) {

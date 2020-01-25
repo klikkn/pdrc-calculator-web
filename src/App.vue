@@ -1,19 +1,22 @@
 <template>
   <div id="app" class="app">
     <Loader />
-    <div class="main" :class="{ blur: isMenuActive }">
-      <div class="container">
-        <div class="mb-1">
-          <router-view></router-view>
+
+    <template v-if="status">
+      <div class="main" :class="{ blur: isMenuActive }">
+        <div class="container">
+          <div class="mb-1">
+            <router-view></router-view>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="open-nav" @click="enableMenu">
-      <i class="el-icon-menu"></i>
-    </div>
-    <div class="nav" :class="{ active: isMenuActive }">
-      <Navigation />
-    </div>
+      <div class="open-nav" @click="enableMenu">
+        <i class="el-icon-menu"></i>
+      </div>
+      <div class="nav" :class="{ active: isMenuActive }">
+        <Navigation />
+      </div>
+    </template>
   </div>
 </template>
 
@@ -239,18 +242,33 @@ import tokenService from "./services/token";
 
 export default {
   mounted: function() {
-    if (!tokenService.get()) return;
-
-    if (isNil(this.user)) this.getMe();
-    if (isNil(this.params)) this.getParams();
+    this.getStatus();
   },
 
   computed: {
-    ...mapState(["user", "params", "isMenuActive"])
+    ...mapState([
+      "status",
+      "isStatusLoading",
+      "isStatusError",
+      "user",
+      "params",
+      "isMenuActive"
+    ])
   },
 
   methods: {
-    ...mapActions(["getMe", "getParams", "enableMenu"])
+    ...mapActions(["getStatus", "getMe", "getParams", "enableMenu"])
+  },
+
+  watch: {
+    status: function(newVal, oldVal) {
+      if (newVal && !oldVal) {
+        if (!tokenService.get()) return;
+
+        if (isNil(this.user)) this.getMe();
+        if (isNil(this.params)) this.getParams();
+      }
+    }
   }
 };
 </script>

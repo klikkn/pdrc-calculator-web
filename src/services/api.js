@@ -1,5 +1,6 @@
 import httpClient from "./http-client";
 
+export const status = async () => await httpClient.get("/", null, { timeout: 60000 });
 export const login = async (data) => await httpClient.post("/auth/local", data);
 export const register = async (data) => await httpClient.post("/auth/local/register", data);
 export const getMe = async () => await httpClient.get("/users/me");

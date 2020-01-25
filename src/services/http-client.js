@@ -33,19 +33,19 @@ axios.interceptors.response.use(function (response) {
 });
 
 export default class httpClient {
-  static get(url = "") {
-    return axios.get(url, options);
+  static get(url = "", opt) {
+    return axios.get(url, { ...options, ...opt });
   }
 
-  static delete(url = "") {
-    return axios.delete(url, options);
+  static delete(url = "", opt) {
+    return axios.delete(url, { ...options, ...opt });
   }
 
-  static post(url = "", data = {}) {
-    return axios.post(url, data, options);
+  static post(url = "", data = {}, opt) {
+    return axios.post(url, data, { ...options, ...opt });
   }
 
-  static put(url = "", data = {}) {
-    return axios.put(url, data, options);
+  static put(url = "", data = {}, opt) {
+    return axios.put(url, data, { ...options, ...opt });
   }
 }

@@ -1,4 +1,7 @@
 {
+  "actions": {
+    "reloadPage": "You need to reload a page"
+  },
   "calculate": "Calculate",
   "calculation": "Calculation",
   "cancel": "Cancel",

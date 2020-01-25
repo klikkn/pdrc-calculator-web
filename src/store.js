@@ -230,6 +230,8 @@ export default new Vuex.Store({
     handleError({ dispatch }, error) {
       Notification.error({ message: error.message, duration: 0 });
 
+      if (!error || !error.response) return;
+
       const statusCode = error.response.status;
       if (!statusCode) return;
 

@@ -1,4 +1,7 @@
 {
+  "actions": {
+    "reloadPage": "Перезагрузите страницу"
+  },
   "calculate": "Рассчитать",
   "calculation": "Расчет",
   "cancel": "Отмена",

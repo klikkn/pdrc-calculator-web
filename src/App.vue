@@ -1,6 +1,9 @@
 <template>
   <div id="app" class="app">
-    <div class="status-loader" v-loading="isStatusLoading"></div>
+    <div class="status" v-loading="isStatusLoading">
+      <span v-if="isStatusError">{{ $t('actions.reloadPage') }}</span>
+    </div>
+
     <template v-if="status">
       <Progress />
       <div class="main" :class="{ blur: isMenuActive }">
@@ -79,12 +82,16 @@ body {
   font-weight: bold;
 }
 
-.status-loader {
+.status {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav {

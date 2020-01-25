@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="app">
-    <div class="status" v-loading="isStatusLoading">
+    <div class="status status--loading" v-loading="isStatusLoading" v-if="!status">
       <span v-if="isStatusError">{{ $t('actions.reloadPage') }}</span>
     </div>
 
-    <template v-if="status">
+    <template v-else>
       <Progress />
       <div class="main" :class="{ blur: isMenuActive }">
         <div class="container">

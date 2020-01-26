@@ -17,12 +17,9 @@
       </el-select>
 
       <div class="mt-1 grid" v-if="isFormVisible">
-        <div>
-          <div v-for="(item, index) of form.items" :key="index">{{ item }}</div>
-        </div>
-
-        <div class="grid-row">
+        <div class="grid-row grid-row--item mb-1">
           <el-select
+            class="part"
             v-model="temporaryItem.part"
             @change="onChange"
             :placeholder="$t('select.part')"
@@ -31,6 +28,7 @@
           </el-select>
 
           <el-select
+            class="square"
             v-model="temporaryItem.square"
             @change="onChange"
             :placeholder="$t('select.square')"
@@ -44,6 +42,7 @@
           </el-select>
 
           <el-select
+            class="category"
             v-model="temporaryItem.category"
             @change="onChange"
             :placeholder="$t('select.category')"
@@ -56,9 +55,22 @@
             ></el-option>
           </el-select>
 
-          <el-button type="primary" @click="onAddItem" :disabled="isAddItemDisabled">{{ $t('add') }}</el-button>
+          <el-button
+            class="button"
+            type="primary"
+            @click="onAddItem"
+            :disabled="isAddItemDisabled"
+          >{{ $t('add') }}</el-button>
         </div>
       </div>
+
+      <PartsTable
+        class="table"
+        :items="form.items"
+        :squares="squares"
+        removeAction="true"
+        @remove="onRemoveItem"
+      />
 
       <div class="grid-row grid-row--last mt-1" v-if="isFormVisible">
         <div class="result">{{ $t('total') }}: {{ form.result }}</div>
@@ -70,7 +82,7 @@
         <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
         <el-button
           type="primary"
-          :disabled="form.result === 0"
+          :disabled="form.result === 0 || !form.items.length"
           @click="dialogFormVisible = true"
         >{{ $t('order') }}</el-button>
       </div>
@@ -145,10 +157,18 @@
   grid-gap: 15px;
 }
 
+.table {
+  font-size: 14px;
+}
+
 @media screen and (min-width: 0) {
   .grid-row {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
+  }
+
+  .grid-row button {
+    grid-column: 1/-1;
   }
 
   .grid-row--last {
@@ -174,7 +194,11 @@
   }
 
   .grid-row {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 120px;
+  }
+
+  .grid-row button {
+    grid-column: initial;
   }
 
   .grid-row--last {
@@ -193,7 +217,7 @@
 </style>
 
 <script>
-import { clone, isNil } from "ramda";
+import { clone, isNil, prepend, remove } from "ramda";
 import { mapState, mapActions } from "vuex";
 
 const temporaryItemDefaultState = {
@@ -277,7 +301,14 @@ export default {
     },
 
     onAddItem() {
-      this.form.items.push(clone(this.temporaryItem));
+      this.form.result = 0;
+      this.form.items = prepend(clone(this.temporaryItem), this.form.items);
+      this.$forceUpdate();
+    },
+
+    onRemoveItem({ index }) {
+      this.form.result = 0;
+      this.form.items = remove(index, 1, this.form.items);
       this.$forceUpdate();
     },
 

@@ -35,23 +35,7 @@
 
           <div>
             <div>{{ $t('partsCount')}}: {{ order.items.length }}</div>
-
-            <table class="table orders-table">
-              <tr>
-                <th>{{ $t('element') }}</th>
-                <th>{{ $t('size') }}</th>
-                <th>{{ $t('complicated') }}</th>
-              </tr>
-              <tr v-for="(item, index) of order.items" :key="index" class="table">
-                <td>{{ $t(item.value) }}</td>
-                <td>
-                  <span v-if="squares[item.square]">{{ squares[item.square].title }} {{ $t('sm2') }}</span>
-                </td>
-                <td>
-                  <i v-if="item.complicated" class="el-icon-success"></i>
-                </td>
-              </tr>
-            </table>
+            <PartsTable :items="order.items" :squares="squares" />
           </div>
         </div>
       </el-collapse-item>
@@ -86,15 +70,6 @@
   align-items: flex-start;
   padding-left: 55px;
   max-width: 800px;
-}
-
-.orders-table th {
-  text-align: left;
-}
-
-.orders-table th,
-.orders-table td {
-  padding-left: 0;
 }
 
 @media screen and (min-width: 0) {

@@ -13,10 +13,13 @@ import i18n from "./i18n";
 import App from "./App.vue";
 import Navigation from "./containers/Navigation.vue";
 import Progress from "./containers/Progress.vue";
+import PartsTable from "./components/PartsTable.vue";
 
 Vue.use(ElementUI, { locale: ruLocale })
 Vue.component("Navigation", Navigation);
 Vue.component("Progress", Progress);
+
+Vue.component("PartsTable", PartsTable);
 
 Vue.config.productionTip = false;
 

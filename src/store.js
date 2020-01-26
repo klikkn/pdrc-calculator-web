@@ -196,6 +196,8 @@ export default new Vuex.Store({
 
         commit("SET", { prop: "orders", value: [...state.orders, order] });
         commit("SET", { prop: "isCreateOrderLoading", value: false });
+
+        dispatch('resetCalculationForm');
       } catch (err) {
         dispatch('handleError', err);
         commit("SET", { prop: "isCreateOrderLoading", value: false });

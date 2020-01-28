@@ -16,7 +16,11 @@
           </th>
           <th class="fz-1" v-for="(value, index) of classes" :key="index">{{ value.title }}</th>
         </tr>
-        <tr v-for="(rowValue, rowIndex) of squares" :key="rowIndex">
+        <tr
+          v-for="(rowValue, rowIndex) of squares"
+          :key="rowIndex"
+          v-show="index !== 2 || rowIndex < 2"
+        >
           <th class="fz-1">{{squares[rowIndex].title}}</th>
           <td class="fz-1" v-for="(priceValue, colIndex) of priceTable" :key="colIndex">
             <div class="el-input">

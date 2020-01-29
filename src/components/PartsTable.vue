@@ -3,8 +3,8 @@
     <tr>
       <th v-if="removeAction" class="remove"></th>
       <th>{{ $t('element') }}</th>
-      <th>{{ $t('size') }}</th>
       <th>{{ $t('category') }}</th>
+      <th>{{ $t('size') }}</th>
     </tr>
     <tr v-for="(item, index) of items" :key="index" class="table">
       <td v-if="removeAction" class="remove">
@@ -17,10 +17,10 @@
       </td>
       <td>{{ $t(item.part) }}</td>
       <td>
-        <span v-if="squares[item.square]">{{ squares[item.square].title }} {{ $t('sm2') }}</span>
+        <span>{{ $t(categories[item.category]) }}</span>
       </td>
       <td>
-        <span>{{ $t(item.category) }}</span>
+        <span v-if="squares[item.square]">{{ squares[item.square].title }} {{ $t('sm2') }}</span>
       </td>
     </tr>
   </table>
@@ -52,6 +52,6 @@
 
 <script>
 export default {
-  props: ["removeAction", "items", "squares"]
+  props: ["removeAction", "items", "squares", "categories"]
 };
 </script>

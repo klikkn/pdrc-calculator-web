@@ -194,7 +194,7 @@ export default new Vuex.Store({
 
         const { data: order } = await createOrder({ ...data, classIndex, items, price: result });
 
-        commit("SET", { prop: "orders", value: [...state.orders, order] });
+        if (state.orders > 0) commit("SET", { prop: "orders", value: [...state.orders, order] });
         commit("SET", { prop: "isCreateOrderLoading", value: false });
 
         dispatch('resetCalculationForm');

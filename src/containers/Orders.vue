@@ -35,7 +35,7 @@
 
           <div>
             <div>{{ $t('partsCount')}}: {{ order.items.length }}</div>
-            <PartsTable :items="order.items" :squares="squares" />
+            <PartsTable :items="order.items" :squares="squares" :categories="categories" />
           </div>
         </div>
       </el-collapse-item>
@@ -137,6 +137,8 @@ export default {
       orders: ({ orders }) => orders,
       squares: ({ params }) => (params ? params.squares : []),
       classes: ({ params }) => (params ? params.classes : []),
+      categories: ({ params }) => (params ? params.categories : []),
+
       isDeleteOrderLoading: ({ isDeleteOrderLoading }) => isDeleteOrderLoading,
       isDeleteOrderError: ({ isDeleteOrderError }) => isDeleteOrderError
     }),

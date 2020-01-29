@@ -28,30 +28,32 @@
           </el-select>
 
           <el-select
-            class="square"
-            v-model="temporaryItem.square"
-            @change="onChange"
-            :placeholder="$t('select.square')"
-          >
-            <el-option
-              v-for="(square, index) of squares"
-              :key="index"
-              :label="square.title"
-              :value="index"
-            ></el-option>
-          </el-select>
-
-          <el-select
             class="category"
             v-model="temporaryItem.category"
-            @change="onChange"
+            @change="onChangeCategory"
             :placeholder="$t('select.category')"
           >
             <el-option
               v-for="(category, index) of categories"
               :key="index"
               :label="$t(category)"
-              :value="category"
+              :value="index"
+            ></el-option>
+          </el-select>
+
+          <el-select
+            class="square"
+            v-model="temporaryItem.square"
+            @change="onChange"
+            :placeholder="$t('select.square')"
+            :disabled="temporaryItem.category === null"
+          >
+            <el-option
+              v-for="(square, index) of squares"
+              :key="index"
+              :label="square.title"
+              :value="index"
+              v-show="temporaryItem.category !== 2 || index < 2"
             ></el-option>
           </el-select>
 
@@ -68,6 +70,7 @@
         class="table"
         :items="form.items"
         :squares="squares"
+        :categories="categories"
         removeAction="true"
         @remove="onRemoveItem"
       />
@@ -222,8 +225,8 @@ import { mapState, mapActions } from "vuex";
 
 const temporaryItemDefaultState = {
   part: null,
-  square: null,
-  category: null
+  category: null,
+  square: null
 };
 
 export default {
@@ -298,6 +301,11 @@ export default {
 
     onChange() {
       this.$forceUpdate();
+    },
+
+    onChangeCategory() {
+      this.temporaryItem.square = null;
+      this.onChange();
     },
 
     onAddItem() {

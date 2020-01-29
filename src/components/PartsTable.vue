@@ -5,6 +5,7 @@
       <th>{{ $t('element') }}</th>
       <th>{{ $t('category') }}</th>
       <th>{{ $t('size') }}</th>
+      <th>{{ $t('count') }}</th>
     </tr>
     <tr v-for="(item, index) of items" :key="index" class="table">
       <td v-if="removeAction" class="remove">
@@ -22,6 +23,7 @@
       <td>
         <span v-if="squares[item.square]">{{ squares[item.square].title }} {{ $t('sm2') }}</span>
       </td>
+      <td>{{ item.count }}</td>
     </tr>
   </table>
 </template>

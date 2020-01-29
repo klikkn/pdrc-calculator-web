@@ -136,6 +136,8 @@ body {
 
 .table th {
   color: var(--SECONDARY_TEXT);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .table td {

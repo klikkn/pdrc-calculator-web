@@ -57,6 +57,8 @@
             ></el-option>
           </el-select>
 
+          <el-input type="number" v-model="temporaryItem.count" :placeholder="$t('select.count')"></el-input>
+
           <el-button
             class="button"
             type="primary"
@@ -166,7 +168,7 @@
 
 @media screen and (min-width: 0) {
   .grid-row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 2fr 1fr;
     grid-gap: 5px;
   }
 
@@ -197,7 +199,7 @@
   }
 
   .grid-row {
-    grid-template-columns: 2fr 1fr 1fr 120px;
+    grid-template-columns: 3fr 2fr 2fr 1fr 120px;
   }
 
   .grid-row button {
@@ -226,7 +228,8 @@ import { mapState, mapActions } from "vuex";
 const temporaryItemDefaultState = {
   part: null,
   category: null,
-  square: null
+  square: null,
+  count: 1
 };
 
 export default {

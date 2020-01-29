@@ -83,7 +83,7 @@
       />
 
       <div class="grid-row grid-row--last mt-1" v-if="isFormVisible">
-        <div class="result">{{ $t('total') }}: {{ form.result }}</div>
+        <div class="result">{{ $t('total') }}: {{ form.result }} {{ $t('rub') }}</div>
         <el-button
           type="primary"
           :disabled="form.classIndex === null || !form.items.length"
@@ -195,8 +195,14 @@
     grid-column: 1/-1;
   }
 
-  .part {
+  .part,
+  .result {
     grid-column: 1/-1;
+  }
+
+  .result {
+    text-align: center;
+    padding: 10px;
   }
 }
 
@@ -226,8 +232,14 @@
     grid-column: initial;
   }
 
-  .part {
+  .part,
+  .result {
     grid-column: 1/2;
+  }
+
+  .result {
+    text-align: left;
+    padding: 0px;
   }
 }
 

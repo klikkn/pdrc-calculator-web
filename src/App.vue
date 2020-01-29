@@ -55,10 +55,6 @@ body {
   font-weight: bold;
 }
 
-.noscroll {
-  overflow: hidden;
-}
-
 .el-notification {
   width: 290px;
 }

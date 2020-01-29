@@ -6,17 +6,14 @@
 
     <template v-else>
       <Progress />
-      <div class="main" :class="{ blur: isMenuActive }">
+      <div class="main">
         <div class="container">
           <div class="mb-1">
             <router-view></router-view>
           </div>
         </div>
       </div>
-      <div class="open-nav" @click="enableMenu">
-        <i class="el-icon-menu"></i>
-      </div>
-      <div class="nav" :class="{ active: isMenuActive }">
+      <div class="nav">
         <Navigation />
       </div>
     </template>
@@ -51,14 +48,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  padding-bottom: 56px;
 }
 
 .bold {
   font-weight: bold;
-}
-
-.blur {
-  filter: blur(5px);
 }
 
 .noscroll {
@@ -96,15 +90,9 @@ body {
 
 .nav {
   position: fixed;
-  top: 0;
   width: 100%;
   z-index: 10;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-}
-
-.open-nav {
-  position: absolute;
-  font-size: 32px;
 }
 
 .auth {
@@ -166,17 +154,8 @@ body {
   }
 
   .nav {
-    display: none;
     border: none;
-  }
-
-  .open-nav {
-    top: 20px;
-    right: 7px;
-  }
-
-  .active {
-    display: block;
+    bottom: 0;
   }
 }
 
@@ -195,11 +174,6 @@ body {
 
   .el-dialog {
     width: 70%;
-  }
-
-  .open-nav {
-    top: 20px;
-    right: 12px;
   }
 
   .container {
@@ -224,11 +198,6 @@ body {
     width: 50%;
   }
 
-  .open-nav {
-    top: 20px;
-    right: 17px;
-  }
-
   .container {
     padding: 0 20px;
   }
@@ -237,13 +206,10 @@ body {
 @media screen and (min-width: 1024px) {
   .nav {
     display: block;
+    top: 0;
     bottom: 0;
     right: 0;
     width: 300px;
-  }
-
-  .open-nav {
-    display: none;
   }
 
   .main {
@@ -268,13 +234,12 @@ export default {
       "isStatusLoading",
       "isStatusError",
       "user",
-      "params",
-      "isMenuActive"
+      "params"
     ])
   },
 
   methods: {
-    ...mapActions(["getStatus", "getMe", "getParams", "enableMenu"])
+    ...mapActions(["getStatus", "getMe", "getParams"])
   },
 
   watch: {

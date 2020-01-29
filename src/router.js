@@ -7,8 +7,8 @@ import Calculation from "./containers/Calculation";
 import Prices from "./containers/Prices";
 import Orders from "./containers/Orders";
 import Classes from "./containers/Classes";
+import Settings from "./containers/Settings";
 
-import store from './store'
 import tokenService from './services/token'
 
 Vue.use(VueRouter);
@@ -24,7 +24,8 @@ const routes = [
   { path: "/calculation", component: Calculation, meta: { requiresAuth: true } },
   { path: "/prices", component: Prices, meta: { requiresAuth: true } },
   { path: "/orders", component: Orders, meta: { requiresAuth: true } },
-  { path: "/Classes", component: Classes, meta: { requiresAuth: true } },
+  { path: "/classes", component: Classes, meta: { requiresAuth: true } },
+  { path: "/settings", component: Settings, meta: { requiresAuth: true } },
 
   { path: '*', redirect: '/' }
 ];
@@ -40,10 +41,6 @@ router.beforeEach((to, _, next) => {
   }
 
   next()
-})
-
-router.afterEach(() => {
-  store.dispatch('disableMenu')
 })
 
 export default router;

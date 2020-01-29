@@ -37,7 +37,6 @@ export default new Vuex.Store({
     orders: [],
     calculationForm: defaultCalculationFormState,
     isLoading: false,
-    isMenuActive: false,
 
     isStatusLoading: false,
     isStatusError: true,
@@ -58,15 +57,6 @@ export default new Vuex.Store({
   },
 
   actions: {
-
-    enableMenu({ commit }) {
-      commit("SET", { prop: "isMenuActive", value: true });
-    },
-
-    disableMenu({ commit }) {
-      commit("SET", { prop: "isMenuActive", value: false });
-    },
-
     enableLoading({ commit }) {
       commit("SET", { prop: "isLoading", value: true });
     },

@@ -17,7 +17,7 @@
       </el-select>
 
       <div class="mt-1 grid" v-if="isFormVisible">
-        <div class="grid-row grid-row--item mb-1">
+        <div class="grid-row mb-1">
           <el-select
             class="part"
             v-model="temporaryItem.part"
@@ -57,7 +57,12 @@
             ></el-option>
           </el-select>
 
-          <el-input type="number" v-model="temporaryItem.count" :placeholder="$t('select.count')"></el-input>
+          <el-input-number
+            class="counter"
+            v-model="temporaryItem.count"
+            :placeholder="$t('select.count')"
+            :min="1"
+          ></el-input-number>
 
           <el-button
             class="button"
@@ -139,10 +144,6 @@
   width: 100%;
 }
 
-.grid-row--last .el-button {
-  margin: 0;
-}
-
 .grid {
   display: grid;
   grid-gap: 15px;
@@ -150,6 +151,10 @@
 
 .grid-row {
   display: grid;
+}
+
+.grid-row--last .el-button {
+  margin: 0;
 }
 
 .result {
@@ -166,9 +171,13 @@
   font-size: 14px;
 }
 
+.counter {
+  width: 100%;
+}
+
 @media screen and (min-width: 0) {
   .grid-row {
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
   }
 
@@ -181,7 +190,8 @@
     grid-gap: 10px;
   }
 
-  .grid-row--last button {
+  .grid-row--last button,
+  .grid-row .counter {
     grid-column: 1/-1;
   }
 
@@ -199,7 +209,7 @@
   }
 
   .grid-row {
-    grid-template-columns: 3fr 2fr 2fr 1fr 120px;
+    grid-template-columns: 3fr 2fr 2fr 2fr 120px;
   }
 
   .grid-row button {
@@ -211,6 +221,7 @@
     grid-gap: 10px;
   }
 
+  .grid-row .counter,
   .grid-row--last button {
     grid-column: initial;
   }
@@ -218,6 +229,9 @@
   .part {
     grid-column: 1/2;
   }
+}
+
+@media screen and (min-width: 1024px) {
 }
 </style>
 
@@ -269,7 +283,12 @@ export default {
 
     isAddItemDisabled: function() {
       const { part, square, category } = this.temporaryItem;
-      return isNil(part) || isNil(square) || isNil(category);
+      return (
+        isNil(part) ||
+        isNil(square) ||
+        isNil(category) ||
+        this.temporaryItem.count < 1
+      );
     },
 
     isEmptyParams: function() {
@@ -313,7 +332,7 @@ export default {
 
     onAddItem() {
       this.form.result = 0;
-      this.form.items = prepend(clone(this.temporaryItem), this.form.items);
+      this.form.items = this.addUniqItem(this.temporaryItem, this.form.items);
       this.$forceUpdate();
     },
 
@@ -330,6 +349,20 @@ export default {
       setTimeout(() => {
         this.isFormVisible = true;
       }, 300);
+    },
+
+    addUniqItem(newItem, items) {
+      const exsistingItem = items.find(
+        e =>
+          e.part === newItem.part &&
+          e.category === newItem.category &&
+          e.square === newItem.square
+      );
+
+      if (!exsistingItem) return prepend(clone(newItem), clone(items));
+
+      exsistingItem.count += newItem.count;
+      return clone(items);
     }
   },
 

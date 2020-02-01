@@ -15,9 +15,9 @@ import {
   getOrders,
   createOrder,
   deleteOrder
-} from "./services/api";
+} from "@/services/api";
 
-import tokenService from './services/token'
+import tokenService from '@/services/token'
 
 Vue.use(Vuex);
 

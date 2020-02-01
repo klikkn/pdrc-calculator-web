@@ -217,7 +217,7 @@ body {
 <script>
 import { isNil } from "ramda";
 import { mapState, mapActions } from "vuex";
-import tokenService from "./services/token";
+import tokenService from "@/services/token";
 
 export default {
   mounted: function() {

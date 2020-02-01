@@ -1,6 +1,6 @@
 import axios from "axios";
-import store from '../store'
-import tokenService from './token'
+import store from '@/store'
+import tokenService from '@/services/token'
 
 const options = {
   baseURL: process.env.VUE_APP_API_HOST,

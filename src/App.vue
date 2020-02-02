@@ -221,6 +221,7 @@ import tokenService from "@/services/token";
 
 export default {
   mounted: function() {
+    this.detectMobile();
     this.getStatus();
   },
 
@@ -235,7 +236,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(["getStatus", "getMe", "getParams"])
+    ...mapActions(["detectMobile", "getStatus", "getMe", "getParams"])
   },
 
   watch: {

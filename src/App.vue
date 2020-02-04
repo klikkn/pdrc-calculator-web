@@ -55,6 +55,10 @@ body {
   font-weight: bold;
 }
 
+.el-input {
+  font-size: 1rem;
+}
+
 .el-notification {
   width: 290px;
 }

@@ -10,6 +10,8 @@ import router from "@/router";
 import store from "@/store";
 import i18n from "@/i18n";
 
+import '@/mixins/getPriceTable';
+
 import App from "@/App.vue";
 import Navigation from "@/containers/Navigation.vue";
 import Progress from "@/containers/Progress.vue";

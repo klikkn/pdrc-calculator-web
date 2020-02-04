@@ -16,12 +16,12 @@
           @click="$emit('remove', { item, index })"
         ></el-button>
       </td>
-      <td>{{ $t(item.part) }}</td>
+      <td>{{ item.part }}</td>
       <td>
-        <span>{{ $t(categories[item.category]) }}</span>
+        <span>{{ item.category }}</span>
       </td>
       <td>
-        <span v-if="squares[item.square]">{{ squares[item.square].title }} {{ $t('sm2') }}</span>
+        <span>{{ item.square }} {{ $t('sm2') }}</span>
       </td>
       <td>{{ item.count }}</td>
     </tr>
@@ -54,6 +54,6 @@
 
 <script>
 export default {
-  props: ["removeAction", "items", "squares", "categories"]
+  props: ["removeAction", "items"]
 };
 </script>

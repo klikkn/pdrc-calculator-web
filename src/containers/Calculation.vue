@@ -20,6 +20,7 @@
       <div class="mt-1 grid" v-if="isFormVisible">
         <div class="grid-row mb-1">
           <select-field
+            class="part"
             :isNative="isMobile"
             :items="parts"
             :labelsList="getTranslatedList(parts)"
@@ -65,9 +66,7 @@
 
       <PartsTable
         class="table"
-        :items="form.items"
-        :squares="squares"
-        :categories="categories"
+        :items="getPriceTableItems(form.items)"
         removeAction="true"
         @remove="onRemoveItem"
       />
@@ -365,23 +364,23 @@ export default {
     },
 
     onClassChange(val) {
-      this.form.classIndex = val;
+      this.form.classIndex = +val;
       this.$forceUpdate();
     },
 
     onPartChange(val) {
-      this.temporaryItem.part = val;
+      this.temporaryItem.part = +val;
       this.$forceUpdate();
     },
 
     onCategoryChange(val) {
-      this.temporaryItem.category = val;
+      this.temporaryItem.category = +val;
       this.temporaryItem.square = null;
       this.$forceUpdate();
     },
 
     onSquareChange(val) {
-      this.temporaryItem.square = val;
+      this.temporaryItem.square = +val;
       this.$forceUpdate();
     },
 

@@ -116,7 +116,7 @@
 </style>
 
 <script>
-import tokenService from "../services/token";
+import tokenService from "@/services/token";
 
 export default {
   computed: {

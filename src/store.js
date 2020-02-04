@@ -15,9 +15,9 @@ import {
   getOrders,
   createOrder,
   deleteOrder
-} from "./services/api";
+} from "@/services/api";
 
-import tokenService from './services/token'
+import tokenService from '@/services/token'
 
 Vue.use(Vuex);
 
@@ -36,6 +36,8 @@ export default new Vuex.Store({
     params: null,
     orders: [],
     calculationForm: defaultCalculationFormState,
+
+    isMobile: true,
     isLoading: false,
 
     isStatusLoading: false,
@@ -57,6 +59,11 @@ export default new Vuex.Store({
   },
 
   actions: {
+    detectMobile({ commit }) {
+      const isMobile = window.navigator.maxTouchPoints || 'ontouchstart' in document;
+      commit("SET", { prop: "isMobile", value: isMobile });
+    },
+
     enableLoading({ commit }) {
       commit("SET", { prop: "isLoading", value: true });
     },

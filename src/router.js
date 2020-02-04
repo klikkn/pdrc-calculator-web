@@ -1,15 +1,15 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import Login from "./containers/Login";
-import Register from "./containers/Register";
-import Calculation from "./containers/Calculation";
-import Prices from "./containers/Prices";
-import Orders from "./containers/Orders";
-import Classes from "./containers/Classes";
-import Settings from "./containers/Settings";
+import Login from "@/containers/Login";
+import Register from "@/containers/Register";
+import Calculation from "@/containers/Calculation";
+import Prices from "@/containers/Prices";
+import Orders from "@/containers/Orders";
+import Classes from "@/containers/Classes";
+import Settings from "@/containers/Settings";
 
-import tokenService from './services/token'
+import tokenService from '@/services/token'
 
 Vue.use(VueRouter);
 

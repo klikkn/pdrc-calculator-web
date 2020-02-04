@@ -59,8 +59,7 @@ export default {
     "valueProp",
     "labelsList",
     "placeholder",
-    "disabled",
-    "translate"
+    "disabled"
   ],
 
   methods: {

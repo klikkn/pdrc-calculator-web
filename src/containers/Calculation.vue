@@ -292,6 +292,7 @@ export default {
     }),
 
     //TODO: move to BE
+    // If hailstorm we should show just 2 first squares
     filteredSquares() {
       return this.temporaryItem.category !== 2
         ? this.squares

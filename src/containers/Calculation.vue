@@ -7,55 +7,45 @@
       v-on:reset="onReset"
       v-loading.fullscreen.lock="!isFormVisible"
     >
-      <el-select v-model="form.classIndex" @change="onChange" :placeholder="$t('select.class')">
-        <el-option
-          v-for="(value, index) of classes"
-          :key="index"
-          :label="value.title"
-          :value="index"
-        ></el-option>
-      </el-select>
+      <select-field
+        :isNative="isMobile"
+        :items="classes"
+        :labelsList="getTitles(classes)"
+        v-model="form.classIndex"
+        @change="onClassChange"
+        labelProp="title"
+        :placeholder="$t('select.class')"
+      ></select-field>
 
       <div class="mt-1 grid" v-if="isFormVisible">
         <div class="grid-row mb-1">
-          <el-select
-            class="part"
+          <select-field
+            :isNative="isMobile"
+            :items="parts"
+            :labelsList="getTranslatedList(parts)"
             v-model="temporaryItem.part"
-            @change="onChange"
+            @change="onPartChange"
             :placeholder="$t('select.part')"
-          >
-            <el-option v-for="(part, index) of parts" :key="index" :value="part" :label="$t(part)"></el-option>
-          </el-select>
+          ></select-field>
 
-          <el-select
-            class="category"
+          <select-field
+            :isNative="isMobile"
+            :items="categories"
+            :labelsList="getTranslatedList(categories)"
             v-model="temporaryItem.category"
-            @change="onChangeCategory"
+            @change="onCategoryChange"
             :placeholder="$t('select.category')"
-          >
-            <el-option
-              v-for="(category, index) of categories"
-              :key="index"
-              :label="$t(category)"
-              :value="index"
-            ></el-option>
-          </el-select>
+          ></select-field>
 
-          <el-select
-            class="square"
+          <select-field
+            :isNative="isMobile"
+            :items="filteredSquares"
+            :labelsList="getTitles(squares)"
             v-model="temporaryItem.square"
-            @change="onChange"
+            @change="onSquareChange"
             :placeholder="$t('select.square')"
-            :disabled="temporaryItem.category === null"
-          >
-            <el-option
-              v-for="(square, index) of squares"
-              :key="index"
-              :label="square.title"
-              :value="index"
-              v-show="temporaryItem.category !== 2 || index < 2"
-            ></el-option>
-          </el-select>
+            :disabled="isCategorySelect"
+          ></select-field>
 
           <el-input-number
             class="counter"
@@ -83,16 +73,16 @@
       />
 
       <div class="grid-row grid-row--last mt-1" v-if="isFormVisible">
-        <div class="result">{{ $t('total') }}: {{ form.result }} {{ $t('rub') }}</div>
+        <div class="result">{{ $t('total') }}: {{ calculationForm.result }} {{ $t('rub') }}</div>
         <el-button
           type="primary"
-          :disabled="form.classIndex === null || !form.items.length"
+          :disabled="!isClassSelected || !isItems"
           native-type="submit"
         >{{ $t('calculate') }}</el-button>
         <el-button type="primary" native-type="reset">{{ $t('reset') }}</el-button>
         <el-button
           type="primary"
-          :disabled="form.result === 0 || !form.items.length"
+          :disabled="!isResult"
           @click="dialogFormVisible = true"
         >{{ $t('order') }}</el-button>
       </div>
@@ -259,13 +249,18 @@ const temporaryItemDefaultState = {
 };
 
 export default {
+  beforeMount() {
+    this.form = clone(this.$store.state.calculationForm);
+  },
+
   beforeDestroy() {
     this.updateCalculationForm(this.form);
   },
 
   data: function() {
     return {
-      temporaryItem: temporaryItemDefaultState,
+      form: null,
+      temporaryItem: clone(temporaryItemDefaultState),
       isFormVisible: true,
       dialogFormVisible: false,
       orderForm: {
@@ -282,16 +277,26 @@ export default {
   },
 
   computed: {
+    ...mapState([
+      "isMobile",
+      "isCreateOrderLoading",
+      "isCreateOrderError",
+      "calculationForm"
+    ]),
+
     ...mapState({
       classes: ({ params }) => (params ? params.classes : []),
       squares: ({ params }) => (params ? params.squares : []),
       parts: ({ params }) => (params ? params.parts : []),
-      categories: ({ params }) => (params ? params.categories : []),
-
-      form: ({ calculationForm }) => clone(calculationForm),
-      isCreateOrderLoading: ({ isCreateOrderLoading }) => isCreateOrderLoading,
-      isCreateOrderError: ({ isCreateOrderError }) => isCreateOrderError
+      categories: ({ params }) => (params ? params.categories : [])
     }),
+
+    //TODO: move to BE
+    filteredSquares() {
+      return this.temporaryItem.category !== 2
+        ? this.squares
+        : this.squares.filter((_, i) => i < 2);
+    },
 
     isAddItemDisabled: function() {
       const { part, square, category } = this.temporaryItem;
@@ -305,6 +310,22 @@ export default {
 
     isEmptyParams: function() {
       return isNil(this.params);
+    },
+
+    isClassSelected() {
+      return this.form.classIndex !== null;
+    },
+
+    isItems() {
+      return this.form.items.length > 0;
+    },
+
+    isCategorySelect() {
+      return this.temporaryItem.category === null;
+    },
+
+    isResult() {
+      return this.calculationForm.result > 0;
     }
   },
 
@@ -316,6 +337,14 @@ export default {
       "createOrder"
     ]),
 
+    getTranslatedList(values) {
+      return values.map(v => this.$t(v));
+    },
+
+    getTitles(values) {
+      return values.map(v => v.title);
+    },
+
     onSubmit: function() {
       this.updateCalculationForm(this.form);
       this.calculate();
@@ -323,9 +352,10 @@ export default {
 
     onReset: function() {
       this.resetCalculationForm();
+      this.form = clone(this.$store.state.calculationForm);
       this.temporaryItem = clone(temporaryItemDefaultState);
 
-      this.onChange();
+      this.$forceUpdate();
       this.forceRerender();
     },
 
@@ -333,13 +363,25 @@ export default {
       this.createOrder(this.orderForm);
     },
 
-    onChange() {
+    onClassChange(val) {
+      this.form.classIndex = val;
       this.$forceUpdate();
     },
 
-    onChangeCategory() {
+    onPartChange(val) {
+      this.temporaryItem.part = val;
+      this.$forceUpdate();
+    },
+
+    onCategoryChange(val) {
+      this.temporaryItem.category = val;
       this.temporaryItem.square = null;
-      this.onChange();
+      this.$forceUpdate();
+    },
+
+    onSquareChange(val) {
+      this.temporaryItem.square = val;
+      this.$forceUpdate();
     },
 
     onAddItem() {

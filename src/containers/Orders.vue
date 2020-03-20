@@ -2,44 +2,44 @@
   <div>
     <h1>{{ $t('orders') }}</h1>
 
-    <el-collapse>
-      <el-collapse-item v-for="(order, index) of availableOrders" :key="order.id" :name="index">
-        <template slot="title">
-          <div class="header">
-            <div class="remove">
-              <el-button
-                icon="el-icon-delete"
-                size="mini"
-                circle
-                @click.stop="openDeleteActionDialog(order.id)"
-              ></el-button>
-            </div>
-
-            <div>{{ order.date | date }}</div>
-            <div>{{ order.price }} {{ $t('rub') }}</div>
-            <div>{{ order.make }} {{ order.model | emptyString}}</div>
-          </div>
+    <el-table :data="orders" style="width: 100%">
+      <el-table-column :label="$t('make')">
+        <template slot-scope="scope">
+          <span>{{ scope.row.make }}</span>
         </template>
+      </el-table-column>
 
-        <div class="content">
-          <div>
-            <div>{{ $t('vin')}}: {{ order.vin | emptyString }}</div>
-            <div>{{ $t('carNumber')}}: {{ order.carNumber | emptyString }}</div>
-            <div>{{ $t('clientName')}}: {{ order.clientName }}</div>
-            <div>{{ $t('phoneNumber')}}: {{ order.phoneNumber }}</div>
-            <div>
-              <span>{{ $t('classIndex')}}:</span>
-              <span v-if="classes[order.classIndex]">{{ classes[order.classIndex].title }}</span>
-            </div>
-          </div>
+      <el-table-column :label="$t('model')">
+        <template slot-scope="scope">
+          <span>{{ scope.row.model }}</span>
+        </template>
+      </el-table-column>
 
-          <div>
-            <div>{{ $t('partsCount')}}: {{ order.items.length }}</div>
-            <PartsTable :items="getPriceTableItems(order.items)" />
-          </div>
-        </div>
-      </el-collapse-item>
-    </el-collapse>
+      <el-table-column :label="$t('price')">
+        <template slot-scope="scope">
+          <span>{{ scope.row.price }}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column :label="$t('clientName')">
+        <template slot-scope="scope">
+          <span>{{ scope.row.clientName }}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column>
+        <template slot-scope="scope">
+          <el-button icon="el-icon-link" size="mini" circle></el-button>
+
+          <el-button
+            icon="el-icon-delete"
+            size="mini"
+            circle
+            @click.stop="openDeleteActionDialog(scope.row.id)"
+          ></el-button>
+        </template>
+      </el-table-column>
+    </el-table>
 
     <el-dialog :title="$t('confirmation')" :visible.sync="deleteDialogVisible">
       <div v-loading="isDeleteOrderLoading">{{ $t('deleteConfirmation') }}</div>
@@ -57,64 +57,6 @@
     </el-dialog>
   </div>
 </template>
-
-<style scoped>
-.header {
-  display: grid;
-  grid-gap: 10px;
-  align-items: center;
-}
-
-.content {
-  display: grid;
-  align-items: flex-start;
-  padding-left: 55px;
-  max-width: 800px;
-}
-
-@media screen and (min-width: 0) {
-  .header {
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(4, auto);
-  }
-
-  .remove {
-    grid-row: 1/-1;
-    grid-column: 1/2;
-    align-self: start;
-  }
-
-  .content {
-    grid-template-columns: auto;
-    grid-gap: 10px;
-    padding-left: 15px;
-  }
-}
-
-@media screen and (min-width: 568px) {
-  .header {
-    grid-template-columns: repeat(4, auto);
-    grid-template-columns: auto minmax(75px, auto) minmax(75px, auto) auto;
-    grid-template-rows: repeat(1, auto);
-  }
-
-  .remove {
-    grid-row: initial;
-    grid-column: initial;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .content {
-    grid-template-columns: repeat(2, auto);
-    grid-gap: 25px;
-    padding-left: 55px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-}
-</style>
 
 <script>
 import { isEmpty } from "ramda";
@@ -135,8 +77,6 @@ export default {
   computed: {
     ...mapState({
       orders: ({ orders }) => orders,
-      classes: ({ params }) => (params ? params.classes : []),
-
       isDeleteOrderLoading: ({ isDeleteOrderLoading }) => isDeleteOrderLoading,
       isDeleteOrderError: ({ isDeleteOrderError }) => isDeleteOrderError
     }),
@@ -168,12 +108,6 @@ export default {
         this.deleteDialogVisible = false;
         this.deletedDraftId = null;
       }
-    }
-  },
-
-  filters: {
-    emptyString: function(value) {
-      return value === "" ? "-" : value;
     }
   }
 };

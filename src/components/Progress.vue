@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isLoading" class="progress-line"></div>
+  <div v-if="loading" class="progress-line"></div>
 </template>
 
 <style>
@@ -54,11 +54,7 @@
 </style>
 
 <script>
-import { mapState } from "vuex";
-
 export default {
-  computed: {
-    ...mapState(["isLoading"])
-  }
+  props: ["loading"]
 };
 </script>

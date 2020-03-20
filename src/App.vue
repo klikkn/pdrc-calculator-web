@@ -1,11 +1,11 @@
 <template>
   <div id="app" class="app">
     <div class="status status--loading" v-loading="isStatusLoading" v-if="!status">
-      <span v-if="isStatusError">{{ $t('actions.reloadPage') }}</span>
+      <span v-if="isStatusError">{{ $t("actions.reloadPage") }}</span>
     </div>
 
     <template v-else>
-      <Progress />
+      <Progress :loading="isLoading" />
       <div class="main">
         <div class="container">
           <div class="mb-1">
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="nav">
-        <Navigation />
+        <Navigation :isAuth="isToken" />
       </div>
     </template>
   </div>
@@ -231,12 +231,17 @@ export default {
 
   computed: {
     ...mapState([
+      "isLoading",
       "status",
       "isStatusLoading",
       "isStatusError",
       "user",
       "params"
-    ])
+    ]),
+
+    isToken() {
+      return tokenService.get();
+    }
   },
 
   methods: {

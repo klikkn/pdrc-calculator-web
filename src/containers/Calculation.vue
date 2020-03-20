@@ -88,34 +88,7 @@
     </form>
 
     <el-dialog :title="$t('orderCreateFormTitle')" :visible.sync="dialogFormVisible">
-      <el-form :model="orderForm" class="orderForm" v-loading="isCreateOrderLoading">
-        <el-date-picker
-          v-model="orderForm.date"
-          type="date"
-          :placeholder="$t('enter.date')"
-          format="dd.MM.yyyy"
-          value-format="timestamp"
-        ></el-date-picker>
-
-        <el-input v-model="orderForm.vin" :placeholder="$t('enter.vin')" autocomplete="off"></el-input>
-        <el-input v-model="orderForm.make" :placeholder="$t('enter.make')" autocomplete="off"></el-input>
-        <el-input v-model="orderForm.model" :placeholder="$t('enter.model')" autocomplete="off"></el-input>
-        <el-input
-          v-model="orderForm.carNumber"
-          :placeholder="$t('enter.carNumber')"
-          autocomplete="off"
-        ></el-input>
-        <el-input
-          v-model="orderForm.clientName"
-          :placeholder="$t('enter.clientName')"
-          autocomplete="off"
-        ></el-input>
-        <el-input
-          v-model="orderForm.phoneNumber"
-          :placeholder="$t('enter.phoneNumber')"
-          autocomplete="off"
-        ></el-input>
-      </el-form>
+      <CustomerForm ref="customerForm" :loading="isCreateOrderLoading" />
       <span slot="footer" class="dialog-footer">
         <el-button
           @click="dialogFormVisible = false"
@@ -261,17 +234,7 @@ export default {
       form: null,
       temporaryItem: clone(temporaryItemDefaultState),
       isFormVisible: true,
-      dialogFormVisible: false,
-      orderForm: {
-        vin: "",
-        make: "",
-        model: "",
-        carNumber: "",
-        clientName: "",
-        phoneNumber: "",
-        date: new Date().getTime(),
-        price: ""
-      }
+      dialogFormVisible: false
     };
   },
 
@@ -360,7 +323,7 @@ export default {
     },
 
     onSave: function() {
-      this.createOrder(this.orderForm);
+      this.createOrder(this.$refs.customerForm.$data.form);
     },
 
     onClassChange(val) {

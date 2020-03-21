@@ -1,7 +1,13 @@
 <template>
   <div>
-    <h1>{{ $t('orderUpdate') }}</h1>
-    <OrderForm ref="orderForm" :initialState="order" v-if="order" @submit="onSubmit" />
+    <h1>{{ $t('orderUpdateFormTitle') }}</h1>
+    <OrderForm
+      :key="remountKey"
+      ref="orderForm"
+      :initialState="order"
+      v-if="order"
+      @submit="onSubmit"
+    />
   </div>
 </template>
 
@@ -23,17 +29,21 @@ export default {
 
   data: function() {
     return {
-      order: null
+      order: null,
+      remountKey: 1
     };
   },
 
   methods: {
     ...mapActions(["handleError"]),
 
-    onSubmit: async function(data) {
+    onSubmit: async function(order) {
       try {
-        await updateOrder(this.order.id, data);
+        const { data } = await updateOrder(this.order.id, order);
+        this.order = data;
+
         this.$refs.orderForm.$data.dialogFormVisible = false;
+        this.remountKey = Math.round(Math.random() * 1000);
       } catch (err) {
         this.handleError(err);
       }

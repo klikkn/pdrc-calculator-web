@@ -114,7 +114,7 @@
     </form>
 
     <el-dialog
-      :title="$t('estimateCreateFormTitle')"
+      :title="$t('customerDialogTitle')"
       :visible.sync="dialogFormVisible"
       @opened="onCustomerFormOpened"
     >

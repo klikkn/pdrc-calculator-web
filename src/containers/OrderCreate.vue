@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ $t('orderCreate') }}</h1>
+    <h1>{{ $t('orderCreateFormTitle') }}</h1>
     <OrderForm ref="orderForm" @submit="onSubmit" />
   </div>
 </template>

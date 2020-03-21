@@ -51,6 +51,12 @@ body {
   padding-bottom: 56px;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .bold {
   font-weight: bold;
 }

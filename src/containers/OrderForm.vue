@@ -4,6 +4,7 @@
       v-on:submit.prevent="onCalculate"
       v-on:reset.prevent="onReset"
       v-loading.fullscreen.lock="!isFormVisible"
+      class="order__form"
     >
       <select-field
         :isNative="isMobile"
@@ -13,50 +14,55 @@
         @change="onClassChange"
         labelProp="title"
         :placeholder="$t('select.class')"
+        class="order__class"
       ></select-field>
 
-      <select-field
-        class="part"
-        :isNative="isMobile"
-        :items="parts"
-        :labelsList="getTranslatedList(parts)"
-        v-model="item.part"
-        @change="onPartChange"
-        :placeholder="$t('select.part')"
-      ></select-field>
+      <div class="order__item">
+        <select-field
+          class="order__part"
+          :isNative="isMobile"
+          :items="parts"
+          :labelsList="getTranslatedList(parts)"
+          v-model="item.part"
+          @change="onPartChange"
+          :placeholder="$t('select.part')"
+        ></select-field>
 
-      <select-field
-        :isNative="isMobile"
-        :items="categories"
-        :labelsList="getTranslatedList(categories)"
-        v-model="item.category"
-        @change="onCategoryChange"
-        :placeholder="$t('select.category')"
-      ></select-field>
+        <select-field
+          class="order__category"
+          :isNative="isMobile"
+          :items="categories"
+          :labelsList="getTranslatedList(categories)"
+          v-model="item.category"
+          @change="onCategoryChange"
+          :placeholder="$t('select.category')"
+        ></select-field>
 
-      <select-field
-        :isNative="isMobile"
-        :items="filteredSquares"
-        :labelsList="getTitles(squares)"
-        v-model="item.square"
-        @change="onSquareChange"
-        :placeholder="$t('select.square')"
-        :disabled="isCategorySelect"
-      ></select-field>
+        <select-field
+          class="order__square"
+          :isNative="isMobile"
+          :items="filteredSquares"
+          :labelsList="getTitles(squares)"
+          v-model="item.square"
+          @change="onSquareChange"
+          :placeholder="$t('select.square')"
+          :disabled="isCategorySelect"
+        ></select-field>
 
-      <el-input-number
-        class="counter"
-        v-model="item.count"
-        :placeholder="$t('select.count')"
-        :min="1"
-      ></el-input-number>
+        <el-input-number
+          class="order__count"
+          v-model="item.count"
+          :placeholder="$t('select.count')"
+          :min="1"
+        ></el-input-number>
 
-      <el-button
-        class="button"
-        type="primary"
-        @click="onAddItem"
-        :disabled="isAddItemDisabled"
-      >{{ $t('add') }}</el-button>
+        <el-button
+          class="order__calculate button"
+          type="primary"
+          @click="onAddItem"
+          :disabled="isAddItemDisabled"
+        >{{ $t('add') }}</el-button>
+      </div>
 
       <el-table :data="tableData" style="width: 100%">
         <el-table-column :label="$t('part')">
@@ -95,8 +101,11 @@
         </el-table-column>
       </el-table>
 
-      <div class="mt-1" v-if="isFormVisible">
-        <div class="price">{{ $t('total') }}: {{ estimate.price }} {{ $t('rub') }}</div>
+      <div class="order__footer" v-if="isFormVisible">
+        <div class="order__price">
+          {{ $t('total') }}:
+          <span class="bold">{{ estimate.price }} {{ $t('rub') }}</span>
+        </div>
         <el-button
           type="primary"
           :disabled="!isClassSelected || !isItems"
@@ -127,6 +136,65 @@
     </el-dialog>
   </div>
 </template>
+
+<style>
+.order__form {
+  display: grid;
+  grid-gap: 25px;
+}
+
+.order__item {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.order__calculate,
+.order__part,
+.order__count {
+  grid-column: 1/-1;
+}
+
+.order__count {
+  width: 100%;
+}
+
+.order__footer {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr;
+}
+
+.order__price {
+  padding: 10px 0;
+}
+
+.order__footer .el-button {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .order__calculate,
+  .order__part,
+  .order__count {
+    grid-column: auto;
+  }
+
+  .order__item {
+    grid-template-columns: 3fr 2fr 2fr 2fr 120px;
+  }
+
+  .order__footer {
+    grid-template-columns: 1fr auto auto auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .order__item {
+    grid-template-columns: 3fr 2fr 2fr 2fr 120px;
+  }
+}
+</style>
 
 <script>
 import { mapState, mapActions } from "vuex";
@@ -234,6 +302,7 @@ export default {
 
     onClassChange(val) {
       this.estimate.classIndex = +val;
+      this.estimate.price = 0;
     },
 
     onPartChange(val) {

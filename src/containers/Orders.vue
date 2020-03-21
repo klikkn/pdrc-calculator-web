@@ -32,83 +32,36 @@
           <router-link :to="`/orders/${scope.row.id}`">
             <el-button icon="el-icon-link" size="mini" circle></el-button>
           </router-link>
-
-          <el-button
-            icon="el-icon-delete"
-            size="mini"
-            circle
-            @click.stop="openDeleteActionDialog(scope.row.id)"
-          ></el-button>
         </template>
       </el-table-column>
     </el-table>
-
-    <el-dialog :title="$t('confirmation')" :visible.sync="deleteDialogVisible">
-      <div v-loading="isDeleteOrderLoading">{{ $t('deleteConfirmation') }}</div>
-      <span slot="footer" class="dialog-footer">
-        <el-button
-          @click="deleteDialogVisible = false"
-          :disabled="isDeleteOrderLoading"
-        >{{ $t('cancel') }}</el-button>
-        <el-button
-          type="primary"
-          @click="deleteAction"
-          :disabled="isDeleteOrderLoading"
-        >{{ $t('yes') }}</el-button>
-      </span>
-    </el-dialog>
   </div>
 </template>
 
 <script>
-import { isEmpty } from "ramda";
-import { mapState, mapActions, mapGetters } from "vuex";
+import { mapActions } from "vuex";
+import { getOrders } from "@/services/api";
 
 export default {
   data: function() {
     return {
-      deleteDialogVisible: false,
-      deletedDraftId: null
+      orders: []
     };
   },
 
   mounted: function() {
-    if (isEmpty(this.orders)) this.getOrders();
-  },
-
-  computed: {
-    ...mapState({
-      orders: ({ orders }) => orders,
-      isDeleteOrderLoading: ({ isDeleteOrderLoading }) => isDeleteOrderLoading,
-      isDeleteOrderError: ({ isDeleteOrderError }) => isDeleteOrderError
-    }),
-
-    ...mapGetters(["availableOrders"])
+    this.getOrders();
   },
 
   methods: {
-    ...mapActions(["getOrders", "deleteOrder"]),
+    ...mapActions(["handleError"]),
 
-    openDeleteActionDialog(id) {
-      this.deleteDialogVisible = true;
-      this.deletedDraftId = id;
-    },
-
-    deleteAction() {
-      this.deleteOrder(this.deletedDraftId);
-    }
-  },
-
-  watch: {
-    isDeleteOrderLoading: function(newVal, oldVal) {
-      if (
-        !newVal &&
-        oldVal &&
-        this.deleteDialogVisible &&
-        !this.isDeleteOrderError
-      ) {
-        this.deleteDialogVisible = false;
-        this.deletedDraftId = null;
+    async getOrders() {
+      try {
+        const { data } = await getOrders();
+        this.orders = data;
+      } catch (err) {
+        this.handleError(err);
       }
     }
   }

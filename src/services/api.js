@@ -13,4 +13,6 @@ export const calculate = async data =>
 export const getOrders = async () => await httpClient.get("/orders");
 export const getOrder = async id => await httpClient.get(`/orders/${id}`);
 export const createOrder = async data => await httpClient.post("/orders", data);
+export const updateOrder = async (id, data) =>
+  await httpClient.put(`/orders/${id}`, data);
 export const deleteOrder = async id => await httpClient.delete(`/orders/${id}`);

@@ -15,7 +15,7 @@
         </el-menu-item>
       </router-link>
 
-      <router-link to="/calculation" class="el-menu-item--calculation">
+      <router-link to="/orders/create" class="el-menu-item--calculation">
         <el-menu-item>
           <i class="el-icon-document-add"></i>
           <span class="title">{{ $t("calculation") }}</span>

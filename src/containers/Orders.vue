@@ -29,7 +29,9 @@
 
       <el-table-column>
         <template slot-scope="scope">
-          <el-button icon="el-icon-link" size="mini" circle></el-button>
+          <router-link :to="`/orders/${scope.row.id}`">
+            <el-button icon="el-icon-link" size="mini" circle></el-button>
+          </router-link>
 
           <el-button
             icon="el-icon-delete"

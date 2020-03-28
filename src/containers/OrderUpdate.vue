@@ -3,6 +3,7 @@
     <div class="flex">
       <h1>{{ $t('orderUpdateFormTitle') }}</h1>
       <div>
+        <el-button icon="el-icon-printer" circle @click.stop="onPrint"></el-button>
         <el-button icon="el-icon-delete" circle @click.stop="deleteDialogVisible = true"></el-button>
       </div>
     </div>
@@ -29,6 +30,9 @@
 <script>
 import { mapActions, mapState } from "vuex";
 import { getOrder, updateOrder, deleteOrder } from "../services/api";
+import pdfMake from "pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts.js";
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 export default {
   mounted: async function() {
@@ -75,6 +79,13 @@ export default {
       } catch (err) {
         this.handleError(err);
       }
+    },
+
+    onPrint() {
+      var dd = {
+        content: [this.order.price]
+      };
+      pdfMake.createPdf(dd).print();
     }
   }
 };

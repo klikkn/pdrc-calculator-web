@@ -93,7 +93,7 @@ export default {
             stack: [
               this.$t("invoice"),
               {
-                text: `${dayjs(this.order.date).format("DD.MM.YYYY")}`,
+                text: dayjs(this.order.date).format("DD.MM.YYYY"),
                 style: "subheader"
               }
             ],

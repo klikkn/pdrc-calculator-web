@@ -3,7 +3,7 @@ import store from '@/store'
 import tokenService from '@/services/token'
 
 const options = {
-  baseURL: "https://pdrc-calculator-strapi.herokuapp.com",
+  baseURL: process.env.VUE_APP_API_HOST,
   timeout: 15000,
   headers: {
     'Accept': 'application/json, text/plain, */*',

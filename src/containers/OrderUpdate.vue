@@ -30,6 +30,7 @@
 <script>
 import { mapActions, mapState } from "vuex";
 import { getOrder, updateOrder, deleteOrder } from "../services/api";
+import dayjs from "dayjs";
 import pdfMake from "pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts.js";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -90,9 +91,9 @@ export default {
         content: [
           {
             stack: [
-              this.$t("score"),
+              this.$t("invoice"),
               {
-                text: `${this.order.date}`,
+                text: `${dayjs(this.order.date).format("DD.MM.YYYY")}`,
                 style: "subheader"
               }
             ],
@@ -102,7 +103,7 @@ export default {
             text: [
               `${this.$t("clientName")}: ${this.order.clientName}\n`,
               `${this.$t("phoneNumber")}: ${this.order.phoneNumber}\n`,
-              `${this.$t("carModel")}: ${this.order.make}\n`,
+              `${this.$t("make")}: ${this.order.make}\n`,
               `${this.$t("model")}: ${this.order.model}\n`,
               `${this.$t("carNumber")}: ${this.order.carNumber}\n`
             ],
@@ -113,10 +114,10 @@ export default {
               widths: ["*", 125, 75, 75],
               body: [
                 [
-                  { text: `${this.$t("part")}`, style: "tableHeader" },
-                  { text: `${this.$t("category")}`, style: "tableHeader" },
-                  { text: `${this.$t("count")}`, style: "tableHeader" },
-                  { text: `${this.$t("square")}`, style: "tableHeader" }
+                  { text: this.$t("part"), style: "tableHeader" },
+                  { text: this.$t("category"), style: "tableHeader" },
+                  { text: this.$t("count"), style: "tableHeader" },
+                  { text: this.$t("square"), style: "tableHeader" }
                 ],
                 ...this.order.items.map(e => [
                   this.$t(parts[e.part]),

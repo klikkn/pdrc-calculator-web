@@ -2,7 +2,8 @@
   <div>
     <div class="flex">
       <h1>{{ $t('orderUpdateFormTitle') }}</h1>
-      <div>
+      <div v-if="order">
+        <el-button icon="el-icon-printer" circle @click.stop="onPrint"></el-button>
         <el-button icon="el-icon-delete" circle @click.stop="deleteDialogVisible = true"></el-button>
       </div>
     </div>
@@ -29,6 +30,10 @@
 <script>
 import { mapActions, mapState } from "vuex";
 import { getOrder, updateOrder, deleteOrder } from "../services/api";
+import dayjs from "dayjs";
+import pdfMake from "pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts.js";
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 export default {
   mounted: async function() {
@@ -50,7 +55,7 @@ export default {
   },
 
   computed: {
-    ...mapState(["isLoading"])
+    ...mapState(["isLoading", "params"])
   },
 
   methods: {
@@ -75,6 +80,90 @@ export default {
       } catch (err) {
         this.handleError(err);
       }
+    },
+
+    onPrint() {
+      if (!this.params) return [];
+
+      const { categories, squares, parts } = this.params;
+
+      var dd = {
+        content: [
+          {
+            stack: [
+              this.$t("invoice"),
+              {
+                text: dayjs(this.order.date).format("DD.MM.YYYY"),
+                style: "subheader"
+              }
+            ],
+            style: "header"
+          },
+          {
+            text: [
+              `${this.$t("clientName")}: ${this.order.clientName}\n`,
+              `${this.$t("phoneNumber")}: ${this.order.phoneNumber}\n`,
+              `${this.$t("make")}: ${this.order.make}\n`,
+              `${this.$t("model")}: ${this.order.model}\n`,
+              `${this.$t("carNumber")}: ${this.order.carNumber}\n`
+            ],
+            style: "text"
+          },
+          {
+            table: {
+              widths: ["*", 125, 75, 75],
+              body: [
+                [
+                  { text: this.$t("part"), style: "tableHeader" },
+                  { text: this.$t("category"), style: "tableHeader" },
+                  { text: this.$t("count"), style: "tableHeader" },
+                  { text: this.$t("square"), style: "tableHeader" }
+                ],
+                ...this.order.items.map(e => [
+                  this.$t(parts[e.part]),
+                  this.$t(categories[e.category]),
+                  e.count,
+                  squares[e.square].title
+                ])
+              ]
+            },
+            style: "tableBody"
+          },
+          {
+            text: `${this.$t("totalCost")} ${this.order.price} ${this.$t(
+              "rub"
+            )}`,
+            style: "price"
+          }
+        ],
+        styles: {
+          header: {
+            fontSize: 18,
+            bold: true,
+            alignment: "left",
+            margin: [0, 100, 0, 50]
+          },
+          subheader: {
+            fontSize: 14
+          },
+          text: {
+            fontSize: 13
+          },
+          tableHeader: {
+            bold: true,
+            fontSize: 12,
+            alignment: "center"
+          },
+          tableBody: {
+            margin: [0, 20, 0, 15]
+          },
+          price: {
+            fontSize: 15,
+            alignment: "center"
+          }
+        }
+      };
+      pdfMake.createPdf(dd).print();
     }
   }
 };

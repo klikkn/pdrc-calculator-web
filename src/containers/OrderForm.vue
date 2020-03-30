@@ -64,43 +64,44 @@
         >{{ $t('add') }}</el-button>
       </div>
 
-      <el-table :data="tableData" style="width: 100%">
-        <el-table-column :label="$t('part')">
-          <template slot-scope="scope">
-            <span>{{ scope.row.part }}</span>
-          </template>
-        </el-table-column>
+      <div style="overflow: hidden">
+        <el-table :data="tableData">
+          <el-table-column :label="$t('part')">
+            <template slot-scope="scope">
+              <span>{{ scope.row.part }}</span>
+            </template>
+          </el-table-column>
 
-        <el-table-column :label="$t('square')">
-          <template slot-scope="scope">
-            <span>{{ scope.row.square }}</span>
-          </template>
-        </el-table-column>
+          <el-table-column :label="$t('square')">
+            <template slot-scope="scope">
+              <span>{{ scope.row.square }}</span>
+            </template>
+          </el-table-column>
 
-        <el-table-column :label="$t('category')">
-          <template slot-scope="scope">
-            <span>{{ scope.row.category }}</span>
-          </template>
-        </el-table-column>
+          <el-table-column :label="$t('category')">
+            <template slot-scope="scope">
+              <span>{{ scope.row.category }}</span>
+            </template>
+          </el-table-column>
 
-        <el-table-column :label="$t('count')">
-          <template slot-scope="scope">
-            <span>{{ scope.row.count }}</span>
-          </template>
-        </el-table-column>
+          <el-table-column :label="$t('count')">
+            <template slot-scope="scope">
+              <span>{{ scope.row.count }}</span>
+            </template>
+          </el-table-column>
 
-        <el-table-column>
-          <template slot-scope="scope">
-            <el-button
-              icon="el-icon-delete"
-              size="mini"
-              circle
-              @click.stop="onRemoveItem(scope.$index)"
-            ></el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-
+          <el-table-column>
+            <template slot-scope="scope">
+              <el-button
+                icon="el-icon-delete"
+                size="mini"
+                circle
+                @click.stop="onRemoveItem(scope.$index)"
+              ></el-button>
+            </template>
+          </el-table-column>
+        </el-table>
+      </div>
       <div class="order__footer" v-if="isFormVisible">
         <div class="order__price">
           {{ $t('total') }}:

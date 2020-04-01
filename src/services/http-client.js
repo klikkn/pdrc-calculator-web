@@ -6,8 +6,8 @@ const options = {
   baseURL: process.env.VUE_APP_API_HOST,
   timeout: 15000,
   headers: {
-    'Accept': 'application/json, text/plain, */*',
-    'Content-Type': 'application/json'
+    Accept: "application/json, text/plain, */*",
+    "Content-Type": "application/json"
   }
 };
 

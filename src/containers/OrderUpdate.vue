@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="flex">
-      <h1>{{ $t('orderUpdateFormTitle') }}</h1>
-      <div v-if="order">
+    <div class="flex order__header">
+      <h1 class="order__title">{{ $t('orderUpdateFormTitle') }}</h1>
+      <div v-if="order" class="flex order__actions">
         <el-button icon="el-icon-printer" circle @click.stop="onPrint"></el-button>
         <el-button icon="el-icon-delete" circle @click.stop="deleteDialogVisible = true"></el-button>
       </div>
@@ -26,6 +26,32 @@
     </el-dialog>
   </div>
 </template>
+
+<style scoped>
+.order__header {
+  flex-direction: column;
+}
+
+.order__title {
+  align-self: flex-start;
+}
+
+.order__actions {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 568px) {
+  .order__header {
+    flex-direction: row;
+  }
+
+  .order__actions {
+    align-self: auto;
+    margin-bottom: 0px;
+  }
+}
+</style>
 
 <script>
 import { mapActions, mapState } from "vuex";

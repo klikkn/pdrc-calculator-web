@@ -1,4 +1,4 @@
-# pdrc-calulator-web
+# pdrc-calculator-web
 
 ## Project setup
 ```

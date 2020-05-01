@@ -205,7 +205,6 @@ import { calculate } from "../services/api";
 const itemDefaultState = { part: null, category: null, square: null, count: 1 };
 const estimateDefaultState = { classIndex: 0, items: [], price: 0 };
 const customerDefaultState = {
-  vin: "",
   make: "",
   model: "",
   carNumber: "",
@@ -358,7 +357,6 @@ export default {
         });
 
         this.customer = clone({
-          vin: data.vin,
           make: data.make,
           model: data.model,
           carNumber: data.carNumber,

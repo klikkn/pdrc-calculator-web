@@ -8,7 +8,6 @@
       value-format="timestamp"
     ></el-date-picker>
 
-    <el-input v-model="customer.vin" :placeholder="$t('enter.vin')" autocomplete="off"></el-input>
     <el-input v-model="customer.make" :placeholder="$t('enter.make')" autocomplete="off"></el-input>
     <el-input v-model="customer.model" :placeholder="$t('enter.model')" autocomplete="off"></el-input>
     <el-input v-model="customer.carNumber" :placeholder="$t('enter.carNumber')" autocomplete="off"></el-input>
@@ -36,7 +35,6 @@
 import { clone } from "ramda";
 
 const customerDefaultState = {
-  vin: "",
   make: "",
   model: "",
   carNumber: "",

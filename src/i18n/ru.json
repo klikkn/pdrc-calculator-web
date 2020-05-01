@@ -40,8 +40,7 @@
     "password": "Введите пароль",
     "passwordAgain": "Повторите пароль",
     "phoneNumber": "Введите номер телефона",
-    "username": "Введите логин",
-    "vin": "Введите VIN номер"
+    "username": "Введите логин"
   },
   "from": "С",
   "hailstorm": "Град",
@@ -94,7 +93,6 @@
   "total": "Итого",
   "totalCost": "Итоговая стоимость",
   "trunk": "Багажник",
-  "vin": "VIN",
   "width": "Ширина",
   "wingBackLeft": "Левое заднее крыло",
   "wingBackRight": "Правое заднее крыло",

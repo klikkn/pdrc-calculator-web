@@ -73,7 +73,8 @@ body {
   word-break: normal;
 }
 
-.el-select-dropdown__item {
+.el-select-dropdown__item,
+.el-picker-panel__body {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }

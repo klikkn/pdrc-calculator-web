@@ -5,13 +5,13 @@
     <el-table :data="orders" style="width: 100%">
       <el-table-column :label="$t('make')">
         <template slot-scope="scope">
-          <span>{{ scope.row.make }}</span>
+          <span>{{ scope.row.make || "—" }}</span>
         </template>
       </el-table-column>
 
       <el-table-column :label="$t('model')">
         <template slot-scope="scope">
-          <span>{{ scope.row.model }}</span>
+          <span>{{ scope.row.model || "—" }}</span>
         </template>
       </el-table-column>
 
@@ -23,7 +23,7 @@
 
       <el-table-column :label="$t('clientName')">
         <template slot-scope="scope">
-          <span>{{ scope.row.clientName }}</span>
+          <span>{{ scope.row.clientName || "—" }}</span>
         </template>
       </el-table-column>
 

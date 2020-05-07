@@ -126,12 +126,12 @@ export default {
             style: "header"
           },
           {
-            text: [
-              `${this.$t("clientName")}: ${this.order.clientName}\n`,
-              `${this.$t("phoneNumber")}: ${this.order.phoneNumber}\n`,
-              `${this.$t("make")}: ${this.order.make}\n`,
-              `${this.$t("model")}: ${this.order.model}\n`,
-              `${this.$t("carNumber")}: ${this.order.carNumber}\n`
+            stack: [
+              `${this.$t("clientName")}: ${this.order.clientName || "—" }\n`,
+              `${this.$t("phoneNumber")}: ${this.order.phoneNumber || "—" }\n`,
+              `${this.$t("make")}: ${this.order.make || "—" }\n`,
+              `${this.$t("model")}: ${this.order.model || "—" }\n`,
+              `${this.$t("carNumber")}: ${this.order.carNumber || "—" }\n`
             ],
             style: "text"
           },

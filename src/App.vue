@@ -73,6 +73,12 @@ body {
   word-break: normal;
 }
 
+.el-select-dropdown__item,
+.el-picker-panel__body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
 .el-collapse-item__header {
   height: auto;
   line-height: 1;
@@ -80,11 +86,6 @@ body {
   color: var(--REGULAR_TEXT);
   font-weight: bold;
 }
-
-.el-picker-panel__body {
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
-    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-} 
 
 .status {
   position: absolute;

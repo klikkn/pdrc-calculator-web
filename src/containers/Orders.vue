@@ -21,9 +21,9 @@
         </template>
       </el-table-column>
 
-      <el-table-column :label="$t('clientName')">
+      <el-table-column :label="$t('client')">
         <template slot-scope="scope">
-          <span>{{ scope.row.clientName || "—" }}</span>
+          <span>{{ scope.row.client || "—" }}</span>
         </template>
       </el-table-column>
 

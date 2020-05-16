@@ -12,13 +12,13 @@
     <el-input v-model="customer.model" :placeholder="$t('enter.model')" autocomplete="off"></el-input>
     <el-input v-model="customer.carNumber" :placeholder="$t('enter.carNumber')" autocomplete="off"></el-input>
     <el-input
-      v-model="customer.clientName"
-      :placeholder="$t('enter.clientName')"
+      v-model="customer.client"
+      :placeholder="$t('enter.client')"
       autocomplete="off"
     ></el-input>
     <el-input
-      v-model="customer.phoneNumber"
-      :placeholder="$t('enter.phoneNumber')"
+      v-model="customer.phone"
+      :placeholder="$t('enter.phone')"
       autocomplete="off"
     ></el-input>
   </el-form>
@@ -38,8 +38,8 @@ const customerDefaultState = {
   make: "",
   model: "",
   carNumber: "",
-  clientName: "",
-  phoneNumber: "",
+  client: "",
+  phone: "",
   date: new Date().getTime(),
   price: ""
 };

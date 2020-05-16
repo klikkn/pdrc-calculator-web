@@ -24,6 +24,12 @@
   </div>
 </template>
 
+<style>
+  td:hover {
+    cursor: pointer;
+  }
+</style>>
+
 <script>
 import { mapActions } from "vuex";
 import { getOrders } from "@/services/api";

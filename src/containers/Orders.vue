@@ -3,15 +3,9 @@
     <h1>{{ $t('orders') }}</h1>
 
     <el-table :data="orders" style="width: 100%">
-      <el-table-column :label="$t('make')">
+      <el-table-column :label="$t('car')">
         <template slot-scope="scope">
-          <span>{{ scope.row.make || "—" }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column :label="$t('model')">
-        <template slot-scope="scope">
-          <span>{{ scope.row.model || "—" }}</span>
+          <span>{{ (scope.row.make) ? `${scope.row.make} ${scope.row.model}` : scope.row.model || "—" }}</span>
         </template>
       </el-table-column>
 

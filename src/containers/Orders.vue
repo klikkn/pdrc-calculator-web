@@ -51,8 +51,8 @@ export default {
       }
     },
 
-    onRowClick: function(row) {
-      this.$router.push(`/orders/${row.id}`);
+    onRowClick: function({id}) {
+      this.$router.push(`/orders/${id}`);
     }
   }
 };

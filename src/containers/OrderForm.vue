@@ -208,8 +208,8 @@ const customerDefaultState = {
   make: "",
   model: "",
   carNumber: "",
-  clientName: "",
-  phoneNumber: "",
+  client: "",
+  phone: "",
   date: new Date().getTime()
 };
 
@@ -360,8 +360,8 @@ export default {
           make: data.make,
           model: data.model,
           carNumber: data.carNumber,
-          clientName: data.clientName,
-          phoneNumber: data.phoneNumber,
+          client: data.client,
+          phone: data.phone,
           date: Date.parse(data.date)
         });
 

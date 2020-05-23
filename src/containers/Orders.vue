@@ -2,16 +2,10 @@
   <div>
     <h1>{{ $t('orders') }}</h1>
 
-    <el-table :data="orders" style="width: 100%">
-      <el-table-column :label="$t('make')">
+    <el-table :data="orders" style="width: 100%" @row-click="onRowClick">
+      <el-table-column :label="$t('car')">
         <template slot-scope="scope">
-          <span>{{ scope.row.make || "—" }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column :label="$t('model')">
-        <template slot-scope="scope">
-          <span>{{ scope.row.model || "—" }}</span>
+          <span>{{ (scope.row.make) ? `${scope.row.make} ${scope.row.model}` : scope.row.model || "—" }}</span>
         </template>
       </el-table-column>
 
@@ -21,22 +15,20 @@
         </template>
       </el-table-column>
 
-      <el-table-column :label="$t('clientName')">
+      <el-table-column :label="$t('client')">
         <template slot-scope="scope">
-          <span>{{ scope.row.clientName || "—" }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column>
-        <template slot-scope="scope">
-          <router-link :to="`/orders/${scope.row.id}`">
-            <el-button icon="el-icon-link" size="mini" circle></el-button>
-          </router-link>
+          <span>{{ scope.row.client || "—" }}</span>
         </template>
       </el-table-column>
     </el-table>
   </div>
 </template>
+
+<style>
+  td:hover {
+    cursor: pointer;
+  }
+</style>>
 
 <script>
 import { mapActions } from "vuex";
@@ -63,6 +55,10 @@ export default {
       } catch (err) {
         this.handleError(err);
       }
+    },
+
+    onRowClick: function({id}) {
+      this.$router.push(`/orders/${id}`);
     }
   }
 };

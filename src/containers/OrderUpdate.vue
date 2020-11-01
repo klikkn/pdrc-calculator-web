@@ -55,7 +55,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex";
-import { getOrder, updateOrder, deleteOrder } from "../services/api";
+import { getOrder, updateOrder, deleteOrder, calculate } from "../services/api";
 import dayjs from "dayjs";
 import pdfMake from "pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts.js";
@@ -66,6 +66,16 @@ export default {
     try {
       const orderId = this.$route.params.id;
       const { data } = await getOrder(orderId);
+
+      const { classIndex, items} = data;
+      const promises = items.map(item => calculate({ classIndex, items: [item] }))
+      const result = await Promise.all(promises)
+
+      data.items = data.items.map((item, i) => {
+        item.price = result[i].data.price;
+        return item;
+      });
+
       this.order = data;
     } catch (err) {
       this.handleError(err);
@@ -89,9 +99,24 @@ export default {
 
     async onSubmit(order) {
       try {
-        const { data } = await updateOrder(this.order.id, order);
-        this.order = data;
+        order.items = order.items.map(i => {
+          const {price, ...rest} = i; // eslint-disable-line
+          return rest;
+        });
 
+        const { data } = await updateOrder(this.order.id, order);
+
+        const { classIndex, items} = data;
+        const promises = items.map(item => calculate({ classIndex, items: [item] }))
+        const result = await Promise.all(promises)
+
+        data.items = data.items.map((item, i) => {
+          item.price = result[i].data.price;
+          return item;
+        });
+
+        this.order = data;
+        
         this.$refs.orderForm.$data.dialogFormVisible = false;
         this.remountKey = Math.round(Math.random() * 1000);
       } catch (err) {
@@ -137,19 +162,21 @@ export default {
           },
           {
             table: {
-              widths: ["*", 125, 75, 75],
+              widths: ["*", 125, 75, 75, 75],
               body: [
                 [
                   { text: this.$t("part"), style: "tableHeader" },
                   { text: this.$t("category"), style: "tableHeader" },
                   { text: this.$t("count"), style: "tableHeader" },
-                  { text: this.$t("square"), style: "tableHeader" }
+                  { text: this.$t("square"), style: "tableHeader" },
+                  { text: this.$t("price"), style: "tableHeader" }
                 ],
                 ...this.order.items.map(e => [
                   this.$t(parts[e.part]),
                   this.$t(categories[e.category]),
                   e.count,
-                  squares[e.square].title
+                  squares[e.square].title,
+                  e.price
                 ])
               ]
             },

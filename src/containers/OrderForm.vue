@@ -90,6 +90,12 @@
             </template>
           </el-table-column>
 
+          <el-table-column :label="$t('price')">
+            <template slot-scope="scope">
+              <span>{{ scope.row.price }}</span>
+            </template>
+          </el-table-column>
+
           <el-table-column>
             <template slot-scope="scope">
               <el-button
@@ -202,7 +208,7 @@ import { mapState, mapActions } from "vuex";
 import { clone, isNil, prepend, remove } from "ramda";
 import { calculate } from "../services/api";
 
-const itemDefaultState = { part: null, category: null, square: null, count: 1 };
+const itemDefaultState = { part: null, category: null, square: null, count: 1, price: 0 };
 const estimateDefaultState = { classIndex: 0, items: [], price: 0 };
 const customerDefaultState = {
   make: "",
@@ -249,7 +255,8 @@ export default {
         category: this.$t(categories[e.category]),
         count: e.count,
         part: this.$t(parts[e.part]),
-        square: squares[e.square].title
+        square: squares[e.square].title,
+        price: e.price
       }));
     },
 
@@ -318,9 +325,17 @@ export default {
       this.item.square = +val;
     },
 
-    onAddItem() {
-      this.estimate.items = this.addUniqItem(this.item, this.estimate.items);
-      this.estimate.price = 0;
+    async onAddItem() {
+      try {
+        const { price: a, ...rest} = this.item; // eslint-disable-line
+        const { data: { price } } = await calculate({ ...this.estimate, items: [rest] });
+        this.item.price = price;
+
+        this.estimate.items = this.addUniqItem(this.item, this.estimate.items);
+        this.estimate.price = 0;
+      } catch(err) {
+        this.handleError(err);
+      }
     },
 
     addUniqItem(newItem, items) {
@@ -334,6 +349,8 @@ export default {
       if (!exsistingItem) return prepend(clone(newItem), clone(items));
 
       exsistingItem.count += newItem.count;
+      exsistingItem.price += newItem.price;
+
       return clone(items);
     },
 
@@ -374,7 +391,13 @@ export default {
 
     onCalculate: async function() {
       try {
-        const { data } = await calculate(this.estimate);
+        const request = clone(this.estimate);
+        request.items = request.items.map(i => {
+          const {price, ...rest} = i; // eslint-disable-line
+          return rest;
+        });
+
+        const { data } = await calculate(request);
         this.estimate = clone({ ...this.estimate, price: data.price });
       } catch (err) {
         this.handleError(err);
@@ -386,8 +409,14 @@ export default {
     },
 
     onSave: function() {
+        const request = clone(this.estimate);
+        request.items = request.items.map(i => {
+          const {price, ...rest} = i; // eslint-disable-line
+          return rest;
+        });
+
       this.$emit("submit", {
-        ...this.estimate,
+        ...request,
         ...this.$refs.customerForm.$data.customer
       });
     }

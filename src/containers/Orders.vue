@@ -51,7 +51,7 @@ export default {
     async getOrders() {
       try {
         const { data } = await getOrders();
-        this.orders = data;
+        this.orders = data.reverse();
       } catch (err) {
         this.handleError(err);
       }

@@ -6,7 +6,8 @@
     "start": "node server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint --fix"
+    "lint": "vue-cli-service lint --fix",
+    "proxy": "lcp --proxyUrl http://pdrc-calculator-api-dev.herokuapp.com"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -14,6 +15,7 @@
     "dayjs": "^1.8.19",
     "element-ui": "^2.12.0",
     "express": "^4.17.1",
+    "local-cors-proxy": "^1.1.0",
     "pdfmake": "^0.1.65",
     "ramda": "^0.26.1",
     "vue": "^2.6.10",

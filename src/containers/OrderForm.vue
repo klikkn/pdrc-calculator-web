@@ -215,6 +215,7 @@ const customerDefaultState = {
   model: "",
   carNumber: "",
   client: "",
+  inn: "",
   phone: "",
   date: new Date().getTime()
 };
@@ -378,6 +379,7 @@ export default {
           model: data.model,
           carNumber: data.carNumber,
           client: data.client,
+          inn: data.inn,
           phone: data.phone,
           date: Date.parse(data.date)
         });

@@ -153,7 +153,7 @@ export default {
           {
             stack: [
               this.order.client ? `${this.$t("client")}: ${this.order.client}\n` : "",
-              this.order.client ? `${this.$t("inn")}: ${this.order.inn}\n` : "",
+              this.order.inn ? `${this.$t("inn")}: ${this.order.inn}\n` : "",
               this.order.phone ? `${this.$t("phone")}: ${this.order.phone}\n` : "",
               this.order.make ? `${this.$t("make")}: ${this.order.make}\n` : "",
               this.order.model ? `${this.$t("model")}: ${this.order.model}\n` : "",

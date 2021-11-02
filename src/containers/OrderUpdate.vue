@@ -91,7 +91,7 @@ export default {
   },
 
   computed: {
-    ...mapState(["isLoading", "params"])
+    ...mapState(["isLoading", "params", "user"])
   },
 
   methods: {
@@ -153,6 +153,7 @@ export default {
           {
             stack: [
               this.order.client ? `${this.$t("client")}: ${this.order.client}\n` : "",
+              this.order.client ? `${this.$t("inn")}: ${this.order.inn}\n` : "",
               this.order.phone ? `${this.$t("phone")}: ${this.order.phone}\n` : "",
               this.order.make ? `${this.$t("make")}: ${this.order.make}\n` : "",
               this.order.model ? `${this.$t("model")}: ${this.order.model}\n` : "",
@@ -183,10 +184,14 @@ export default {
             style: "tableBody"
           },
           {
-            text: `${this.$t("totalCost")} ${this.order.price} ${this.$t(
+            text: `${this.$t("totalCost")}: ${this.order.price} ${this.$t(
               "rub"
             )}`,
             style: "price"
+          },
+          {
+            text: `${this.user.sign}`,
+            style: "signature"
           }
         ],
         styles: {
@@ -212,7 +217,10 @@ export default {
           },
           price: {
             fontSize: 15,
-            alignment: "center"
+            alignment: "center", 
+          },
+          signature: {
+            marginTop: 60
           }
         }
       };

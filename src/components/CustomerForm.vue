@@ -17,6 +17,8 @@
       autocomplete="off"
     ></el-input>
     <el-input
+      v-model="customer.inn" :placeholder="$t('enter.inn')" autocomplete="off"></el-input>
+    <el-input
       v-model="customer.phone"
       :placeholder="$t('enter.phone')"
       autocomplete="off"
